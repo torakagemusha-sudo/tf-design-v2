@@ -1,0 +1,677 @@
+/**
+ * Torafirma Design System v2 — Base Component Styles
+ * From Section 9 (Part 1) and Section 22 (Part 2)
+ * Imports tokens.css for base color definitions.
+ */
+
+@import url("./tokens.css");
+
+/* ════════════════════════════════════════════════
+   BUTTONS
+   ════════════════════════════════════════════════ */
+
+/* Base button */
+.tf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tf-space-2);
+  height: var(--tf-control-height-md);
+  padding: var(--tf-button-padding-y) var(--tf-button-padding-x);
+  border-radius: var(--tf-radius-sm);
+  border: 1px solid var(--tf-border-normal);
+  background: var(--tf-charcoal);
+  color: var(--tf-text-primary);
+  font-family: var(--tf-font-ui);
+  font-size: var(--tf-text-sm);
+  font-weight: var(--tf-weight-semibold);
+  letter-spacing: var(--tf-tracking-label);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--tf-duration-fast) var(--tf-ease-standard),
+              border-color var(--tf-duration-fast) var(--tf-ease-standard),
+              color var(--tf-duration-fast) var(--tf-ease-standard),
+              box-shadow var(--tf-duration-fast) var(--tf-ease-standard);
+}
+
+.tf-button:hover:not(:disabled) {
+  background: var(--tf-steel-900);
+  border-color: var(--tf-border-strong);
+}
+
+.tf-button:active:not(:disabled) {
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.tf-button:focus-visible {
+  outline: 1px solid var(--tf-blue);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(75, 163, 242, 0.18);
+}
+
+.tf-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ── Semantic Button Variants ── */
+
+/* Run / Execute */
+.tf-button--run {
+  color: #B8FFCC;
+  background: var(--tf-green-dark);
+  border-color: var(--tf-green-dim);
+}
+.tf-button--run:hover:not(:disabled) {
+  background: #102A1A;
+  border-color: var(--tf-green);
+}
+.tf-button--run:active:not(:disabled) {
+  color: var(--tf-green);
+}
+
+/* Danger / Destructive */
+.tf-button--danger {
+  color: #FFD6D6;
+  background: var(--tf-red-dark);
+  border-color: var(--tf-red-dim);
+}
+.tf-button--danger:hover:not(:disabled) {
+  background: #2A1010;
+  border-color: var(--tf-red);
+}
+.tf-button--danger:active:not(:disabled) {
+  color: var(--tf-red);
+}
+.tf-button--danger:focus-visible {
+  outline: 1px solid var(--tf-red);
+  box-shadow: 0 0 0 3px rgba(242, 75, 75, 0.18);
+}
+
+/* Warning / Stage */
+.tf-button--warning {
+  color: #FFECB8;
+  background: var(--tf-amber-dark);
+  border-color: var(--tf-amber-dim);
+}
+.tf-button--warning:hover:not(:disabled) {
+  background: #2A1F0A;
+  border-color: var(--tf-amber);
+}
+.tf-button--warning:active:not(:disabled) {
+  color: var(--tf-amber);
+}
+
+/* Inspect / Information */
+.tf-button--inspect {
+  color: #C8E4FF;
+  background: var(--tf-blue-dark);
+  border-color: var(--tf-blue-dim);
+}
+.tf-button--inspect:hover:not(:disabled) {
+  background: #0E1E30;
+  border-color: var(--tf-blue);
+}
+.tf-button--inspect:active:not(:disabled) {
+  color: var(--tf-blue);
+}
+
+/* Stream / Live data */
+.tf-button--stream {
+  color: #B8F5FF;
+  background: var(--tf-cyan-dark);
+  border-color: var(--tf-cyan-dim);
+}
+.tf-button--stream:hover:not(:disabled) {
+  background: #0A2224;
+  border-color: var(--tf-cyan);
+}
+.tf-button--stream:active:not(:disabled) {
+  color: var(--tf-cyan);
+}
+
+/* Model / AI */
+.tf-button--model {
+  color: #E0D4FF;
+  background: var(--tf-purple-dark);
+  border-color: var(--tf-purple-dim);
+}
+.tf-button--model:hover:not(:disabled) {
+  background: #1A1228;
+  border-color: var(--tf-purple);
+}
+.tf-button--model:active:not(:disabled) {
+  color: var(--tf-purple);
+}
+
+/* Authority / Privileged */
+.tf-button--authority {
+  color: #FFE8B8;
+  background: var(--tf-gold-dark);
+  border-color: var(--tf-gold-dim);
+}
+.tf-button--authority:hover:not(:disabled) {
+  background: #2A2010;
+  border-color: var(--tf-gold);
+}
+.tf-button--authority:active:not(:disabled) {
+  color: var(--tf-gold);
+}
+
+/* Neutral / Secondary */
+.tf-button--neutral {
+  color: var(--tf-steel-300);
+  background: var(--tf-slate-dark);
+  border-color: var(--tf-slate-dim);
+}
+.tf-button--neutral:hover:not(:disabled) {
+  background: var(--tf-steel-950);
+  border-color: var(--tf-slate);
+}
+.tf-button--neutral:active:not(:disabled) {
+  color: var(--tf-slate);
+}
+
+
+/* ════════════════════════════════════════════════
+   BADGES
+   ════════════════════════════════════════════════ */
+
+/* Base badge */
+.tf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tf-space-1);
+  height: 18px;
+  padding: 0 var(--tf-space-3);
+  border-radius: var(--tf-radius-sm);
+  font-family: var(--tf-font-ui);
+  font-size: var(--tf-text-2xs);
+  font-weight: var(--tf-weight-bold);
+  letter-spacing: var(--tf-tracking-micro);
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+/* Ready — safe to execute */
+.tf-badge--ready {
+  color: var(--tf-green);
+  background: var(--tf-green-dark);
+  border-color: var(--tf-green-dim);
+}
+
+/* Live — active stream or process */
+.tf-badge--live {
+  color: var(--tf-cyan);
+  background: var(--tf-cyan-dark);
+  border-color: var(--tf-cyan-dim);
+}
+
+/* Staged — prepared but not committed */
+.tf-badge--staged {
+  color: var(--tf-amber);
+  background: var(--tf-amber-dark);
+  border-color: var(--tf-amber-dim);
+}
+
+/* Dirty — modified and unsaved */
+.tf-badge--dirty {
+  color: var(--tf-amber);
+  background: var(--tf-amber-dark);
+  border-color: var(--tf-amber-dim);
+}
+
+/* Locked — authority protected */
+.tf-badge--locked {
+  color: var(--tf-gold);
+  background: var(--tf-gold-dark);
+  border-color: var(--tf-gold-dim);
+}
+
+/* Fault — active error */
+.tf-badge--fault {
+  color: var(--tf-red);
+  background: var(--tf-red-dark);
+  border-color: var(--tf-red-dim);
+}
+
+/* Degraded — reduced capability */
+.tf-badge--degraded {
+  color: var(--tf-orange);
+  background: var(--tf-orange-dark);
+  border-color: var(--tf-orange-dim);
+}
+
+/* Signed — verified authority artifact */
+.tf-badge--signed {
+  color: var(--tf-gold);
+  background: var(--tf-gold-dark);
+  border-color: var(--tf-gold-dim);
+}
+
+/* Model — AI/model artifact */
+.tf-badge--model {
+  color: var(--tf-purple);
+  background: var(--tf-purple-dark);
+  border-color: var(--tf-purple-dim);
+}
+
+/* Sim — simulation state */
+.tf-badge--sim {
+  color: var(--tf-blue);
+  background: var(--tf-blue-dark);
+  border-color: var(--tf-blue-dim);
+}
+
+
+/* ════════════════════════════════════════════════
+   PANELS
+   ════════════════════════════════════════════════ */
+
+.tf-panel {
+  background: var(--tf-surface);
+  border: 1px solid var(--tf-border-normal);
+  border-radius: var(--tf-radius-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tf-panel-header {
+  height: 32px;
+  padding: 0 var(--tf-space-4);
+  border-bottom: 1px solid var(--tf-border-normal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tf-space-3);
+  text-transform: uppercase;
+  letter-spacing: var(--tf-tracking-command);
+  font-size: var(--tf-text-xs);
+  font-weight: var(--tf-weight-bold);
+  color: var(--tf-text-muted);
+  background: var(--tf-surface);
+  flex-shrink: 0;
+}
+
+
+/* ════════════════════════════════════════════════
+   TABLES
+   ════════════════════════════════════════════════ */
+
+.tf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--tf-font-mono);
+  font-size: var(--tf-text-sm);
+  color: var(--tf-text-primary);
+}
+
+.tf-table thead {
+  position: sticky;
+  top: 0;
+  z-index: var(--tf-z-sticky);
+}
+
+.tf-table th {
+  padding: var(--tf-cell-padding-y) var(--tf-cell-padding-x);
+  text-align: left;
+  font-weight: var(--tf-weight-semibold);
+  letter-spacing: var(--tf-tracking-label);
+  text-transform: uppercase;
+  font-size: var(--tf-text-xs);
+  color: var(--tf-text-muted);
+  background: var(--tf-surface);
+  border-bottom: 1px solid var(--tf-border-strong);
+  white-space: nowrap;
+}
+
+.tf-table-cell {
+  padding: var(--tf-cell-padding-y) var(--tf-cell-padding-x);
+  font-size: var(--tf-text-sm);
+  border-bottom: 1px solid var(--tf-border-subtle);
+  vertical-align: middle;
+}
+
+.tf-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+/* ════════════════════════════════════════════════
+   INPUTS
+   ════════════════════════════════════════════════ */
+
+.tf-input {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: var(--tf-control-height-md);
+  background: var(--tf-void);
+  border: 1px solid var(--tf-steel-700);
+  color: var(--tf-text-primary);
+  border-radius: var(--tf-radius-sm);
+  padding: 0 var(--tf-space-4);
+  font-family: var(--tf-font-ui);
+  font-size: var(--tf-text-sm);
+  transition: border-color var(--tf-duration-fast) var(--tf-ease-standard),
+              box-shadow var(--tf-duration-fast) var(--tf-ease-standard);
+}
+
+.tf-input::placeholder {
+  color: var(--tf-text-muted);
+}
+
+/* Focus */
+.tf-input:focus {
+  outline: none;
+  border-color: var(--tf-blue);
+  box-shadow: 0 0 0 1px var(--tf-blue-dim), 0 0 8px rgba(75, 163, 242, 0.12);
+}
+
+/* Invalid */
+.tf-input--invalid,
+.tf-input:invalid {
+  border-color: var(--tf-red);
+  box-shadow: 0 0 0 1px var(--tf-red-dim);
+}
+
+/* Warning */
+.tf-input--warning {
+  border-color: var(--tf-amber);
+  box-shadow: 0 0 0 1px var(--tf-amber-dim);
+}
+
+/* Read-only */
+.tf-input--readonly,
+.tf-input:read-only {
+  background: var(--tf-steel-950);
+  border-color: var(--tf-steel-800);
+  color: var(--tf-text-muted);
+  cursor: default;
+}
+
+/* Dirty — amber left edge */
+.tf-input--dirty {
+  border-left: 3px solid var(--tf-amber);
+}
+
+/* Synced — green subtle dot indicator */
+.tf-input--synced {
+  border-left: 3px solid var(--tf-green-dim);
+}
+
+
+/* ════════════════════════════════════════════════
+   TOGGLE
+   ════════════════════════════════════════════════ */
+
+.tf-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tf-space-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tf-toggle__track {
+  width: 36px;
+  height: 18px;
+  border-radius: var(--tf-radius-sm);
+  background: var(--tf-steel-800);
+  border: 1px solid var(--tf-steel-700);
+  position: relative;
+  transition: background var(--tf-duration-fast) var(--tf-ease-standard),
+              border-color var(--tf-duration-fast) var(--tf-ease-standard);
+}
+
+.tf-toggle__thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--tf-radius-xs);
+  background: var(--tf-steel-300);
+  transition: transform var(--tf-duration-fast) var(--tf-ease-sharp),
+              background var(--tf-duration-fast) var(--tf-ease-standard);
+}
+
+/* Checked states */
+.tf-toggle input:checked + .tf-toggle__track {
+  background: var(--tf-green-dim);
+  border-color: var(--tf-green);
+}
+
+.tf-toggle input:checked + .tf-toggle__track .tf-toggle__thumb {
+  transform: translateX(18px);
+  background: var(--tf-green);
+}
+
+/* Warning active */
+.tf-toggle--warning input:checked + .tf-toggle__track {
+  background: var(--tf-amber-dim);
+  border-color: var(--tf-amber);
+}
+.tf-toggle--warning input:checked + .tf-toggle__track .tf-toggle__thumb {
+  background: var(--tf-amber);
+}
+
+/* Danger active */
+.tf-toggle--danger input:checked + .tf-toggle__track {
+  background: var(--tf-red-dim);
+  border-color: var(--tf-red);
+}
+.tf-toggle--danger input:checked + .tf-toggle__track .tf-toggle__thumb {
+  background: var(--tf-red);
+}
+
+/* Model active */
+.tf-toggle--model input:checked + .tf-toggle__track {
+  background: var(--tf-purple-dim);
+  border-color: var(--tf-purple);
+}
+.tf-toggle--model input:checked + .tf-toggle__track .tf-toggle__thumb {
+  background: var(--tf-purple);
+}
+
+/* Disabled */
+.tf-toggle input:disabled + .tf-toggle__track {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Hidden native checkbox */
+.tf-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* ════════════════════════════════════════════════
+   MODALS
+   ════════════════════════════════════════════════ */
+
+/* Modal backdrop */
+.tf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--tf-z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tf-space-6);
+}
+
+.tf-modal::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+/* Modal shell */
+.tf-modal__shell {
+  background: var(--tf-surface);
+  border: 1px solid var(--tf-border-normal);
+  border-radius: var(--tf-radius-lg);
+  box-shadow: var(--tf-shadow-lg);
+  max-width: 560px;
+  width: 100%;
+  max-height: calc(100vh - var(--tf-space-8));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tf-modal__header {
+  padding: var(--tf-space-4) var(--tf-space-5);
+  border-bottom: 1px solid var(--tf-border-normal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tf-space-3);
+}
+
+.tf-modal__title {
+  font-family: var(--tf-font-display);
+  font-size: var(--tf-text-lg);
+  font-weight: var(--tf-weight-bold);
+  letter-spacing: var(--tf-tracking-label);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tf-modal__body {
+  padding: var(--tf-space-5);
+  overflow-y: auto;
+  font-size: var(--tf-text-base);
+  line-height: var(--tf-line-normal);
+  color: var(--tf-text-primary);
+}
+
+.tf-modal__footer {
+  padding: var(--tf-space-4) var(--tf-space-5);
+  border-top: 1px solid var(--tf-border-normal);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--tf-space-3);
+}
+
+/* ── Modal Semantic Variants ── */
+
+/* Inspect — read-only inquiry */
+.tf-modal--inspect .tf-modal__shell {
+  border-color: var(--tf-blue-dim);
+}
+.tf-modal--inspect .tf-modal__title {
+  color: var(--tf-blue);
+}
+
+/* Confirm — staged/elevated action */
+.tf-modal--confirm .tf-modal__shell {
+  border-color: var(--tf-amber-dim);
+}
+.tf-modal--confirm .tf-modal__title {
+  color: var(--tf-amber);
+}
+
+/* Destructive — irreversible action */
+.tf-modal--destructive .tf-modal__shell {
+  border-color: var(--tf-red-dim);
+}
+.tf-modal--destructive .tf-modal__title {
+  color: var(--tf-red);
+}
+
+/* Authority — privilege escalation */
+.tf-modal--authority .tf-modal__shell {
+  border-color: var(--tf-gold-dim);
+}
+.tf-modal--authority .tf-modal__title {
+  color: var(--tf-gold);
+}
+
+/* Fault — critical failure */
+.tf-modal--fault .tf-modal__shell {
+  border-color: var(--tf-red-dim);
+}
+.tf-modal--fault .tf-modal__title {
+  color: var(--tf-red);
+}
+
+
+/* ════════════════════════════════════════════════
+   AUTHORITY BADGE
+   ════════════════════════════════════════════════ */
+
+.tf-authority-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 7px;
+  border: 1px solid var(--tf-gold-dim);
+  color: var(--tf-gold);
+  background: var(--tf-gold-dark);
+  border-radius: var(--tf-radius-sm);
+  font-family: var(--tf-font-mono);
+  font-size: var(--tf-text-xs);
+  font-weight: var(--tf-weight-bold);
+  letter-spacing: var(--tf-tracking-command);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+/* ════════════════════════════════════════════════
+   STATE BADGE (compact operational state marker)
+   ════════════════════════════════════════════════ */
+
+.tf-state-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tf-space-1);
+  height: 16px;
+  padding: 0 var(--tf-space-2);
+  border-radius: var(--tf-radius-xs);
+  font-family: var(--tf-font-mono);
+  font-size: var(--tf-text-2xs);
+  font-weight: var(--tf-weight-bold);
+  letter-spacing: var(--tf-tracking-micro);
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════════════════
+   PANEL SEMANTIC VARIANTS
+   ════════════════════════════════════════════════ */
+
+.tf-panel--command {
+  border-left: 2px solid var(--tf-green-dim);
+}
+.tf-panel--inspect {
+  border-left: 2px solid var(--tf-blue-dim);
+}
+.tf-panel--trace {
+  border-left: 2px solid var(--tf-cyan-dim);
+}
+.tf-panel--policy {
+  border-left: 2px solid var(--tf-gold-dim);
+}
+.tf-panel--fault {
+  border-left: 2px solid var(--tf-red-dim);
+}
+.tf-panel--staged {
+  border-left: 2px solid var(--tf-amber-dim);
+}
+.tf-panel--model {
+  border-left: 2px solid var(--tf-purple-dim);
+}

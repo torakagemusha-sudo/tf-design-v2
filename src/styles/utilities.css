@@ -1,0 +1,162 @@
+/**
+ * Torafirma Design System v2 — Utility Visual Effects
+ * From Section 17 (Part 1) and Section 28 (Part 2)
+ * Imports tokens.css for base color definitions.
+ */
+
+@import url("./tokens.css");
+
+/* ────────────────────────────────────────────────
+   1. Grid Backgrounds
+   ──────────────────────────────────────────────── */
+
+/* Tactical Grid — green grid overlay */
+.tactical-grid {
+  background-color: var(--tf-black);
+  background-image:
+    linear-gradient(rgba(54, 212, 123, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 212, 123, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Analysis Grid — blue grid overlay */
+.analysis-grid {
+  background-color: var(--tf-blue-dark);
+  background-image:
+    linear-gradient(rgba(75, 163, 242, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 163, 242, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ────────────────────────────────────────────────
+   2. Scanline Overlay
+   ──────────────────────────────────────────────── */
+
+.scanline-overlay {
+  position: relative;
+}
+
+.scanline-overlay::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+/* ────────────────────────────────────────────────
+   3. Semantic Edge Markers
+   ──────────────────────────────────────────────── */
+
+/* Active Command Edge — green left edge + inset glow */
+.active-command {
+  border-left: 2px solid var(--tf-green);
+  box-shadow: inset 3px 0 12px rgba(54, 212, 123, 0.12);
+}
+
+/* Fault Edge — red left edge + inset glow */
+.fault-edge {
+  border-left: 2px solid var(--tf-red);
+  box-shadow: inset 3px 0 12px rgba(242, 75, 75, 0.16);
+}
+
+/* Staged Edge — amber left edge + inset glow */
+.staged-edge {
+  border-left: 2px solid var(--tf-amber);
+  box-shadow: inset 3px 0 12px rgba(242, 184, 75, 0.12);
+}
+
+/* ────────────────────────────────────────────────
+   4. Clipped Corner Geometry
+   ──────────────────────────────────────────────── */
+
+.clipped-panel {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+}
+
+/* ────────────────────────────────────────────────
+   5. Terminal Cursor
+   ──────────────────────────────────────────────── */
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--tf-green);
+  animation: tf-cursor-pulse 1s steps(1) infinite;
+}
+
+@keyframes tf-cursor-pulse {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ────────────────────────────────────────────────
+   6. Focus States
+   ──────────────────────────────────────────────── */
+
+/* Standard focus — blue outline */
+.tf-focus:focus-visible {
+  outline: 1px solid var(--tf-blue);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(75, 163, 242, 0.18);
+}
+
+/* Danger focus — red outline for destructive controls */
+.tf-focus-danger:focus-visible {
+  outline: 1px solid var(--tf-red);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(242, 75, 75, 0.18);
+}
+
+/* ────────────────────────────────────────────────
+   7. Semantic Glow Effects
+   ──────────────────────────────────────────────── */
+
+/* Execute / Run glow */
+.glow-run {
+  box-shadow: var(--tf-glow-run);
+}
+
+/* Danger / Fault glow */
+.glow-danger {
+  box-shadow: var(--tf-glow-danger);
+}
+
+/* Warning / Staged glow */
+.glow-warning {
+  box-shadow: var(--tf-glow-warning);
+}
+
+/* Info / Inspect glow */
+.glow-info {
+  box-shadow: var(--tf-glow-info);
+}
+
+/* Stream / Live data glow */
+.glow-stream {
+  box-shadow: var(--tf-glow-stream);
+}
+
+/* Model / AI glow */
+.glow-model {
+  box-shadow: var(--tf-glow-model);
+}
+
+/* Authority / Signature glow */
+.glow-authority {
+  box-shadow: var(--tf-glow-authority);
+}

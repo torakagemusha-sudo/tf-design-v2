@@ -1,0 +1,83 @@
+{
+  "name": "@torakagemusha-sudo/tf-design-v2",
+  "version": "0.2.0",
+  "description": "Torafirma Design System v2 — expanded foundation with 12 component families, state machines, layouts, rules, hooks, and utilities for operational interfaces.",
+  "license": "MIT",
+  "author": "Torafirma Engineering",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torakagemusha-sudo/tf-design-v2.git"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "exports": {
+    "./styles": {
+      "import": "./src/styles/tokens.css",
+      "require": "./src/styles/tokens.css"
+    },
+    "./tokens": {
+      "import": "./src/styles/tokens.css",
+      "require": "./src/styles/tokens.css"
+    },
+    "./tailwind": {
+      "import": "./src/styles/tailwind.config.js",
+      "require": "./src/styles/tailwind.config.js"
+    },
+    "./types": {
+      "import": "./src/types/index.d.ts",
+      "require": "./src/types/index.d.ts"
+    },
+    "./components": {
+      "import": "./src/components/index.ts",
+      "require": "./src/components/index.ts"
+    },
+    "./hooks": {
+      "import": "./src/hooks/index.ts",
+      "require": "./src/hooks/index.ts"
+    },
+    "./utils": {
+      "import": "./src/utils/index.ts",
+      "require": "./src/utils/index.ts"
+    },
+    "./state-machines": {
+      "import": "./src/state-machines/index.ts",
+      "require": "./src/state-machines/index.ts"
+    },
+    "./layouts": {
+      "import": "./src/layouts/index.ts",
+      "require": "./src/layouts/index.ts"
+    },
+    "./rules": {
+      "import": "./src/rules/index.ts",
+      "require": "./src/rules/index.ts"
+    }
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "tailwindcss": ">=3.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && echo 'Build complete'",
+    "typecheck": "tsc --noEmit"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/torakagemusha-sudo/tf-design-v2/issues"
+  },
+  "homepage": "https://github.com/torakagemusha-sudo/tf-design-v2#readme"
+}

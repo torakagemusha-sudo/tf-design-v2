@@ -1,0 +1,134 @@
+/**
+ * Torafirma Design System v2 — Theme Variables
+ * Canonical themes from Section 6 (Part 1)
+ * Imports tokens.css for base color definitions.
+ */
+
+@import url("./tokens.css");
+
+/* ────────────────────────────────────────────────
+   THEME 1 — Command Dark (default)
+   Mood: severe, operational, controlled, general-purpose
+   ──────────────────────────────────────────────── */
+.theme-command-dark {
+  --tf-theme-bg: #050608;
+  --tf-theme-main-panels: #0E1318;
+  --tf-theme-raised-panels: #141A20;
+  --tf-theme-borders: #26323C;
+  --tf-theme-primary-text: #D6E0E6;
+  --tf-theme-muted-text: #7F8C96;
+  --tf-theme-accent: var(--tf-green);
+  --tf-theme-accent-secondary: var(--tf-cyan);
+  --tf-theme-warning: var(--tf-amber);
+  --tf-theme-execute: var(--tf-green);
+
+  /* Derived surface aliases for this theme */
+  --tf-bg: var(--tf-theme-bg);
+  --tf-surface: var(--tf-theme-main-panels);
+  --tf-surface-raised: var(--tf-theme-raised-panels);
+  --tf-border: var(--tf-theme-borders);
+  --tf-text-primary: var(--tf-theme-primary-text);
+  --tf-text-muted: var(--tf-theme-muted-text);
+}
+
+/* ────────────────────────────────────────────────
+   THEME 2 — Field Green (tactical)
+   Mood: military, field-ready, radar-like,
+         command tent / operations room
+   ──────────────────────────────────────────────── */
+.theme-field-green {
+  --tf-theme-bg: #030705;
+  --tf-theme-main-panels: #07120C;
+  --tf-theme-raised-panels: #0B1A12;
+  --tf-theme-borders: #1E3A2A;
+  --tf-theme-primary-text: #CFE8D7;
+  --tf-theme-muted-text: #5A7A68;
+  --tf-theme-accent: #36D47B;
+  --tf-theme-accent-secondary: #76FF9F;
+  --tf-theme-warning: #F2B84B;
+  --tf-theme-execute: #36D47B;
+
+  /* Derived surface aliases */
+  --tf-bg: var(--tf-theme-bg);
+  --tf-surface: var(--tf-theme-main-panels);
+  --tf-surface-raised: var(--tf-theme-raised-panels);
+  --tf-border: var(--tf-theme-borders);
+  --tf-text-primary: var(--tf-theme-primary-text);
+  --tf-text-muted: var(--tf-theme-muted-text);
+}
+
+/* ────────────────────────────────────────────────
+   THEME 3 — Deep Blue (analysis)
+   Mood: analytic, cold, intelligence-grade, cartographic
+   ──────────────────────────────────────────────── */
+.theme-deep-blue {
+  --tf-theme-bg: #05080D;
+  --tf-theme-main-panels: #07111F;
+  --tf-theme-raised-panels: #0E1A2A;
+  --tf-theme-borders: #263B52;
+  --tf-theme-primary-text: #D8E6F2;
+  --tf-theme-muted-text: #6E8AA8;
+  --tf-theme-accent: #4BA3F2;
+  --tf-theme-accent-secondary: #35D0E3;
+  --tf-theme-warning: var(--tf-amber);
+  --tf-theme-execute: var(--tf-green);
+
+  /* Derived surface aliases */
+  --tf-bg: var(--tf-theme-bg);
+  --tf-surface: var(--tf-theme-main-panels);
+  --tf-surface-raised: var(--tf-theme-raised-panels);
+  --tf-border: var(--tf-theme-borders);
+  --tf-text-primary: var(--tf-theme-primary-text);
+  --tf-text-muted: var(--tf-theme-muted-text);
+}
+
+/* ────────────────────────────────────────────────
+   THEME 4 — Forge (graphite amber)
+   Mood: foundry, industrial, compiler console,
+         metal and heat
+   ──────────────────────────────────────────────── */
+.theme-forge {
+  --tf-theme-bg: #070707;
+  --tf-theme-main-panels: #111111;
+  --tf-theme-raised-panels: #191919;
+  --tf-theme-borders: #33302A;
+  --tf-theme-primary-text: #E0DDD6;
+  --tf-theme-muted-text: #8A8580;
+  --tf-theme-accent: #F2B84B;
+  --tf-theme-accent-secondary: #D6A84F;
+  --tf-theme-warning: #F2B84B;
+  --tf-theme-execute: #36D47B;
+
+  /* Derived surface aliases */
+  --tf-bg: var(--tf-theme-bg);
+  --tf-surface: var(--tf-theme-main-panels);
+  --tf-surface-raised: var(--tf-theme-raised-panels);
+  --tf-border: var(--tf-theme-borders);
+  --tf-text-primary: var(--tf-theme-primary-text);
+  --tf-text-muted: var(--tf-theme-muted-text);
+}
+
+/* ────────────────────────────────────────────────
+   THEME 5 — Redline (threat)
+   Mood: critical, constrained, high-alert, fail-closed
+   ──────────────────────────────────────────────── */
+.theme-redline {
+  --tf-theme-bg: #080303;
+  --tf-theme-main-panels: #130707;
+  --tf-theme-raised-panels: #1C0B0B;
+  --tf-theme-borders: #4A1F1F;
+  --tf-theme-primary-text: #F1DCDC;
+  --tf-theme-muted-text: #A88282;
+  --tf-theme-accent: #F24B4B;
+  --tf-theme-accent-secondary: #B00020;
+  --tf-theme-warning: #F2B84B;
+  --tf-theme-execute: #36D47B;
+
+  /* Derived surface aliases */
+  --tf-bg: var(--tf-theme-bg);
+  --tf-surface: var(--tf-theme-main-panels);
+  --tf-surface-raised: var(--tf-theme-raised-panels);
+  --tf-border: var(--tf-theme-borders);
+  --tf-text-primary: var(--tf-theme-primary-text);
+  --tf-text-muted: var(--tf-theme-muted-text);
+}

@@ -1,0 +1,446 @@
+/**
+ * Torafirma Design System v2 — Design Tokens
+ * Canonical CSS variable set from Section 21 (Part 2)
+ * Expanded for 12 component families, state machines, layouts, and rules.
+ * Base infrastructure for all Torafirma products.
+ */
+
+:root {
+  /* ════════════════════════════════════════════════
+     ROOT SURFACES
+     ════════════════════════════════════════════════ */
+  --tf-black: #050608;
+  --tf-void: #080B0F;
+  --tf-charcoal: #0E1318;
+  --tf-graphite: #141A20;
+  --tf-panel: #10161C;
+  --tf-panel-raised: #171F27;
+  --tf-panel-inset: #090D11;
+
+  /* ════════════════════════════════════════════════
+     STEEL SCALE
+     ════════════════════════════════════════════════ */
+  --tf-steel-950: #0A0E12;
+  --tf-steel-900: #1A222A;
+  --tf-steel-800: #222C35;
+  --tf-steel-700: #2D3A45;
+  --tf-steel-600: #40505C;
+  --tf-steel-500: #5F6E7A;
+  --tf-steel-400: #7C8A95;
+  --tf-steel-300: #9BAAB5;
+  --tf-steel-200: #BCC8D0;
+  --tf-steel-100: #D6E0E6;
+  --tf-white: #F4F7F8;
+
+  /* ════════════════════════════════════════════════
+     OPERATIONAL SEMANTICS
+     ════════════════════════════════════════════════ */
+  --tf-green: #36D47B;
+  --tf-green-dim: #1F7F4D;
+  --tf-green-dark: #0B1A12;
+  --tf-green-glow: rgba(54, 212, 123, 0.24);
+
+  --tf-red: #F24B4B;
+  --tf-red-dim: #8F2C2C;
+  --tf-red-dark: #1C0B0B;
+  --tf-red-critical: #B00020;
+  --tf-red-glow: rgba(242, 75, 75, 0.24);
+
+  --tf-amber: #F2B84B;
+  --tf-amber-dim: #9E6F24;
+  --tf-amber-dark: #1D1608;
+  --tf-amber-glow: rgba(242, 184, 75, 0.22);
+
+  --tf-orange: #F07A2A;
+  --tf-orange-dim: #984B1A;
+  --tf-orange-dark: #1B0D05;
+  --tf-orange-glow: rgba(240, 122, 42, 0.22);
+
+  --tf-blue: #4BA3F2;
+  --tf-blue-dim: #2D6394;
+  --tf-blue-dark: #07111F;
+  --tf-blue-glow: rgba(75, 163, 242, 0.22);
+
+  --tf-cyan: #35D0E3;
+  --tf-cyan-dim: #1B7783;
+  --tf-cyan-dark: #041417;
+  --tf-cyan-glow: rgba(53, 208, 227, 0.22);
+
+  --tf-purple: #A678F2;
+  --tf-purple-dim: #5F4A8B;
+  --tf-purple-dark: #110B1F;
+  --tf-purple-glow: rgba(166, 120, 242, 0.22);
+
+  --tf-gold: #D6A84F;
+  --tf-gold-dim: #8A6A30;
+  --tf-gold-dark: #1A1407;
+  --tf-gold-glow: rgba(214, 168, 79, 0.24);
+
+  --tf-slate: #6E7F8D;
+  --tf-slate-dim: #46535D;
+  --tf-slate-dark: #10161B;
+
+  /* ════════════════════════════════════════════════
+     SEMANTIC ALIASES
+     ════════════════════════════════════════════════ */
+  --tf-bg: var(--tf-black);
+  --tf-bg-elevated: var(--tf-void);
+  --tf-surface: var(--tf-charcoal);
+  --tf-surface-raised: var(--tf-graphite);
+  --tf-surface-inset: var(--tf-panel-inset);
+
+  --tf-text-primary: var(--tf-steel-100);
+  --tf-text-secondary: var(--tf-steel-300);
+  --tf-text-muted: var(--tf-steel-500);
+  --tf-text-disabled: var(--tf-steel-600);
+  --tf-text-inverse: var(--tf-black);
+
+  --tf-action-run: var(--tf-green);
+  --tf-action-stop: var(--tf-red);
+  --tf-action-review: var(--tf-amber);
+  --tf-action-inspect: var(--tf-blue);
+  --tf-action-stream: var(--tf-cyan);
+  --tf-action-model: var(--tf-purple);
+  --tf-action-authority: var(--tf-gold);
+  --tf-action-neutral: var(--tf-slate);
+
+  /* ════════════════════════════════════════════════
+     TYPOGRAPHY
+     ════════════════════════════════════════════════ */
+  --tf-font-ui: Inter, "IBM Plex Sans", system-ui, sans-serif;
+  --tf-font-condensed: "Roboto Condensed", "DIN 2014", Inter, system-ui, sans-serif;
+  --tf-font-mono: "JetBrains Mono", "IBM Plex Mono", "Roboto Mono", ui-monospace, monospace;
+  --tf-font-display: Rajdhani, Oxanium, Inter, system-ui, sans-serif;
+
+  --tf-text-2xs: 10px;
+  --tf-text-xs: 11px;
+  --tf-text-sm: 12px;
+  --tf-text-base: 13px;
+  --tf-text-md: 14px;
+  --tf-text-lg: 18px;
+  --tf-text-xl: 22px;
+  --tf-text-2xl: 28px;
+  --tf-text-display: 40px;
+
+  --tf-line-tight: 1.1;
+  --tf-line-compact: 1.25;
+  --tf-line-normal: 1.45;
+  --tf-line-readable: 1.65;
+
+  --tf-weight-regular: 400;
+  --tf-weight-medium: 500;
+  --tf-weight-semibold: 600;
+  --tf-weight-bold: 700;
+  --tf-weight-black: 800;
+
+  --tf-tracking-tight: -0.01em;
+  --tf-tracking-normal: 0;
+  --tf-tracking-label: 0.04em;
+  --tf-tracking-command: 0.06em;
+  --tf-tracking-micro: 0.08em;
+
+  /* ════════════════════════════════════════════════
+     SPACING
+     ════════════════════════════════════════════════ */
+  --tf-space-0: 0px;
+  --tf-space-1: 2px;
+  --tf-space-2: 4px;
+  --tf-space-3: 6px;
+  --tf-space-4: 8px;
+  --tf-space-5: 12px;
+  --tf-space-6: 16px;
+  --tf-space-7: 24px;
+  --tf-space-8: 32px;
+  --tf-space-9: 48px;
+  --tf-space-10: 64px;
+
+  /* v2: Mobile spacing tokens */
+  --tf-space-mobile-1: 4px;
+  --tf-space-mobile-2: 8px;
+  --tf-space-mobile-3: 12px;
+  --tf-space-mobile-4: 16px;
+  --tf-space-mobile-5: 20px;
+  --tf-space-mobile-6: 24px;
+  --tf-space-mobile-8: 32px;
+
+  --tf-control-height-xs: 22px;
+  --tf-control-height-sm: 26px;
+  --tf-control-height-md: 30px;
+  --tf-control-height-lg: 36px;
+  --tf-control-height-xl: 44px;
+
+  /* v2: Mobile control heights */
+  --tf-control-height-mobile-sm: 40px;
+  --tf-control-height-mobile-md: 44px;
+  --tf-control-height-mobile-lg: 48px;
+
+  --tf-panel-padding-compact: 8px;
+  --tf-panel-padding: 12px;
+  --tf-panel-padding-loose: 16px;
+
+  /* v2: Panel padding for mobile */
+  --tf-panel-padding-mobile: 16px;
+
+  --tf-cell-padding-x: 8px;
+  --tf-cell-padding-y: 5px;
+
+  --tf-button-padding-x: 10px;
+  --tf-button-padding-y: 6px;
+
+  /* ════════════════════════════════════════════════
+     RADIUS
+     ════════════════════════════════════════════════ */
+  --tf-radius-none: 0px;
+  --tf-radius-xs: 1px;
+  --tf-radius-sm: 2px;
+  --tf-radius-md: 4px;
+  --tf-radius-lg: 6px;
+  --tf-radius-xl: 8px;
+
+  /* ════════════════════════════════════════════════
+     BORDERS
+     ════════════════════════════════════════════════ */
+  --tf-border-subtle: #1C2630;
+  --tf-border-normal: #26323C;
+  --tf-border-strong: #51616D;
+
+  --tf-border-run: var(--tf-green-dim);
+  --tf-border-run-strong: var(--tf-green);
+
+  --tf-border-danger: var(--tf-red-dim);
+  --tf-border-danger-strong: var(--tf-red);
+
+  --tf-border-warning: var(--tf-amber-dim);
+  --tf-border-warning-strong: var(--tf-amber);
+
+  --tf-border-instability: var(--tf-orange-dim);
+  --tf-border-instability-strong: var(--tf-orange);
+
+  --tf-border-info: var(--tf-blue-dim);
+  --tf-border-info-strong: var(--tf-blue);
+
+  --tf-border-stream: var(--tf-cyan-dim);
+  --tf-border-stream-strong: var(--tf-cyan);
+
+  --tf-border-model: var(--tf-purple-dim);
+  --tf-border-model-strong: var(--tf-purple);
+
+  --tf-border-authority: var(--tf-gold-dim);
+  --tf-border-authority-strong: var(--tf-gold);
+
+  /* ════════════════════════════════════════════════
+     SHADOWS, GLOW, ELEVATION
+     ════════════════════════════════════════════════ */
+  --tf-shadow-none: none;
+  --tf-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --tf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --tf-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+  /* v2: Extra-large shadow for modals and drawers */
+  --tf-shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.65);
+
+  --tf-glow-run: 0 0 0 1px var(--tf-green), 0 0 18px var(--tf-green-glow);
+  --tf-glow-danger: 0 0 0 1px var(--tf-red), 0 0 18px var(--tf-red-glow);
+  --tf-glow-warning: 0 0 0 1px var(--tf-amber), 0 0 18px var(--tf-amber-glow);
+  --tf-glow-info: 0 0 0 1px var(--tf-blue), 0 0 18px var(--tf-blue-glow);
+  --tf-glow-stream: 0 0 0 1px var(--tf-cyan), 0 0 18px var(--tf-cyan-glow);
+  --tf-glow-model: 0 0 0 1px var(--tf-purple), 0 0 18px var(--tf-purple-glow);
+  --tf-glow-authority: 0 0 0 1px var(--tf-gold), 0 0 18px var(--tf-gold-glow);
+
+  /* v2: Additional glow variants for 12 component families */
+  --tf-glow-ai: 0 0 0 1px var(--tf-purple), 0 0 24px rgba(166, 120, 242, 0.28), 0 0 48px rgba(166, 120, 242, 0.12);
+  --tf-glow-ai-soft: 0 0 0 1px var(--tf-purple-dim), 0 0 12px rgba(166, 120, 242, 0.16);
+  --tf-glow-stream-soft: 0 0 0 1px var(--tf-cyan-dim), 0 0 12px rgba(53, 208, 227, 0.16);
+  --tf-glow-stream-pulse: 0 0 0 1px var(--tf-cyan), 0 0 18px rgba(53, 208, 227, 0.28), 0 0 36px rgba(53, 208, 227, 0.14);
+  --tf-glow-model-intense: 0 0 0 1px var(--tf-purple), 0 0 24px rgba(166, 120, 242, 0.32), 0 0 56px rgba(166, 120, 242, 0.16);
+  --tf-glow-success: 0 0 0 1px var(--tf-green), 0 0 18px var(--tf-green-glow);
+  --tf-glow-fault: 0 0 0 1px var(--tf-red), 0 0 18px var(--tf-red-glow), 0 0 36px rgba(242, 75, 75, 0.12);
+  --tf-glow-locked: 0 0 0 1px var(--tf-gold), 0 0 18px var(--tf-gold-glow);
+
+  /* ════════════════════════════════════════════════
+     MOTION
+     ════════════════════════════════════════════════ */
+  --tf-duration-instant: 60ms;
+  --tf-duration-fast: 100ms;
+  --tf-duration-normal: 160ms;
+  --tf-duration-panel: 220ms;
+  --tf-duration-slow: 360ms;
+
+  /* v2: Extended motion durations */
+  --tf-duration-enter: 280ms;
+  --tf-duration-exit: 200ms;
+  --tf-duration-complex: 480ms;
+  --tf-duration-stagger: 80ms;
+
+  --tf-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --tf-ease-sharp: cubic-bezier(0.4, 0, 0.2, 1);
+  --tf-ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --tf-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* v2: Additional motion curves for 12 component families */
+  --tf-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --tf-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --tf-ease-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  --tf-ease-dramatic: cubic-bezier(0.87, 0, 0.13, 1);
+  --tf-ease-ai-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --tf-ease-stream-flow: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ════════════════════════════════════════════════
+     Z-INDEX
+     ════════════════════════════════════════════════ */
+  --tf-z-base: 0;
+  --tf-z-panel: 10;
+  --tf-z-sticky: 20;
+  --tf-z-dropdown: 40;
+  --tf-z-command-palette: 60;
+  --tf-z-modal-backdrop: 80;
+  --tf-z-modal: 90;
+  --tf-z-critical-alert: 100;
+  --tf-z-breaker: 110;
+
+  /* v2: Additional z-index layers */
+  --tf-z-toast: 120;
+  --tf-z-drawer: 95;
+  --tf-z-popover: 45;
+  --tf-z-tooltip: 50;
+
+  /* ════════════════════════════════════════════════
+     v2: COMPONENT FAMILY TOKENS
+     All 12 component families with family-specific
+     color accents, spacing, and behavior.
+     ════════════════════════════════════════════════ */
+
+  /* ── Family 1: Action & Command ── */
+  --tf-family-action-accent: var(--tf-green);
+  --tf-family-action-accent-dim: var(--tf-green-dim);
+  --tf-family-action-bg: var(--tf-green-dark);
+  --tf-family-action-glow: var(--tf-glow-run);
+  --tf-family-action-border: var(--tf-border-run);
+
+  /* ── Family 2: Feedback & Status ── */
+  --tf-family-feedback-info: var(--tf-blue);
+  --tf-family-feedback-success: var(--tf-green);
+  --tf-family-feedback-warning: var(--tf-amber);
+  --tf-family-feedback-error: var(--tf-red);
+  --tf-family-feedback-critical: var(--tf-red-critical);
+
+  /* ── Family 3: Input & Control ── */
+  --tf-family-input-border: var(--tf-steel-700);
+  --tf-family-input-border-focus: var(--tf-blue);
+  --tf-family-input-bg: var(--tf-void);
+  --tf-family-input-bg-readonly: var(--tf-steel-950);
+
+  /* ── Family 4: Navigation ── */
+  --tf-family-nav-border: var(--tf-border-subtle);
+  --tf-family-nav-bg: var(--tf-charcoal);
+  --tf-family-nav-bg-hover: var(--tf-steel-900);
+  --tf-family-nav-accent: var(--tf-cyan);
+
+  /* ── Family 5: Data Display ── */
+  --tf-family-data-border: var(--tf-border-subtle);
+  --tf-family-data-header-bg: var(--tf-surface);
+  --tf-family-data-row-hover: rgba(255, 255, 255, 0.03);
+  --tf-family-data-cell-padding-x: 8px;
+  --tf-family-data-cell-padding-y: 5px;
+
+  /* ── Family 6: Overlay ── */
+  --tf-family-overlay-backdrop: rgba(0, 0, 0, 0.65);
+  --tf-family-overlay-bg: var(--tf-surface);
+  --tf-family-overlay-border: var(--tf-border-normal);
+  --tf-family-overlay-shadow: var(--tf-shadow-lg);
+
+  /* ── Family 7: Authority & Permission ── */
+  --tf-family-authority-accent: var(--tf-gold);
+  --tf-family-authority-accent-dim: var(--tf-gold-dim);
+  --tf-family-authority-bg: var(--tf-gold-dark);
+  --tf-family-authority-glow: var(--tf-glow-authority);
+  --tf-family-authority-border: var(--tf-border-authority);
+
+  /* ── Family 8: AI & Model ── */
+  --tf-family-ai-accent: var(--tf-purple);
+  --tf-family-ai-accent-dim: var(--tf-purple-dim);
+  --tf-family-ai-accent-soft: #7C5FBF;
+  --tf-family-ai-bg: var(--tf-purple-dark);
+  --tf-family-ai-glow: var(--tf-glow-ai);
+  --tf-family-ai-glow-soft: var(--tf-glow-ai-soft);
+  --tf-family-ai-glow-intense: var(--tf-glow-model-intense);
+  --tf-family-ai-border: var(--tf-border-model);
+
+  /* ── Family 9: Stream & Live ── */
+  --tf-family-stream-accent: var(--tf-cyan);
+  --tf-family-stream-accent-dim: var(--tf-cyan-dim);
+  --tf-family-stream-bg: var(--tf-cyan-dark);
+  --tf-family-stream-glow: var(--tf-glow-stream);
+  --tf-family-stream-glow-soft: var(--tf-glow-stream-soft);
+  --tf-family-stream-glow-pulse: var(--tf-glow-stream-pulse);
+  --tf-family-stream-border: var(--tf-border-stream);
+
+  /* ── Family 10: Safety & Circuit ── */
+  --tf-family-safety-stop: var(--tf-red);
+  --tf-family-safety-stop-dim: var(--tf-red-dim);
+  --tf-family-safety-stop-bg: var(--tf-red-dark);
+  --tf-family-safety-armed: var(--tf-amber);
+  --tf-family-safety-armed-bg: var(--tf-amber-dark);
+  --tf-family-safety-safe: var(--tf-green);
+
+  /* ── Family 11: Trace & Audit ── */
+  --tf-family-trace-accent: var(--tf-cyan);
+  --tf-family-trace-accent-dim: var(--tf-cyan-dim);
+  --tf-family-trace-bg: var(--tf-cyan-dark);
+  --tf-family-trace-border: var(--tf-border-stream);
+
+  /* ── Family 12: Workspace & Layout ── */
+  --tf-family-layout-bg: var(--tf-black);
+  --tf-family-layout-panel: var(--tf-charcoal);
+  --tf-family-layout-panel-raised: var(--tf-graphite);
+  --tf-family-layout-border: var(--tf-border-normal);
+  --tf-family-layout-gap: var(--tf-space-1);
+  --tf-family-layout-header-height: 36px;
+
+  /* ════════════════════════════════════════════════
+     v2: LAYOUT TOKENS
+     Grid, panel, and workspace-specific tokens.
+     ════════════════════════════════════════════════ */
+
+  --tf-layout-sidebar-width: 240px;
+  --tf-layout-sidebar-collapsed: 48px;
+  --tf-layout-topbar-height: 40px;
+  --tf-layout-footer-height: 28px;
+  --tf-layout-panel-min-width: 280px;
+  --tf-layout-panel-max-width: 480px;
+  --tf-layout-drawer-width: 360px;
+  --tf-layout-toast-max-width: 400px;
+  --tf-layout-command-palette-width: 640px;
+
+  /* ════════════════════════════════════════════════
+     v2: STATE MACHINE TOKENS
+     Visual tokens for state machine representations.
+     ════════════════════════════════════════════════ */
+
+  --tf-state-idle-fill: var(--tf-charcoal);
+  --tf-state-idle-border: var(--tf-steel-700);
+  --tf-state-ready-fill: var(--tf-green-dark);
+  --tf-state-ready-border: var(--tf-green-dim);
+  --tf-state-running-fill: var(--tf-cyan-dark);
+  --tf-state-running-border: var(--tf-cyan-dim);
+  --tf-state-complete-fill: var(--tf-green-dark);
+  --tf-state-complete-border: var(--tf-green);
+  --tf-state-blocked-fill: var(--tf-red-dark);
+  --tf-state-blocked-border: var(--tf-red-dim);
+  --tf-state-faulted-fill: var(--tf-red-dark);
+  --tf-state-faulted-border: var(--tf-red);
+  --tf-state-locked-fill: var(--tf-gold-dark);
+  --tf-state-locked-border: var(--tf-gold-dim);
+  --tf-state-staged-fill: var(--tf-amber-dark);
+  --tf-state-staged-border: var(--tf-amber-dim);
+  --tf-state-degraded-fill: var(--tf-orange-dark);
+  --tf-state-degraded-border: var(--tf-orange-dim);
+  --tf-state-simulated-fill: var(--tf-blue-dark);
+  --tf-state-simulated-border: var(--tf-blue-dim);
+
+  /* State transition arrow colors */
+  --tf-transition-auto: var(--tf-steel-500);
+  --tf-transition-user: var(--tf-blue);
+  --tf-transition-system: var(--tf-cyan);
+  --tf-transition-guard: var(--tf-gold);
+}
