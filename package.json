@@ -9,15 +9,22 @@
     "url": "git+https://github.com/torakagemusha-sudo/tf-design-v2.git"
   },
   "files": [
-    "dist",
     "src",
     "README.md"
   ],
   "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
     "./styles": {
       "import": "./src/styles/tokens.css",
       "require": "./src/styles/tokens.css"
     },
+    "./styles/tokens.css": "./src/styles/tokens.css",
+    "./styles/themes.css": "./src/styles/themes.css",
+    "./styles/components.css": "./src/styles/components.css",
+    "./styles/utilities.css": "./src/styles/utilities.css",
     "./tokens": {
       "import": "./src/styles/tokens.css",
       "require": "./src/styles/tokens.css"
@@ -70,12 +77,14 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build": "tsc --noEmit && echo 'Build complete'",
+    "build": "tsc --noEmit && echo 'Source package validated'",
     "typecheck": "tsc --noEmit"
   },
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/torakagemusha-sudo/tf-design-v2/issues"
   },

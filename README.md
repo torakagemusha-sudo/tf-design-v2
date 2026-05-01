@@ -9,7 +9,7 @@ A design system for dark, dense, engineer-level interfaces with a militarized te
 ## Installation
 
 ```bash
-npm install @torafirma/design-system-v2
+npm install @torakagemusha-sudo/tf-design-v2
 ```
 
 ## Peer Dependencies
@@ -18,22 +18,26 @@ npm install @torafirma/design-system-v2
 npm install react react-dom tailwindcss
 ```
 
+## Build Compatibility
+
+This package currently publishes source-first ESM/TypeScript entrypoints. Your app/toolchain should support TypeScript in dependencies (for example Vite, Next.js, or other TS-aware bundlers).
+
 ## Quick Start
 
 ### 1. Import the CSS tokens
 
 ```tsx
-import '@torafirma/design-system-v2/styles/tokens.css';
-import '@torafirma/design-system-v2/styles/themes.css';
-import '@torafirma/design-system-v2/styles/components.css';
-import '@torafirma/design-system-v2/styles/utilities.css';
+import '@torakagemusha-sudo/tf-design-v2/styles/tokens.css';
+import '@torakagemusha-sudo/tf-design-v2/styles/themes.css';
+import '@torakagemusha-sudo/tf-design-v2/styles/components.css';
+import '@torakagemusha-sudo/tf-design-v2/styles/utilities.css';
 ```
 
 ### 2. Configure Tailwind
 
 ```js
 // tailwind.config.js
-import tfConfig from '@torafirma/design-system-v2/tailwind';
+import tfConfig from '@torakagemusha-sudo/tf-design-v2/tailwind';
 
 export default {
   presets: [tfConfig],
@@ -52,7 +56,7 @@ export default {
 ### 4. Use components
 
 ```tsx
-import { CommandButton } from '@torafirma/design-system-v2';
+import { CommandButton } from '@torakagemusha-sudo/tf-design-v2';
 
 <CommandButton
   command={{
@@ -70,7 +74,7 @@ import { CommandButton } from '@torafirma/design-system-v2';
 ### 5. Use hooks (v2)
 
 ```tsx
-import { useAuthority, useComponentState, useTheme, useCommand } from '@torafirma/design-system-v2';
+import { useAuthority, useComponentState, useTheme, useCommand } from '@torakagemusha-sudo/tf-design-v2';
 
 function MyComponent() {
   const { authority, hasRequiredAuthority } = useAuthority('AUTH_3_EXECUTE');
@@ -84,7 +88,7 @@ function MyComponent() {
 ### 6. Use utilities (v2)
 
 ```tsx
-import { generateTraceId, getStateColor, classNames, deepMerge } from '@torafirma/design-system-v2';
+import { generateTraceId, getStateColor, classNames, deepMerge } from '@torakagemusha-sudo/tf-design-v2';
 
 const traceId = generateTraceId('cmd');
 const color = getStateColor('running');
@@ -95,7 +99,7 @@ const config = deepMerge(defaultConfig, userOverrides);
 ## Package Structure
 
 ```
-@torafirma/design-system-v2/
+@torakagemusha-sudo/tf-design-v2/
 ├── styles/
 │   ├── tokens.css              # 350+ CSS custom properties
 │   ├── tailwind.config.js      # Complete Tailwind theme extension
@@ -132,17 +136,21 @@ const config = deepMerge(defaultConfig, userOverrides);
 
 | Export Path | Description |
 |-------------|-------------|
-| `@torafirma/design-system-v2` | Main barrel (types, components, hooks, utils) |
-| `@torafirma/design-system-v2/styles` | CSS tokens |
-| `@torafirma/design-system-v2/tokens` | CSS tokens (alias) |
-| `@torafirma/design-system-v2/tailwind` | Tailwind config |
-| `@torafirma/design-system-v2/types` | TypeScript definitions |
-| `@torafirma/design-system-v2/components` | React components |
-| `@torafirma/design-system-v2/hooks` | React hooks |
-| `@torafirma/design-system-v2/utils` | Utility functions |
-| `@torafirma/design-system-v2/state-machines` | State machine types & configs |
-| `@torafirma/design-system-v2/layouts` | Layout types & configs |
-| `@torafirma/design-system-v2/rules` | Rules engine types |
+| `@torakagemusha-sudo/tf-design-v2` | Main barrel (types, components, hooks, utils) |
+| `@torakagemusha-sudo/tf-design-v2/styles` | CSS tokens |
+| `@torakagemusha-sudo/tf-design-v2/styles/tokens.css` | CSS tokens file |
+| `@torakagemusha-sudo/tf-design-v2/styles/themes.css` | Theme classes |
+| `@torakagemusha-sudo/tf-design-v2/styles/components.css` | Base component styles |
+| `@torakagemusha-sudo/tf-design-v2/styles/utilities.css` | Utility classes/effects |
+| `@torakagemusha-sudo/tf-design-v2/tokens` | CSS tokens (alias) |
+| `@torakagemusha-sudo/tf-design-v2/tailwind` | Tailwind config |
+| `@torakagemusha-sudo/tf-design-v2/types` | TypeScript definitions |
+| `@torakagemusha-sudo/tf-design-v2/components` | React components |
+| `@torakagemusha-sudo/tf-design-v2/hooks` | React hooks |
+| `@torakagemusha-sudo/tf-design-v2/utils` | Utility functions |
+| `@torakagemusha-sudo/tf-design-v2/state-machines` | State machine types & configs |
+| `@torakagemusha-sudo/tf-design-v2/layouts` | Layout types & configs |
+| `@torakagemusha-sudo/tf-design-v2/rules` | Rules engine types |
 
 ## Design Token Categories (v2)
 
@@ -236,6 +244,17 @@ This package is compiled from the Torafirma Specification Codex:
 - `03.0` — Component System Overview
 - `03.1` — Command & Action Components
 - General Design System Parts 1 & 2
+
+## Acknowledgements
+
+This package uses and depends on the following open-source packages:
+
+- `react`
+- `react-dom`
+- `tailwindcss`
+- `typescript`
+- `@types/react`
+- `@types/react-dom`
 
 ## License
 

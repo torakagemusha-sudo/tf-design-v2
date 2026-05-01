@@ -1,0 +1,4 @@
+node_modules/
+.omx/
+*.tgz
+npm-debug.log*
