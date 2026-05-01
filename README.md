@@ -12,6 +12,10 @@ A design system for dark, dense, engineer-level interfaces with a militarized te
 npm install @torakagemusha-sudo/tf-design-v2
 ```
 
+## Published Package
+
+- npm: https://www.npmjs.com/package/@torakagemusha-sudo/tf-design-v2
+
 ## Peer Dependencies
 
 ```bash
