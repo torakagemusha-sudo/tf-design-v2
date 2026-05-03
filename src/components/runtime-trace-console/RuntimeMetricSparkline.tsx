@@ -2,7 +2,7 @@
  * @fileoverview RuntimeMetricSparkline — Sparkline chart for metric history.
  * Mini line chart showing metric trend over time.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeMetricSparkline
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeMetricSparkline
  */
 
 import React, { useMemo } from "react";

@@ -30,8 +30,8 @@ export interface LineChartPointsProps {
  * ```
  */
 const LineChartPoints: React.FC<LineChartPointsProps> = ({
-  points, y, value?, label?, color?, size?, onPointClick?, className?
-}}) => {
+  points, color, size, onPointClick, className
+}) => {
   return (
     <g className={`tf-line-chart-points ${className || ''}`}>
       {points.map((p, i) => (

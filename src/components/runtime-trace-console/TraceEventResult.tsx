@@ -2,7 +2,7 @@
  * @fileoverview TraceEventResult — Operation result display.
  * Shows success, failure, partial, or blocked result.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventResult
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventResult
  */
 
 import React from "react";

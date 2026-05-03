@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleSearch — Search input for finding trace events.
  * Provides real-time text search with keyboard shortcuts and result navigation.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleSearch
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleSearch
  */
 
 import React, { useCallback, useEffect, useRef, useState } from "react";

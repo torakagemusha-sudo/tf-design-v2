@@ -47,8 +47,6 @@ export interface SidebarItemProps extends TorafirmaComponentBaseProps {
   itemState?: TorafirmaComponentState;
   /** Badge text or count. */
   badge?: string | number;
-  /** On click callback. */
-  onClick?: (itemId: string) => void;
   /** Href for link behavior. */
   href?: string;
 }
@@ -95,7 +93,6 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   active = false,
   itemState = "idle",
   badge,
-  onClick,
   href,
 }) => {
   const stateClass = `tf-state--${state}`;

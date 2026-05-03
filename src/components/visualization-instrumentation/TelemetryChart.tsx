@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import type { TelemetrySeries, TimeRange } from './types';
+import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import type { TelemetrySeries, TimeRange, DataPoint } from './types';
 
 /**
  * Props for TelemetryChart component.
@@ -31,8 +31,8 @@ export interface TelemetryChartProps {
  * ```
  */
 const TelemetryChart: React.FC<TelemetryChartProps> = ({
-  series, timeRange, yAxisLabel?, xAxisLabel?, gridLines?, crosshair?, onHover?, onClick?, className?
-}}) => {
+  series, timeRange, yAxisLabel, xAxisLabel, gridLines, crosshair, onHover, onClick, className
+}) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoveredPoint, setHoveredPoint] = useState<DataPoint | null>(null);
 

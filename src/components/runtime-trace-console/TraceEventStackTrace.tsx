@@ -2,7 +2,7 @@
  * @fileoverview TraceEventStackTrace — Stack trace display for error events.
  * Formatted stack trace with collapsible frames.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventStackTrace
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventStackTrace
  */
 
 import React, { useState } from "react";

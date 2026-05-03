@@ -2,7 +2,7 @@
  * @fileoverview ConsoleDebugDisplay — Formatted debug output display.
  * Shows debug-level messages with expandable detail.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleDebugDisplay
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleDebugDisplay
  */
 
 import React, { useState } from "react";

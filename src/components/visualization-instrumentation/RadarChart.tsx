@@ -30,8 +30,8 @@ export interface RadarChartProps {
  * ```
  */
 const RadarChart: React.FC<RadarChartProps> = ({
-  axes, data, maxValue, showGrid?, showLegend?, width?, height?, className?
-}}) => {
+  axes, data, maxValue, showGrid, showLegend, width, height, className
+}) => {
   const w = width || 400;
   const h = height || 400;
   const cx = w / 2;

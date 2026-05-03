@@ -12,6 +12,8 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { ChatMessage } from './types';
+import AIChatInput from './AIChatInput';
+import AIChatMessage from './AIChatMessage';
 
 /** Props for the AIChatPanel component */
 export interface AIChatPanelProps {

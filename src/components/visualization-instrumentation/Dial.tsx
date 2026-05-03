@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 
 
 /**
@@ -32,8 +32,8 @@ export interface DialProps {
  * ```
  */
 const Dial: React.FC<DialProps> = ({
-  value, min, max, step?, onChange, size?, label?, showValue?, disabled?, className?
-}}) => {
+  value, min, max, step, onChange, size, label, showValue, disabled, className
+}) => {
   const dialRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const angleMin = -135;

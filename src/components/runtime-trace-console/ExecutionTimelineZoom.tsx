@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineZoom — Zoom controls for the timeline.
  * Provides zoom in/out, fit-to-view, and zoom level display.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineZoom
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineZoom
  */
 
 import React from "react";

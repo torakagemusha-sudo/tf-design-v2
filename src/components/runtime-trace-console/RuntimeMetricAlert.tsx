@@ -2,7 +2,7 @@
  * @fileoverview RuntimeMetricAlert — Metric alert threshold display.
  * Shows active alerts with severity, condition, and acknowledgment.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeMetricAlert
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeMetricAlert
  */
 
 import React from "react";

@@ -28,8 +28,8 @@ export interface SparklineBarProps {
  * ```
  */
 const SparklineBar: React.FC<SparklineBarProps> = ({
-  data, width?, height?, color?, barWidth?, className?
-}}) => {
+  data, width, height, color, barWidth, className
+}) => {
   if (data.length === 0) return null;
   const w = width || 120;
   const h = height || 30;

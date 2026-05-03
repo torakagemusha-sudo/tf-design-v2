@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineEvent — Event marker on the timeline.
  * Visual representation of a single event with type/severity styling.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineEvent
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineEvent
  */
 
 import React from "react";

@@ -32,8 +32,8 @@ export interface LineChartProps {
  * ```
  */
 const LineChart: React.FC<LineChartProps> = ({
-  data, xAxisLabel?, yAxisLabel?, showGrid?, showArea?, curve?, onPointClick?, width?, height?, className?
-}}) => {
+  data, xAxisLabel, yAxisLabel, showGrid, showArea, curve, onPointClick, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

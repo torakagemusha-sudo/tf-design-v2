@@ -10,8 +10,7 @@
  */
 
 import React from 'react';
-import type { ComponentSize, ConfidenceLevel } from './types';
-import type { ProposalFilter, ConfidenceLevel } from './types';
+import type { ComponentSize, ConfidenceLevel, ProposalFilter } from './types';
 
 /** Props for the AIProposalFilter component */
 export interface AIProposalFilterProps {

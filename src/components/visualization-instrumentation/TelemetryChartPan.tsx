@@ -27,8 +27,8 @@ export interface TelemetryChartPanProps {
  * ```
  */
 const TelemetryChartPan: React.FC<TelemetryChartPanProps> = ({
-  offset, maxOffset, step?, onPan, className?
-}}) => {
+  offset, maxOffset, step, onPan, className
+}) => {
   return (
     <div className={`tf-telemetry-chart-pan ${className || ''}`}>
       <button

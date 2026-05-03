@@ -14,7 +14,7 @@
  *   registry,
  *   type RuleResult,
  *   type EnforcementLevel,
- * } from '@torafirma/rules';
+ * } from '@torakagemusha-sudo/tf-design-v2/rules';
  * ```
  */
 

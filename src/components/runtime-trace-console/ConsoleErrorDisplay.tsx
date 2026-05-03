@@ -2,7 +2,7 @@
  * @fileoverview ConsoleErrorDisplay — Formatted error display for console.
  * Shows structured error information with severity and context.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleErrorDisplay
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleErrorDisplay
  */
 
 import React from "react";

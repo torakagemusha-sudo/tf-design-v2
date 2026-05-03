@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleFilter — Filter controls for trace events.
  * Allows filtering by severity, actor, action, target, and time range.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleFilter
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleFilter
  */
 
 import React, { useCallback, useState } from "react";

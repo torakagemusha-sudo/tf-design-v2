@@ -29,8 +29,8 @@ export interface SparklineProps {
  * ```
  */
 const Sparkline: React.FC<SparklineProps> = ({
-  data, width?, height?, color?, strokeWidth?, showDots?, className?
-}}) => {
+  data, width, height, color, strokeWidth, showDots, className
+}) => {
   if (data.length < 2) return null;
   const w = width || 120;
   const h = height || 30;

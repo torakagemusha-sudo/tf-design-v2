@@ -28,8 +28,8 @@ export interface BarChartStackProps {
  * ```
  */
 const BarChartStack: React.FC<BarChartStackProps> = ({
-  categories, series, width?, height?, showTotal?, className?
-}}) => {
+  categories, series, width, height, showTotal, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 60;

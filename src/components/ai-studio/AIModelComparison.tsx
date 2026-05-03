@@ -11,6 +11,8 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
+import AILatencyIndicator from './AILatencyIndicator';
+import AIRerunButton from './AIRerunButton';
 
 /** Props for the AIModelComparison component */
 export interface AIModelComparisonProps {

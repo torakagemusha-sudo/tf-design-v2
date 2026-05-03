@@ -28,8 +28,8 @@ export interface RadarAxisProps {
  * ```
  */
 const RadarAxis: React.FC<RadarAxisProps> = ({
-  label, angle, radius, cx?, cy?, className?
-}}) => {
+  label, angle, radius, cx, cy, className
+}) => {
   const rad = (angle * Math.PI) / 180;
   const x2 = (cx || 50) + radius * Math.cos(rad);
   const y2 = (cy || 50) + radius * Math.sin(rad);

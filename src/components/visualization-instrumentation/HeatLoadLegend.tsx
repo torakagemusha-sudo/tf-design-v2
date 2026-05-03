@@ -29,8 +29,8 @@ export interface HeatLoadLegendProps {
  * ```
  */
 const HeatLoadLegend: React.FC<HeatLoadLegendProps> = ({
-  minValue, maxValue, colorScale?, steps?, units?, orientation?, className?
-}}) => {
+  minValue, maxValue, colorScale, steps, units, orientation, className
+}) => {
   const stepsArr = [...Array(steps || 8)].map((_, i) => minValue + (i / ((steps || 8) - 1)) * (maxValue - minValue));
   const scale = colorScale || ['#0c4a6e', '#075985', '#0369a1', '#0284c7', '#0ea5e9', '#38bdf8', '#7dd3fc', '#bae6fd'];
 

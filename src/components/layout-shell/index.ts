@@ -10,7 +10,6 @@
  * ============================================================================
  */
 
-export { default as types } from "./types";
 export * from "./types";
 
 export { default as AppShell } from "./AppShell";

@@ -26,8 +26,8 @@ export interface SparklineStripProps {
  * ```
  */
 const SparklineStrip: React.FC<SparklineStripProps> = ({
-  items, height?, onItemClick?, className?
-}}) => {
+  items, height, onItemClick, className
+}) => {
   return (
     <div className={`tf-sparkline-strip ${className || ''}`}>
       {items.map((item, i) => (

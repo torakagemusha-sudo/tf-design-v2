@@ -2,7 +2,7 @@
  * @fileoverview TraceFlameBar — Individual flame graph bar.
  * SVG rect representing one node in the flame graph.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceFlameBar
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceFlameBar
  */
 
 import React from "react";

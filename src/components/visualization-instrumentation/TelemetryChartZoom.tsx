@@ -29,8 +29,8 @@ export interface TelemetryChartZoomProps {
  * ```
  */
 const TelemetryChartZoom: React.FC<TelemetryChartZoomProps> = ({
-  level, minLevel?, maxLevel?, presets?, onZoom, onReset?, className?
-}}) => {
+  level, minLevel, maxLevel, presets, onZoom, onReset, className
+}) => {
   return (
     <div className={`tf-telemetry-chart-zoom ${className || ''}`}>
       <div className="tf-telemetry-chart-zoom__controls">

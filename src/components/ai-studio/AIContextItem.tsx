@@ -11,6 +11,7 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
+import AIContextPriority from './AIContextPriority';
 
 /** Props for the AIContextItem component */
 export interface AIContextItemProps {
@@ -34,13 +35,6 @@ export interface AIContextItemProps {
  */
 const AIContextItem: React.FC<AIContextItemProps> = ({
   item,
-  id,
-  label,
-  type,
-  isSelected,
-  priority,
-  description,
-  };,
   onToggle,
 }) => {
   return (

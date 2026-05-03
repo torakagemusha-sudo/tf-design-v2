@@ -10,11 +10,12 @@
  *
  * Spec: 03.0 Section 9 — Validation Semantics
  *
- * @module torafirma/state-machines/validationPipeline
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/validationPipeline
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -151,7 +152,7 @@ export const validationPipelineMachineDefinition: StateMachineDefinition<
   id: 'torafirma.validation.pipeline',
   name: 'Validation Pipeline State Machine',
   description: 'Structured validation process with support for partial results, overrides, and staleness.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'pending',
 
@@ -237,7 +238,6 @@ export function createValidationPipelineMachine(
   authority?: string,
   overrides?: Partial<ValidationContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(validationPipelineMachineDefinition, {
     context: {
       targetId,

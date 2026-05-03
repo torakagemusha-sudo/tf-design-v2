@@ -2,7 +2,7 @@
  * @fileoverview RuntimeTargetMetrics — Target performance metrics display.
  * Shows CPU, memory, queue depth, latency, throughput, and error rate.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeTargetMetrics
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeTargetMetrics
  */
 
 import React, { useMemo } from "react";

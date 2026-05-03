@@ -2,7 +2,7 @@
  * @fileoverview EventStreamItem — Single event item in the event stream.
  * Renders one stream event with full detail: timestamp, type, source, message.
  *
- * @module @torafirma/design-system/runtime-trace-console/EventStreamItem
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/EventStreamItem
  */
 
 import React, { useState } from "react";

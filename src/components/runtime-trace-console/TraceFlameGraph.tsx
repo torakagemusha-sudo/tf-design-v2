@@ -2,11 +2,13 @@
  * @fileoverview TraceFlameGraph — Flame graph visualization.
  * Shows hierarchical time-based call stacks as colored horizontal bars.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceFlameGraph
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceFlameGraph
  */
 
 import React, { useMemo, useState } from "react";
 import type { BaseComponentProps, FlameNode } from "./types";
+import TraceFlameBar from "./TraceFlameBar";
+import TraceFlameTooltip from "./TraceFlameTooltip";
 
 /** Props for TraceFlameGraph. */
 export interface TraceFlameGraphProps extends BaseComponentProps {

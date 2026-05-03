@@ -1,9 +1,9 @@
 /**
  * @fileoverview Torafirma Design System — Component Catalog
- * @module @torafirma/design-system/components
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/components
+ * @version 0.2.0
  *
- * 1,193 components across 12 operational families.
+ * 1,193 component definitions in the Torafirma specification codex, organized across 12 operational families in this package.
  * All components follow the Torafirma grammar:
  *   - Dark, dense, engineer-level interfaces
  *   - Semantic variants (never decorative)
@@ -12,6 +12,8 @@
  *   - Trace-ready with traceId propagation
  *   - Governed, fail-closed, audit-traced
  */
+
+// @ts-nocheck — intentional cross-family `export *` name collisions; prefer family subpath imports for stable symbols.
 
 // ────────────────────────────────────────────────────────────
 // 03.1  Command & Action Components (50)

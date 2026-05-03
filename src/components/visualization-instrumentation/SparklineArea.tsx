@@ -28,8 +28,8 @@ export interface SparklineAreaProps {
  * ```
  */
 const SparklineArea: React.FC<SparklineAreaProps> = ({
-  data, width?, height?, color?, fillOpacity?, className?
-}}) => {
+  data, width, height, color, fillOpacity, className
+}) => {
   if (data.length < 2) return null;
   const w = width || 120;
   const h = height || 30;

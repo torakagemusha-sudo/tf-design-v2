@@ -2,7 +2,7 @@
  * @fileoverview LogSearch — Search input with result navigation for logs.
  * Finds and navigates between matching log lines.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogSearch
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogSearch
  */
 
 import React, { useCallback, useEffect, useRef, useState } from "react";

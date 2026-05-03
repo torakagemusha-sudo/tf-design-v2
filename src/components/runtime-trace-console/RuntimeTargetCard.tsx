@@ -2,7 +2,7 @@
  * @fileoverview RuntimeTargetCard — Target environment card display.
  * Shows runtime identity, connection status, and key metadata.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeTargetCard
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeTargetCard
  */
 
 import React from "react";

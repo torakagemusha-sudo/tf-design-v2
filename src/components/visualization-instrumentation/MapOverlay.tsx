@@ -30,8 +30,8 @@ export interface MapOverlayProps {
  * ```
  */
 const MapOverlay: React.FC<MapOverlayProps> = ({
-  center, zoom, markers, layers?, onMarkerClick?, onMapClick?, children?, className?
-}}) => {
+  center, zoom, markers, layers, onMarkerClick, onMapClick, children, className
+}) => {
   return (
     <div className={`tf-map-overlay ${className || ''}`}>
       <div className="tf-map-overlay__container" style={{ position: 'relative', width: '100%', height: '100%' }}>

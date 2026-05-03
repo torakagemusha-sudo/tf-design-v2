@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimeline — Timeline visualization of execution events.
  * Multi-track timeline with zoom, cursor, and event markers.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimeline
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimeline
  */
 
 import React, { useCallback, useMemo, useState } from "react";

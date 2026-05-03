@@ -2,7 +2,7 @@
  * @fileoverview TraceLatencyHistogram — Latency distribution histogram.
  * Shows bucketed latency counts for trace span analysis.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceLatencyHistogram
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceLatencyHistogram
  */
 
 import React, { useMemo } from "react";

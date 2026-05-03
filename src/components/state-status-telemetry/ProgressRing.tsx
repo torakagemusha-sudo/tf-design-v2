@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import type { SemanticVariant } from '../../../torafirma-design-system/src/types';
+import type { SemanticVariant } from '../../types';
 
 /**
  * Props for the ProgressRing component.

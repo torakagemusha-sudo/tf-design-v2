@@ -10,11 +10,12 @@
  *
  * Spec: 03.0 Section 3.5 — Graph Components
  *
- * @module torafirma/state-machines/graphEdit
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/graphEdit
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -192,7 +193,7 @@ export const graphEditMachineDefinition: StateMachineDefinition<
   id: 'torafirma.graph.edit',
   name: 'Graph Editing State Machine',
   description: 'Graph canvas interaction modes: view, select, pan, zoom, connect, drag, resize, delete, undo, redo.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'viewing',
 
@@ -293,7 +294,6 @@ export function createGraphEditMachine(
   authority?: string,
   overrides?: Partial<GraphEditContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(graphEditMachineDefinition, {
     context: {
       canvasId,

@@ -2,7 +2,7 @@
  * @fileoverview TraceImportPanel — Import trace data panel.
  * Accepts trace files for upload and parsing.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceImportPanel
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceImportPanel
  */
 
 import React, { useCallback, useState } from "react";

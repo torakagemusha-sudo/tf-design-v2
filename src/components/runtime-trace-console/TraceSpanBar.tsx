@@ -2,7 +2,7 @@
  * @fileoverview TraceSpanBar — Span duration bar visualization.
  * Horizontal bar proportional to span duration with status-based coloring.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceSpanBar
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceSpanBar
  */
 
 import React from "react";

@@ -31,8 +31,8 @@ export interface AreaChartProps {
  * ```
  */
 const AreaChart: React.FC<AreaChartProps> = ({
-  data, xAxisLabel?, yAxisLabel?, showGrid?, color?, opacity?, width?, height?, className?
-}}) => {
+  data, xAxisLabel, yAxisLabel, showGrid, color, opacity, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

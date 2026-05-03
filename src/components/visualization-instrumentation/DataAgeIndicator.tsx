@@ -26,8 +26,8 @@ export interface DataAgeIndicatorProps {
  * ```
  */
 const DataAgeIndicator: React.FC<DataAgeIndicatorProps> = ({
-  timestamp, maxAge?, formatter?, className?
-}}) => {
+  timestamp, maxAge, formatter, className
+}) => {
   const age = Date.now() - timestamp;
   const max = maxAge || 300000;
   const status = age < max * 0.3 ? 'fresh' : age < max * 0.7 ? 'aging' : 'stale';

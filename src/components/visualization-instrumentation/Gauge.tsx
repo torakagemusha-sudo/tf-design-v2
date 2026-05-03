@@ -31,8 +31,8 @@ export interface GaugeProps {
  * ```
  */
 const Gauge: React.FC<GaugeProps> = ({
-  value, min, max, title?, unit?, zones?, size?, showValue?, className?
-}}) => {
+  value, min, max, title, unit, zones, size, showValue, className
+}) => {
   const radius = (size || 200) / 2 - 20;
   const center = (size || 200) / 2;
   const angleMin = -135;

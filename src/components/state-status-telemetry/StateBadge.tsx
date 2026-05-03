@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import type { TorafirmaComponentState, ComponentDensity, ComponentCriticality } from '../../../torafirma-design-system/src/types';
+import type { TorafirmaComponentState, ComponentDensity, ComponentCriticality } from '../../types';
 
 /**
  * Props for the StateBadge component.

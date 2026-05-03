@@ -2,7 +2,7 @@
  * @fileoverview TerminalAutocomplete — Autocomplete dropdown for terminal.
  * Shows matching command/file/variable suggestions with keyboard navigation.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalAutocomplete
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalAutocomplete
  */
 
 import React, { useEffect, useState } from "react";

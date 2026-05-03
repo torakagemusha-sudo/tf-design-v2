@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleHeader — Console header with controls for the Trace Console.
  * Displays title, state badge, live indicator, and global console actions.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleHeader
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleHeader
  */
 
 import React from "react";

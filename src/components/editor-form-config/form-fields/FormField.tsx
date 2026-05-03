@@ -1,5 +1,8 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, type ReactNode, type CSSProperties, type ChangeEvent, type FocusEvent, type KeyboardEvent, type MouseEvent } from "react";
-import type { BaseComponentProps, PropertyDefinition, ValidationRule, SchemaNodeData, SchemaEdgeData, CodeDocument, JsonViewMode, PatchHunk, PatchLine, PatchOperation, FieldOption, FormFieldConfig, FieldCondition, FormStepConfig, ConfigVersion, DependencyNode, AutocompleteSuggestion, CurrencyConfig, DurationValue, UploadedFile, ConfigTemplate, SecretEntry, SchemaPropertyEditorProps } from "../types";
+import type { PropertyDefinition, ValidationRule, SchemaNodeData, SchemaEdgeData, CodeDocument, JsonViewMode, PatchHunk, PatchLine, PatchOperation, FieldOption, FormFieldConfig, FieldCondition, FormStepConfig, ConfigVersion, DependencyNode, AutocompleteSuggestion, CurrencyConfig, DurationValue, UploadedFile, ConfigTemplate, SecretEntry, SchemaPropertyEditorProps } from "../types";
+import type { FormFieldProps } from "./formFieldTypes";
+
+export type { FormFieldProps } from "./formFieldTypes";
 
 /**
  * FormField — generic form field wrapper that renders the appropriate field
@@ -8,24 +11,6 @@ import type { BaseComponentProps, PropertyDefinition, ValidationRule, SchemaNode
  * @example
  * <FormField type="text" name="username" label="Username" value="john" onChange={handleChange} />
  */
-export interface FormFieldProps extends BaseComponentProps {
-  name: string;
-  label?: string;
-  type: string;
-  value?: unknown;
-  onChange: (name: string, value: unknown) => void;
-  placeholder?: string;
-  description?: string;
-  error?: string;
-  required?: boolean;
-  readonly?: boolean;
-  disabled?: boolean;
-  hidden?: boolean;
-  size?: "sm" | "md" | "lg";
-  width?: "full" | "half" | "third" | "quarter";
-  /** Extra props passed to the underlying input */
-  inputProps?: Record<string, unknown>;
-}
 
 export const FormField: React.FC<FormFieldProps> = ({
   name,

@@ -2,7 +2,7 @@
  * @fileoverview TraceSpanItem — Single span item display.
  * Shows span name, service, timing, and status in a compact row.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceSpanItem
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceSpanItem
  */
 
 import React from "react";

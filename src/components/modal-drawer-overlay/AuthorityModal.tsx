@@ -4,6 +4,7 @@ import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { AuthorityModalForm } from './AuthorityModalForm';
 
 /**
  * AuthorityModal — modal for authority escalation requiring credentials.

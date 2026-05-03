@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { PromptTemplate } from './types';
+import AIPromptTemplateCard from './AIPromptTemplateCard';
 
 /** Props for the AIPromptTemplate component */
 export interface AIPromptTemplateProps {

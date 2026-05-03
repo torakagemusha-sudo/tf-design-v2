@@ -2,7 +2,7 @@
  * @fileoverview LogViewer — Log file viewer with filtering, search, and highlighting.
  * Supports tail/follow mode, line wrapping, and level-based colorization.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogViewer
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogViewer
  */
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";

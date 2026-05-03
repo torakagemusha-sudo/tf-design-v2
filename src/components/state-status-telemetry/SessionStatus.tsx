@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import type { AuthorityLevel, ComponentDensity } from '../../../torafirma-design-system/src/types';
+import type { AuthorityLevel, ComponentDensity } from '../../types';
 
 /**
  * Props for the SessionStatus component.

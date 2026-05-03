@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { PromptTemplate, PromptVariable } from './types';
+import AIPromptVariableInput from './AIPromptVariableInput';
 
 /** Props for the AIPromptBuilder component */
 export interface AIPromptBuilderProps {

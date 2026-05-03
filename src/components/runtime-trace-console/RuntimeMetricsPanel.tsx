@@ -2,7 +2,7 @@
  * @fileoverview RuntimeMetricsPanel — Runtime metrics overview panel.
  * Shows all key metrics as gauges with sparklines and alerts.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeMetricsPanel
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeMetricsPanel
  */
 
 import React from "react";

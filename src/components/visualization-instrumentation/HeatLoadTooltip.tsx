@@ -30,8 +30,8 @@ export interface HeatLoadTooltipProps {
  * ```
  */
 const HeatLoadTooltip: React.FC<HeatLoadTooltipProps> = ({
-  cell, xLabel?, yLabel?, visible, x, y, formatter?, className?
-}}) => {
+  cell, xLabel, yLabel, visible, x, y, formatter, className
+}) => {
   if (!visible || !cell) return null;
 
   return (

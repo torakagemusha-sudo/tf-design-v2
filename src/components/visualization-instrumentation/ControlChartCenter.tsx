@@ -26,8 +26,8 @@ export interface ControlChartCenterProps {
  * ```
  */
 const ControlChartCenter: React.FC<ControlChartCenterProps> = ({
-  value, label?, color?, className?
-}}) => {
+  value, label, color, className
+}) => {
   return (
     <div className={`tf-control-chart-center ${className || ''}`}>
       <svg className="tf-control-chart-center__svg" viewBox="0 0 800 20">

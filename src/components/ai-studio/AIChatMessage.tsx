@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { ChatMessage } from './types';
+import AIFeedbackButton from './AIFeedbackButton';
 
 /** Props for the AIChatMessage component */
 export interface AIChatMessageProps {

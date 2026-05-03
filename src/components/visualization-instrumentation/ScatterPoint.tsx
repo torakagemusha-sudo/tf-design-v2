@@ -29,8 +29,8 @@ export interface ScatterPointProps {
  * ```
  */
 const ScatterPoint: React.FC<ScatterPointProps> = ({
-  x, y, color?, size?, label?, onClick?, className?
-}}) => {
+  x, y, color, size, label, onClick, className
+}) => {
   return (
     <circle
       cx={x} cy={y} r={size || 5}

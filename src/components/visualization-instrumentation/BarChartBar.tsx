@@ -32,8 +32,8 @@ export interface BarChartBarProps {
  * ```
  */
 const BarChartBar: React.FC<BarChartBarProps> = ({
-  value, label, x, y, width, height, color?, showValue?, onClick?, className?
-}}) => {
+  value, label, x, y, width, height, color, showValue, onClick, className
+}) => {
   return (
     <g className={`tf-bar-chart-bar ${className || ''}`} onClick={onClick}>
       <rect x={x} y={y} width={width} height={height} className="tf-bar-chart-bar__rect" style={{ fill: color || '#0ea5e9' }} />

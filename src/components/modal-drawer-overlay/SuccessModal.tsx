@@ -4,6 +4,7 @@ import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { SuccessModalIcon } from './SuccessModalIcon';
 
 /**
  * SuccessModal — displays a success confirmation after an operation

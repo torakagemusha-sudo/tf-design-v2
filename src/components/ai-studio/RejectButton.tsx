@@ -11,7 +11,6 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
-import type { ComponentSize } from './types';
 
 /** Props for the RejectButton component */
 export interface RejectButtonProps {

@@ -2,7 +2,7 @@
  * @fileoverview ConsoleProgressOutput — Progress bar display for console.
  * Shows operation progress with percentage and optional status text.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleProgressOutput
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleProgressOutput
  */
 
 import React from "react";

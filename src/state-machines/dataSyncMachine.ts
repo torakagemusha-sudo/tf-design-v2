@@ -6,11 +6,12 @@
  *
  * **7 states**: idle → syncing → synced → conflict → merging → error → offline
  *
- * @module torafirma/state-machines/dataSync
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/dataSync
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -159,7 +160,7 @@ export const dataSyncMachineDefinition: StateMachineDefinition<
   id: 'torafirma.data.sync',
   name: 'Data Synchronization State Machine',
   description: 'Data sync lifecycle with conflict detection, merging, and offline support.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'idle',
 
@@ -241,7 +242,6 @@ export function createDataSyncMachine(
   sourceId: string,
   overrides?: Partial<DataSyncContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(dataSyncMachineDefinition, {
     context: {
       syncId,

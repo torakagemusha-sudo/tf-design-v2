@@ -28,8 +28,8 @@ export interface ResidualPlotProps {
  * ```
  */
 const ResidualPlot: React.FC<ResidualPlotProps> = ({
-  predicted, residuals, width?, height?, showZeroLine?, className?
-}}) => {
+  predicted, residuals, width, height, showZeroLine, className
+}) => {
   const w = width || 400;
   const h = height || 300;
   const padding = 40;

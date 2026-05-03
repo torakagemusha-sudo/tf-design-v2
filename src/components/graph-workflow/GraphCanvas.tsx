@@ -13,7 +13,7 @@ import type {
   CanvasComponentProps,
 } from './types';
 
-export interface GraphCanvasProps extends CanvasComponentProps {
+export interface GraphCanvasProps extends Omit<CanvasComponentProps, 'tool'> {
   /** Active tool mode */
   tool?: string;
   /** Drag state indicator */

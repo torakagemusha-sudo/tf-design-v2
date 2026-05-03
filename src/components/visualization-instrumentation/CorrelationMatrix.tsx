@@ -26,8 +26,8 @@ export interface CorrelationMatrixProps {
  * ```
  */
 const CorrelationMatrix: React.FC<CorrelationMatrixProps> = ({
-  variables, matrix, onCellClick?, className?
-}}) => {
+  variables, matrix, onCellClick, className
+}) => {
   const getColor = (v: number) => {
     if (v > 0) return `rgba(14, 165, 233, ${Math.abs(v)})`;
     if (v < 0) return `rgba(239, 68, 68, ${Math.abs(v)})`;

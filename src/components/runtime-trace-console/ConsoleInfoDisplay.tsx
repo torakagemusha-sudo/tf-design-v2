@@ -2,7 +2,7 @@
  * @fileoverview ConsoleInfoDisplay — Formatted info display for console.
  * Shows informational messages and status updates.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleInfoDisplay
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleInfoDisplay
  */
 
 import React from "react";

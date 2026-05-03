@@ -41,8 +41,6 @@ export interface AccordionItemProps extends TorafirmaComponentBaseProps {
   expanded?: boolean;
   /** On toggle callback. */
   onToggle?: (itemId: string) => void;
-  /** Whether the item is disabled. */
-  disabled?: boolean;
   /** Item state. */
   itemState?: TorafirmaComponentState;
 }
@@ -86,7 +84,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   itemId,
   expanded = false,
   onToggle,
-  disabled = false,
   itemState = "idle",
 }) => {
   const stateClass = `tf-state--${state}`;

@@ -4,6 +4,8 @@ import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { DestructiveModalWarning } from './DestructiveModalWarning';
+import { DestructiveModalConfirm } from './DestructiveModalConfirm';
 
 /**
  * DestructiveModal — a high-friction modal for destructive operations.

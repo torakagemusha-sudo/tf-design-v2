@@ -26,8 +26,8 @@ export interface TrendArrowProps {
  * ```
  */
 const TrendArrow: React.FC<TrendArrowProps> = ({
-  direction, size?, color?, className?
-}}) => {
+  direction, size, color, className
+}) => {
   const arrowMap = { up: '&#9650;', down: '&#9660;', flat: '&#9644;' };
 
   return (

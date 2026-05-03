@@ -12,6 +12,10 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { FileDiff, DiffDisplayMode } from './types';
+import DiffViewerHeader from './DiffViewerHeader';
+import DiffViewerInline from './DiffViewerInline';
+import DiffViewerSideBySide from './DiffViewerSideBySide';
+import DiffViewerUnified from './DiffViewerUnified';
 
 /** Props for the DiffViewer component */
 export interface DiffViewerProps {

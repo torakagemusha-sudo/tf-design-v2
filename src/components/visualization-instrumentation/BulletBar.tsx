@@ -27,8 +27,8 @@ export interface BulletBarProps {
  * ```
  */
 const BulletBar: React.FC<BulletBarProps> = ({
-  value, maxValue, width?, color?, className?
-}}) => {
+  value, maxValue, width, color, className
+}) => {
   const w = width || 100;
   const pct = Math.min(100, (value / maxValue) * 100);
 

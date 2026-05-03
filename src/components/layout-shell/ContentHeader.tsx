@@ -35,10 +35,8 @@ export interface ContentHeaderProps extends TorafirmaComponentBaseProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   /** Optional variant for semantic styling. */
   variant?: SemanticVariant;
-  /** Header title. */
+  /** Header title (alias for `label` when used as page title). */
   title?: string;
-  /** Description text. */
-  description?: string;
   /** Header actions. */
   actions?: React.ReactNode;
   /** Back navigation callback. */
@@ -84,7 +82,6 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({
   onClick,
   variant = "neutral",
   title,
-  description,
   actions,
   onBack,
   backLabel = "Back",

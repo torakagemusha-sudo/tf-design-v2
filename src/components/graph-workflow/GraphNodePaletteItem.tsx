@@ -6,7 +6,7 @@
 import React from 'react';
 import type { GraphNodeType, GraphComponentProps } from './types';
 
-export interface GraphNodePaletteItemProps extends GraphComponentProps {
+export interface GraphNodePaletteItemProps extends Omit<GraphComponentProps, 'onClick'> {
   /** Node type this item represents */
   nodeType: GraphNodeType;
   /** Display label */

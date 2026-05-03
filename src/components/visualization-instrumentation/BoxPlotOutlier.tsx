@@ -27,8 +27,8 @@ export interface BoxPlotOutlierProps {
  * ```
  */
 const BoxPlotOutlier: React.FC<BoxPlotOutlierProps> = ({
-  value, x, y, onClick?, className?
-}}) => {
+  value, x, y, onClick, className
+}) => {
   return (
     <circle
       cx={x} cy={y} r={4}

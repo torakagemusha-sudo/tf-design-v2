@@ -2,7 +2,7 @@
  * @fileoverview RuntimeConnectionStatus — Connection health indicator.
  * Shows runtime connection state with quality metrics.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeConnectionStatus
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeConnectionStatus
  */
 
 import React from "react";

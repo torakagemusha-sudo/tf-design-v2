@@ -12,6 +12,8 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AISuggestion } from './types';
+import SuggestionQueueActions from './SuggestionQueueActions';
+import SuggestionQueueItem from './SuggestionQueueItem';
 
 /** Props for the SuggestionQueue component */
 export interface SuggestionQueueProps {

@@ -28,8 +28,8 @@ export interface GaugeNeedleProps {
  * ```
  */
 const GaugeNeedle: React.FC<GaugeNeedleProps> = ({
-  angle, length, color?, width?, pivotSize?, className?
-}}) => {
+  angle, length, color, width, pivotSize, className
+}) => {
   const radians = (angle - 90) * Math.PI / 180;
   const x2 = 50 + (length || 40) * Math.cos(radians);
   const y2 = 50 + (length || 40) * Math.sin(radians);

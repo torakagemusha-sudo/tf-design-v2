@@ -27,8 +27,8 @@ export interface BulletRangeProps {
  * ```
  */
 const BulletRange: React.FC<BulletRangeProps> = ({
-  min, max, maxValue, qualitative, className?
-}}) => {
+  min, max, maxValue, qualitative, className
+}) => {
   const left = (min / maxValue) * 100;
   const width = ((max - min) / maxValue) * 100;
 

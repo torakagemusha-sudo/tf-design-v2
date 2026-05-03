@@ -29,8 +29,8 @@ export interface GaugeTicksProps {
  * ```
  */
 const GaugeTicks: React.FC<GaugeTicksProps> = ({
-  count, radius, startAngle, endAngle, majorInterval?, tickLength?, className?
-}}) => {
+  count, radius, startAngle, endAngle, majorInterval, tickLength, className
+}) => {
   const ticks = [...Array(count)].map((_, i) => {
     const angle = startAngle + (i / (count - 1)) * (endAngle - startAngle);
     const isMajor = majorInterval ? i % majorInterval === 0 : false;

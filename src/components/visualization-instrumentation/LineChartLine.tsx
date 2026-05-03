@@ -28,8 +28,8 @@ export interface LineChartLineProps {
  * ```
  */
 const LineChartLine: React.FC<LineChartLineProps> = ({
-  points, y, color?, width?, dashed?, className?
-}}) => {
+  points, color, width, dashed, className
+}) => {
   const pts = points.map((p) => `${p.x},${p.y}`).join(' ');
 
   return (

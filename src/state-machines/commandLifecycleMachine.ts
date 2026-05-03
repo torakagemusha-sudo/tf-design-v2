@@ -10,11 +10,12 @@
  *
  * Spec: 01 Sections 5, 6, 7 — Action Lifecycle & Authority Model
  *
- * @module torafirma/state-machines/commandLifecycle
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/commandLifecycle
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -158,7 +159,7 @@ export const commandLifecycleMachineDefinition: StateMachineDefinition<
   id: 'torafirma.command.lifecycle',
   name: 'Command Lifecycle State Machine',
   description: 'Models the full lifecycle of a user-facing command from availability through execution.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'available',
 
@@ -255,7 +256,6 @@ export function createCommandLifecycleMachine(
   requiredAuthority?: string,
   overrides?: Partial<CommandContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(commandLifecycleMachineDefinition, {
     context: {
       commandId,

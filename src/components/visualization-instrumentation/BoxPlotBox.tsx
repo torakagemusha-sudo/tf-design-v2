@@ -31,8 +31,8 @@ export interface BoxPlotBoxProps {
  * ```
  */
 const BoxPlotBox: React.FC<BoxPlotBoxProps> = ({
-  q1, q3, median, x, y, width, height, color?, className?
-}}) => {
+  q1, q3, median, x, y, width, height, color, className
+}) => {
   return (
     <g className={`tf-box-plot-box ${className || ''}`}>
       <rect x={x} y={y} width={width} height={height} className="tf-box-plot-box__rect" style={{ fill: color || '#0ea5e9', opacity: 0.5 }} />

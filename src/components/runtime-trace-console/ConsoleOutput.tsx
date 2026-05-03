@@ -2,7 +2,7 @@
  * @fileoverview ConsoleOutput — Console output area for command results.
  * Displays typed output blocks (text, JSON, table, error, etc.).
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleOutput
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleOutput
  */
 
 import React, { useEffect, useRef } from "react";

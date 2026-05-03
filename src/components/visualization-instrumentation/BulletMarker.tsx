@@ -25,8 +25,8 @@ export interface BulletMarkerProps {
  * ```
  */
 const BulletMarker: React.FC<BulletMarkerProps> = ({
-  target, maxValue, className?
-}}) => {
+  target, maxValue, className
+}) => {
   const pct = (target / maxValue) * 100;
 
   return (

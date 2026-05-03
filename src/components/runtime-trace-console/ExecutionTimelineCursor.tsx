@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineCursor — Playhead cursor on the timeline.
  * Shows current playback/inspection position with draggable interaction.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineCursor
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineCursor
  */
 
 import React from "react";

@@ -2,7 +2,7 @@
  * @fileoverview TraceConsole — Main trace console panel for the Torafirma Design System.
  * Displays real-time and historical trace events with filtering, search, and export.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsole
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsole
  */
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";

@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { DiffHunk } from './types';
+import DiffViewerHunkHeader from './DiffViewerHunkHeader';
 
 /** Props for the DiffViewerSideBySide component */
 export interface DiffViewerSideBySideProps {

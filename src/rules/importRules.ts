@@ -290,7 +290,7 @@ function checkTypesFromCentral(
         rule: RULE.typesFromCentral,
         message: `Type import from "${imp.source}" should come from central types.`,
         severity: 'warning',
-        suggestion: `Move type to the central types module and import from '../types' or '@torafirma/types'.`,
+        suggestion: `Move type to the central types module and import from '../types' or '@torakagemusha-sudo/tf-design-v2/types'.`,
         filePath: ctx?.filePath,
         context: imp.full,
       });

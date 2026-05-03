@@ -2,7 +2,7 @@
  * @fileoverview EventStreamHeader — Header bar for the event stream.
  * Shows stream status, event count, and aggregate severity indicators.
  *
- * @module @torafirma/design-system/runtime-trace-console/EventStreamHeader
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/EventStreamHeader
  */
 
 import React from "react";

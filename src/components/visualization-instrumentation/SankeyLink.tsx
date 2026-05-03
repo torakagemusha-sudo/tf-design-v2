@@ -30,8 +30,8 @@ export interface SankeyLinkProps {
  * ```
  */
 const SankeyLink: React.FC<SankeyLinkProps> = ({
-  sourceX, sourceY, targetX, targetY, value, color?, opacity?, className?
-}}) => {
+  sourceX, sourceY, targetX, targetY, value, color, opacity, className
+}) => {
   const d = `M ${sourceX} ${sourceY} C ${sourceX + 50} ${sourceY}, ${targetX - 50} ${targetY}, ${targetX} ${targetY}`;
 
   return (

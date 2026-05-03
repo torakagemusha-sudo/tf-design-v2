@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineRuler — Time ruler for the timeline.
  * Displays tick marks and time labels above the tracks.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineRuler
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineRuler
  */
 
 import React, { useMemo } from "react";

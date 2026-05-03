@@ -26,8 +26,8 @@ export interface RealtimeIndicatorProps {
  * ```
  */
 const RealtimeIndicator: React.FC<RealtimeIndicatorProps> = ({
-  status, lastUpdate?, latency?, className?
-}}) => {
+  status, lastUpdate, latency, className
+}) => {
   return (
     <div className={`tf-realtime-indicator tf-realtime-indicator--${status} ${className || ''}`}>
       <span className="tf-realtime-indicator__dot" />

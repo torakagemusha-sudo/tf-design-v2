@@ -2,7 +2,7 @@
  * @fileoverview TraceEventReason — Reason code display for events.
  * Shows structured reason codes explaining why an event occurred.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventReason
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventReason
  */
 
 import React from "react";

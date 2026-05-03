@@ -10,11 +10,12 @@
  *
  * Spec: 03.0 Section 3.11 — Overlay Components
  *
- * @module torafirma/state-machines/modalDialog
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/modalDialog
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -175,7 +176,7 @@ export const modalDialogMachineDefinition: StateMachineDefinition<
   id: 'torafirma.modal.dialog',
   name: 'Modal Dialog Lifecycle State Machine',
   description: 'Modal, drawer, and overlay lifecycle with focus trapping, confirmation, and error handling.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'closed',
 
@@ -278,7 +279,6 @@ export function createModalDialogMachine(
   variant?: 'modal' | 'drawer' | 'popover' | 'alert',
   overrides?: Partial<ModalDialogContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(modalDialogMachineDefinition, {
     context: {
       dialogId,

@@ -22,9 +22,9 @@ npm install @torakagemusha-sudo/tf-design-v2
 npm install react react-dom tailwindcss
 ```
 
-## Build Compatibility
+## Package status
 
-This package currently publishes source-first ESM/TypeScript entrypoints. Your app/toolchain should support TypeScript in dependencies (for example Vite, Next.js, or other TS-aware bundlers).
+This package ships **compiled ESM** from `dist/` (`.js` + `.d.ts`) for all TypeScript entry points. CSS and the Tailwind preset continue to ship from `src/styles/` as static assets. Run `npm run build` before `npm pack` or publish; `prepack` runs the build automatically.
 
 ## Quick Start
 
@@ -66,6 +66,7 @@ import { CommandButton } from '@torakagemusha-sudo/tf-design-v2';
   command={{
     id: 'run-workflow',
     label: 'Run workflow',
+    operation: 'workflow.run',
     commandClass: 'execute',
     state: 'available',
     requiredAuthority: 'AUTH_3_EXECUTE',
@@ -100,56 +101,47 @@ const classes = classNames('tf-button', { 'tf-button--run': isRunMode });
 const config = deepMerge(defaultConfig, userOverrides);
 ```
 
-## Package Structure
+## Package structure
+
+Published tarball layout (conceptual):
 
 ```
 @torakagemusha-sudo/tf-design-v2/
-├── styles/
-│   ├── tokens.css              # 350+ CSS custom properties
-│   ├── tailwind.config.js      # Complete Tailwind theme extension
-│   ├── themes.css              # 5 canonical themes
-│   ├── components.css          # Base component styles
-│   └── utilities.css           # Visual effects & utilities
-├── types/
-│   └── index.ts                # 80+ TypeScript types
-├── components/
-│   ├── CommandButton.tsx
-│   ├── CommandButtonGroup.tsx
-│   ├── ActionBar.tsx
-│   ├── CommandPalette.tsx
-│   ├── ContextMenu.tsx
-│   ├── KebabActionMenu.tsx
-│   ├── ConfirmActionModal.tsx
-│   ├── DestructiveActionModal.tsx
-│   ├── AuthorityActionModal.tsx
-│   ├── CircuitBreaker.tsx
-│   ├── CommandQueue.tsx
-│   ├── StagedActionPanel.tsx
-│   ├── ActionTooltip.tsx
-│   ├── CommandResultToast.tsx
-│   ├── InlineCommandPrompt.tsx
-│   └── InspectorActionList.tsx
-├── hooks/
-│   └── index.ts                # 10 React hooks
-├── utils/
-│   └── index.ts                # 10 utility functions
-└── index.ts                    # Barrel export
+├── dist/                       # Compiled ESM + declarations (main, subpath exports)
+├── src/styles/                 # Packaged CSS + Tailwind preset (not compiled by tsc)
+│   ├── tokens.css              # Many CSS custom properties (implementation detail)
+│   ├── tailwind.config.js
+│   ├── themes.css
+│   ├── components.css
+│   └── utilities.css
+├── types/                      # Source: barrel at src/types (types-only export → dist/types)
+├── components/                 # Source: src/components (family folders + barrel)
+├── hooks/                      # Source: src/hooks
+├── utils/                      # Source: src/utils
+├── state-machines/             # Source: src/state-machines
+├── layouts/                    # Source: src/layouts
+├── rules/                      # Source: src/rules
+└── index.ts                    # Root barrel (compiled to dist/index.*)
 ```
+
+**Catalog vs exports:** The Torafirma specification codex describes **1,193 component definitions** across twelve families; this repository implements that catalog as **TypeScript/React exports** (import from `@torakagemusha-sudo/tf-design-v2` or `@torakagemusha-sudo/tf-design-v2/components`). The headline number refers to **specification coverage**, not a hand-count of every discrete default export in the tree.
+
+**Design tokens vs CSS variables:** Semantic token categories in the design system number on the order of **256+** (grouped dimensions such as color, spacing, motion). **`tokens.css` additionally defines a large set of CSS custom properties** (including aliases, component-family tokens, and theme wiring); treat “350+ CSS custom properties” and “256+ design tokens” as **different layers** of the same token system, not two estimates of the same set.
 
 ## v2 Exports Map
 
 | Export Path | Description |
 |-------------|-------------|
-| `@torakagemusha-sudo/tf-design-v2` | Main barrel (types, components, hooks, utils) |
-| `@torakagemusha-sudo/tf-design-v2/styles` | CSS tokens |
+| `@torakagemusha-sudo/tf-design-v2` | Main barrel from `dist/` (types, components, hooks, utils, …) |
+| `@torakagemusha-sudo/tf-design-v2/styles` | CSS tokens (`src/styles/tokens.css`) |
 | `@torakagemusha-sudo/tf-design-v2/styles/tokens.css` | CSS tokens file |
 | `@torakagemusha-sudo/tf-design-v2/styles/themes.css` | Theme classes |
 | `@torakagemusha-sudo/tf-design-v2/styles/components.css` | Base component styles |
 | `@torakagemusha-sudo/tf-design-v2/styles/utilities.css` | Utility classes/effects |
 | `@torakagemusha-sudo/tf-design-v2/tokens` | CSS tokens (alias) |
 | `@torakagemusha-sudo/tf-design-v2/tailwind` | Tailwind config |
-| `@torakagemusha-sudo/tf-design-v2/types` | TypeScript definitions |
-| `@torakagemusha-sudo/tf-design-v2/components` | React components |
+| `@torakagemusha-sudo/tf-design-v2/types` | Type-only barrel (`dist/types/*.d.ts`) |
+| `@torakagemusha-sudo/tf-design-v2/components` | React components (`dist/components/*`) |
 | `@torakagemusha-sudo/tf-design-v2/hooks` | React hooks |
 | `@torakagemusha-sudo/tf-design-v2/utils` | Utility functions |
 | `@torakagemusha-sudo/tf-design-v2/state-machines` | State machine types & configs |
@@ -226,18 +218,28 @@ const config = deepMerge(defaultConfig, userOverrides);
 
 ## Utilities (v2)
 
+The `utils` entry exports **18 named functions** (see `src/utils/index.ts`):
+
 | Utility | Purpose |
 |---------|---------|
 | `generateTraceId` | Unique trace ID generation |
 | `formatTimestamp` | ISO 8601 / human-readable timestamps |
 | `getAuthorityLabel` | Human-readable authority labels |
-| `getStateColor` | Semantic color for component states |
+| `getAuthorityDescription` | Longer description for an authority level |
+| `getAuthorityRank` | Numeric rank for an authority level |
+| `getStateColor` | Semantic foreground color for component states |
+| `getStateBgColor` | Background color for component states |
+| `getStateColorPair` | Foreground + background pair for a state |
 | `classNames` | Conditional class name joining |
 | `debounce` | Debounced function wrapper |
 | `throttle` | Throttled function wrapper |
 | `deepMerge` | Deep object merging |
 | `isValidAuthority` | Authority level validation |
 | `isValidState` | Component state validation |
+| `getStateLabel` | Human-readable label for a state |
+| `isActiveState` | Whether a state is “active” |
+| `isTerminalState` | Whether a state is terminal |
+| `isErrorState` | Whether a state represents an error |
 
 ## Contributing
 
@@ -262,4 +264,4 @@ This package uses and depends on the following open-source packages:
 
 ## License
 
-Opensource - Fair use
+MIT

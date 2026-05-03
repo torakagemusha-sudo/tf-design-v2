@@ -2,6 +2,9 @@ import React from 'react';
 import { cn } from '@/utils/cn';
 import { Modal } from './Modal';
 import { ModalBody } from './ModalBody';
+import { LoadingModalSpinner } from './LoadingModalSpinner';
+import { LoadingModalMessage } from './LoadingModalMessage';
+import { LoadingModalProgress } from './LoadingModalProgress';
 
 /**
  * LoadingModal — displays an indeterminate or determinate loading state

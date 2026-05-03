@@ -20,7 +20,6 @@ import type {
   AuthorityLevel,
   ComponentDensity,
   ComponentCriticality,
-  SemanticVariant,
   TorafirmaComponentBaseProps,
 } from "./types";
 
@@ -33,15 +32,13 @@ export interface TabListProps extends TorafirmaComponentBaseProps {
   children?: React.ReactNode;
   /** Optional click handler. */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** Optional variant for semantic styling. */
-  variant?: SemanticVariant;
   /** Tab items. */
   items?: { id: string; label: string; icon?: React.ReactNode; badge?: string | number; disabled?: boolean; state?: TorafirmaComponentState }[];
   /** Active tab ID. */
   activeTabId?: string;
   /** On tab select. */
   onTabSelect?: (tabId: string) => void;
-  /** Tab list variant. */
+  /** Tab list visual variant. */
   variant?: "default" | "pills" | "underline" | "bordered";
   /** Whether the tab list is scrollable. */
   scrollable?: boolean;
@@ -82,15 +79,14 @@ const TabList: React.FC<TabListProps> = ({
   className = "",
   children,
   onClick,
-  variant = "neutral",
+  variant = "default",
   items = [],
   activeTabId,
   onTabSelect,
-  variant = "default",
   scrollable = true,
 }) => {
   const stateClass = `tf-state--${state}`;
-  const variantClass = `tf-variant--${variant}`;
+  const variantClass = `tf-variant--neutral`;
   const densityClass = `tf-density--${density}`;
   const criticalityClass = `tf-criticality--${criticality}`;
   const disabledClass = disabled ? "tf-disabled" : "";

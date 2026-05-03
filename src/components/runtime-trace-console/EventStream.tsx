@@ -2,7 +2,7 @@
  * @fileoverview EventStream — Real-time event stream display.
  * Renders a scrolling feed of live events with severity-based styling.
  *
- * @module @torafirma/design-system/runtime-trace-console/EventStream
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/EventStream
  */
 
 import React, { useEffect, useRef } from "react";

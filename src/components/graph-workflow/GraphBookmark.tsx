@@ -6,7 +6,7 @@
 import React from 'react';
 import type { BookmarkData, GraphComponentProps } from './types';
 
-export interface GraphBookmarkProps extends GraphComponentProps {
+export interface GraphBookmarkProps extends Omit<GraphComponentProps, 'onClick'> {
   /** Bookmark data */
   bookmark: BookmarkData;
   /** Whether the bookmark is highlighted */

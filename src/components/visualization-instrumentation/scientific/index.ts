@@ -1,6 +1,6 @@
 /**
  * @fileoverview Scientific Visualization Components
- * @module @torafirma/design-system/components/visualization-instrumentation/scientific
+ * @module @torakagemusha-sudo/tf-design-v2/components/visualization-instrumentation/scientific
  *
  * Advanced scientific plots: phase-space trajectories, spectrograms,
  * and animated mathematical visualizations.

@@ -2,8 +2,8 @@
  * @fileoverview Barrel export for the Torafirma Runtime, Trace & Console component family.
  * All components in this directory are exported from this module.
  *
- * @module @torafirma/design-system/runtime-trace-console
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console
+ * @version 0.2.0
  */
 
 // Central types module

@@ -2,7 +2,7 @@
  * @fileoverview TraceBookmark — Bookmark important trace events.
  * Toggle bookmark state and show bookmark list.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceBookmark
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceBookmark
  */
 
 import React, { useState } from "react";

@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import type { ValidationResult } from '../../../torafirma-design-system/src/types';
+import type { ValidationResult } from '../../types';
 
 /**
  * Props for the ValidationBadge component.

@@ -35,8 +35,6 @@ export interface AccordionHeaderProps extends TorafirmaComponentBaseProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   /** Optional variant for semantic styling. */
   variant?: SemanticVariant;
-  /** Header label. */
-  label: string;
   /** Whether the section is expanded. */
   expanded?: boolean;
   /** On toggle callback. */
@@ -83,7 +81,6 @@ const AccordionHeader: React.FC<AccordionHeaderProps> = ({
   children,
   onClick,
   variant = "neutral",
-  label,
   expanded = false,
   onToggle,
   icon,

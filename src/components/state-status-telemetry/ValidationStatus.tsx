@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import type { ValidationResult, ComponentDensity } from '../../../torafirma-design-system/src/types';
+import type { ValidationResult, ComponentDensity } from '../../types';
 
 /**
  * Props for the ValidationStatus component.

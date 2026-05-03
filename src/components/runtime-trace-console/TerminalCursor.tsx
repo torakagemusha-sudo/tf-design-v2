@@ -2,7 +2,7 @@
  * @fileoverview TerminalCursor — Blinking cursor for terminal input.
  * CSS-animated block cursor for the terminal prompt.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalCursor
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalCursor
  */
 
 import React from "react";
@@ -11,7 +11,7 @@ import type { BaseComponentProps } from "./types";
 /** Props for TerminalCursor. */
 export interface TerminalCursorProps extends BaseComponentProps {
   /** Cursor style. */
-  style?: "block" | "line" | "underscore";
+  cursorStyle?: "block" | "line" | "underscore";
   /** Whether cursor is blinking. */
   blink?: boolean;
   /** Cursor color. */
@@ -23,21 +23,21 @@ export interface TerminalCursorProps extends BaseComponentProps {
  *
  * @example
  * ```tsx
- * <TerminalCursor style="block" blink />
+ * <TerminalCursor cursorStyle="block" blink />
  * ```
  */
 export const TerminalCursor: React.FC<TerminalCursorProps> = ({
-  style = "block",
+  cursorStyle = "block",
   blink = true,
   color,
   className = "",
   "data-testid": dataTestId = "terminal-cursor",
 }) => {
-  const char = style === "block" ? "█" : style === "line" ? "│" : "▁";
+  const char = cursorStyle === "block" ? "█" : cursorStyle === "line" ? "│" : "▁";
 
   return (
     <span
-      className={`tf-terminal-cursor tf-terminal-cursor--${style} ${
+      className={`tf-terminal-cursor tf-terminal-cursor--${cursorStyle} ${
         blink ? "tf-terminal-cursor--blink" : ""
       } ${className}`}
       data-testid={dataTestId}

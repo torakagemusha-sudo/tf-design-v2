@@ -29,8 +29,8 @@ export interface FunnelChartProps {
  * ```
  */
 const FunnelChart: React.FC<FunnelChartProps> = ({
-  stages, width?, height?, showPercentages?, showValues?, onStageClick?, className?
-}}) => {
+  stages, width, height, showPercentages, showValues, onStageClick, className
+}) => {
   const w = width || 400;
   const h = height || 500;
   const maxVal = Math.max(...stages.map((s) => s.value));

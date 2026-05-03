@@ -6,7 +6,7 @@
 import React, { useCallback, useState } from 'react';
 import type { GraphComponentProps, Point2D } from './types';
 
-export interface GraphEdgeWaypointProps extends GraphComponentProps {
+export interface GraphEdgeWaypointProps extends Omit<GraphComponentProps, 'onClick'> {
   /** Waypoint unique identifier */
   id: string;
   /** Waypoint position */

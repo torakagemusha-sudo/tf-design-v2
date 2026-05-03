@@ -26,8 +26,8 @@ export interface MapLegendProps {
  * ```
  */
 const MapLegend: React.FC<MapLegendProps> = ({
-  items, collapsible?, defaultCollapsed?, className?
-}}) => {
+  items, collapsible, defaultCollapsed, className
+}) => {
   const [collapsed, setCollapsed] = useState(defaultCollapsed || false);
 
   return (

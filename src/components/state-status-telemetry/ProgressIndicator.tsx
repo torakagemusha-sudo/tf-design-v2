@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import type { SemanticVariant, ComponentDensity } from '../../../torafirma-design-system/src/types';
+import type { SemanticVariant, ComponentDensity } from '../../types';
 
 /**
  * Props for the ProgressIndicator component.

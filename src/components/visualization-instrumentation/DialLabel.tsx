@@ -25,8 +25,8 @@ export interface DialLabelProps {
  * ```
  */
 const DialLabel: React.FC<DialLabelProps> = ({
-  text, position?, className?
-}}) => {
+  text, position, className
+}) => {
   return (
     <text
       x={50} y={position === 'top' ? 25 : 80}

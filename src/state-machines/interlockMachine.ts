@@ -10,11 +10,12 @@
  *
  * Spec: 01 Section 12 — Failure Model, 03.0 Section 8 — Authority Semantics
  *
- * @module torafirma/state-machines/interlock
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/interlock
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -175,7 +176,7 @@ export const interlockMachineDefinition: StateMachineDefinition<
   id: 'torafirma.interlock',
   name: 'Interlock System State Machine',
   description: 'Safety interlock with bypass support and configurable failure modes.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'open',
 
@@ -271,7 +272,6 @@ export function createInterlockMachine(
   requiredAuthority?: string,
   overrides?: Partial<InterlockContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(interlockMachineDefinition, {
     context: {
       interlockId,

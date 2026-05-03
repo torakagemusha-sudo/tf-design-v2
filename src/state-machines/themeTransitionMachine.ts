@@ -6,11 +6,12 @@
  *
  * **4 states**: idle → transitioning → settled → failed
  *
- * @module torafirma/state-machines/themeTransition
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/themeTransition
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -116,7 +117,7 @@ export const themeTransitionMachineDefinition: StateMachineDefinition<
   id: 'torafirma.theme.transition',
   name: 'Theme Transition State Machine',
   description: 'Manages smooth theme transitions with settlement and failure states.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'idle',
 
@@ -170,7 +171,6 @@ export function createThemeTransitionMachine(
   currentTheme?: string,
   overrides?: Partial<ThemeTransitionContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(themeTransitionMachineDefinition, {
     context: {
       currentTheme: currentTheme ?? 'system',

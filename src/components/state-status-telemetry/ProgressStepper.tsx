@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import type { ComponentDensity } from '../../../torafirma-design-system/src/types';
+import type { ComponentDensity } from '../../types';
 
 /**
  * Individual step descriptor.

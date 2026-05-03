@@ -12,6 +12,8 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AIModel } from './types';
+import AIModelCapabilities from './AIModelCapabilities';
+import AIModelStatus from './AIModelStatus';
 
 /** Props for the AIModelInfo component */
 export interface AIModelInfoProps {

@@ -27,8 +27,8 @@ export interface ControlChartRuleProps {
  * ```
  */
 const ControlChartRule: React.FC<ControlChartRuleProps> = ({
-  rule, active, violationCount, onToggle?, className?
-}}) => {
+  rule, active, violationCount, onToggle, className
+}) => {
   return (
     <div className={`tf-control-chart-rule ${active ? 'tf-control-chart-rule--active' : ''} ${className || ''}`} onClick={onToggle} role="switch" aria-checked={active}>
       <span className="tf-control-chart-rule__toggle">

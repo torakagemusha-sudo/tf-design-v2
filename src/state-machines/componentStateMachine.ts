@@ -9,11 +9,12 @@
  *
  * Spec: 03.0 Sections 5, 6 — Universal State Model
  *
- * @module torafirma/state-machines/componentStateMachine
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/componentStateMachine
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -222,7 +223,7 @@ export const componentStateMachineDefinition: StateMachineDefinition<
   description:
     'Canonical 17-state component lifecycle. Models the full path from idle through ' +
     'validation, staging, execution, completion, commit, and deployment.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'idle',
 
@@ -424,7 +425,6 @@ export function createComponentMachine(
   overrides?: Partial<ComponentContext>,
 ) {
   // Lazy-import to avoid circular deps if types.ts needs to reference this
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(componentStateMachineDefinition, {
     context: {
       authority: authority ?? 'AUTH_0_OBSERVE',

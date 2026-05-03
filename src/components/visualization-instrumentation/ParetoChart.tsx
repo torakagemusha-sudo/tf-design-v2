@@ -30,8 +30,8 @@ export interface ParetoChartProps {
  * ```
  */
 const ParetoChart: React.FC<ParetoChartProps> = ({
-  data, threshold?, width?, height?, showLine?, showValues?, onBarClick?, className?
-}}) => {
+  data, threshold, width, height, showLine, showValues, onBarClick, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

@@ -2,7 +2,7 @@
  * @fileoverview TraceSpanList — List of trace spans.
  * Sortable, filterable list of spans with duration bars.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceSpanList
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceSpanList
  */
 
 import React, { useState } from "react";

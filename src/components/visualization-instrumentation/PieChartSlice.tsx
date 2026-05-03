@@ -30,8 +30,8 @@ export interface PieChartSliceProps {
  * ```
  */
 const PieChartSlice: React.FC<PieChartSliceProps> = ({
-  value, total, startAngle, color, label?, exploded?, onClick?, className?
-}}) => {
+  value, total, startAngle, color, label, exploded, onClick, className
+}) => {
   const sliceAngle = (value / total) * 360;
   const r = 40;
   const cx = 50;

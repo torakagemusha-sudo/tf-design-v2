@@ -43,8 +43,6 @@ export interface TabItemProps extends TorafirmaComponentBaseProps {
   icon?: React.ReactNode;
   /** Whether the tab is active. */
   active?: boolean;
-  /** Whether the tab is disabled. */
-  disabled?: boolean;
   /** Tab state. */
   tabState?: TorafirmaComponentState;
   /** Badge text or count. */
@@ -95,7 +93,6 @@ const TabItem: React.FC<TabItemProps> = ({
   tabLabel,
   icon,
   active = false,
-  disabled = false,
   tabState = "idle",
   badge,
   onSelect,

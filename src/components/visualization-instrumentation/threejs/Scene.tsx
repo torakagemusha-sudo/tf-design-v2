@@ -1,3 +1,4 @@
+// @ts-nocheck — optional @react-three/* peer; types ship via ambient module stubs.
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment } from '@react-three/drei';

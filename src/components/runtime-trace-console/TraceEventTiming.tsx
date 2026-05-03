@@ -2,7 +2,7 @@
  * @fileoverview TraceEventTiming — Timing information display.
  * Shows duration, timestamps, and latency for trace events.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventTiming
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventTiming
  */
 
 import React, { useMemo } from "react";

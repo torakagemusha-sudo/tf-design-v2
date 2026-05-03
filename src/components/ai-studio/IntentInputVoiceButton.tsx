@@ -10,7 +10,6 @@
  */
 
 import React from 'react';
-import type { IntentInputVoiceButton } from './types';
 import type { ComponentSize, ConfidenceLevel } from './types';
 
 /** Props for the IntentInputVoiceButton component */
@@ -34,13 +33,13 @@ export interface IntentInputVoiceButtonProps {
  */
 const IntentInputVoiceButton: React.FC<IntentInputVoiceButtonProps> = ({
   isListening,
-onToggle,
-disabled?,
-transcript?,
+  onToggle,
+  disabled,
+  transcript,
 }) => {
   return (
     <button
-      className={\`tf-intent-input-voice-btn\${isListening ? ' tf-intent-input-voice-btn--listening' : ''}\${disabled ? ' tf-intent-input-voice-btn--disabled' : ''}\`}
+      className={`tf-intent-input-voice-btn${isListening ? ' tf-intent-input-voice-btn--listening' : ''}${disabled ? ' tf-intent-input-voice-btn--disabled' : ''}`}
       onClick={onToggle}
       disabled={disabled}
       type="button"

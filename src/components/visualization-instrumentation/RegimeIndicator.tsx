@@ -26,8 +26,8 @@ export interface RegimeIndicatorProps {
  * ```
  */
 const RegimeIndicator: React.FC<RegimeIndicatorProps> = ({
-  regime, showMetadata?, showConfidence?, className?
-}}) => {
+  regime, showMetadata, showConfidence, className
+}) => {
   return (
     <div className={`tf-regime-indicator tf-regime-indicator--${regime.type} ${className || ''}`}>
       <div className="tf-regime-indicator__header">

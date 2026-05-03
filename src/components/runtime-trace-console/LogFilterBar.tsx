@@ -2,7 +2,7 @@
  * @fileoverview LogFilterBar — Filter bar for logs by level and source.
  * Provides dropdown selectors and quick-filter chips.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogFilterBar
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogFilterBar
  */
 
 import React, { useCallback } from "react";

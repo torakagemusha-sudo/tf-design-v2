@@ -2,7 +2,7 @@
  * @fileoverview RuntimeSwitchButton — Switch runtime target button.
  * Allows quick switching between configured runtime targets.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeSwitchButton
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeSwitchButton
  */
 
 import React, { useState } from "react";

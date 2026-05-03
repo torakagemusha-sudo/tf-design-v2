@@ -1,6 +1,10 @@
 import React, { createContext, useContext, useCallback, useMemo } from 'react';
 import { cn } from '@/utils/cn';
 import { Modal } from './Modal';
+import { MultiStepModalSteps } from './MultiStepModalSteps';
+import { MultiStepModalBody } from './MultiStepModalBody';
+import { MultiStepModalFooter } from './MultiStepModalFooter';
+import { MultiStepModalHeader } from './MultiStepModalHeader';
 
 /**
  * Multi-step wizard modal context for sharing step state.

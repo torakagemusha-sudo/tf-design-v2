@@ -11,7 +11,9 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
-import type { ComponentSize } from './types';
+import AcceptButton from './AcceptButton';
+import RejectButton from './RejectButton';
+import ReviseButton from './ReviseButton';
 
 /** Props for the AcceptRejectControls component */
 export interface AcceptRejectControlsProps {

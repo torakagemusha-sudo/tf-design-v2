@@ -3,7 +3,7 @@
  * Dropdown or card grid for choosing the active runtime target.
  * Follows Torafirma Section 9 Runtime Boundary Rules.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeTargetSelector
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeTargetSelector
  */
 
 import React, { useCallback, useState } from "react";

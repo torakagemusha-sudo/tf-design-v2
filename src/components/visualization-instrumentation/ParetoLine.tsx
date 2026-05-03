@@ -28,8 +28,8 @@ export interface ParetoLineProps {
  * ```
  */
 const ParetoLine: React.FC<ParetoLineProps> = ({
-  data, maxCumulative, width, height, padding, className?
-}}) => {
+  data, maxCumulative, width, height, padding, className
+}) => {
   const points = data.map((v, i) => `${padding + (i / (data.length - 1)) * (width - padding * 2)},${height - padding - (v / maxCumulative) * (height - padding * 2)}`).join(' ');
 
   return (

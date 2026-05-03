@@ -2,7 +2,7 @@
  * @fileoverview TraceEventBody — Event body/detail display.
  * Shows message, fields, and action details for a trace event.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventBody
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventBody
  */
 
 import React from "react";

@@ -2,7 +2,7 @@
  * @fileoverview TerminalLine — Terminal output line with type-based styling.
  * Renders input, output, error, warning, info, and prompt lines.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalLine
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalLine
  */
 
 import React from "react";

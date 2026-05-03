@@ -2,7 +2,7 @@
  * @fileoverview TraceCorrelationMatrix — Event correlation heatmap.
  * Shows co-occurrence relationships between event types.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceCorrelationMatrix
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceCorrelationMatrix
  */
 
 import React, { useMemo } from "react";

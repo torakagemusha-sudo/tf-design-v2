@@ -2,7 +2,7 @@
  * @fileoverview TraceAnnotation — Add annotation to trace events.
  * Create text annotations attached to specific events.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceAnnotation
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceAnnotation
  */
 
 import React, { useState } from "react";

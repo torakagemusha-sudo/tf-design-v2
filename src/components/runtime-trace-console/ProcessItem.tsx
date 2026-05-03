@@ -2,7 +2,7 @@
  * @fileoverview ProcessItem — Single process row/card display.
  * Detailed view for one process with expanded metrics.
  *
- * @module @torafirma/design-system/runtime-trace-console/ProcessItem
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ProcessItem
  */
 
 import React from "react";

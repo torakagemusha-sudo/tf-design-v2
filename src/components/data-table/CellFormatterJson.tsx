@@ -147,10 +147,9 @@ const CellFormatterJson: React.FC<CellFormatterJsonProps> = ({
 }) => {
   if (value === null || value === undefined) return <span id={id} data-testid={testId} className="tf-cell-formatter-json tf-cell-formatter-json--null">&mdash;</span>;
   const json = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-  const lines = json.split('
-');
-  const display = !expanded && lines.length > maxLines ? lines.slice(0, maxLines).join('
-') + '...' : json;
+  const lines = json.split('\n');
+  const display =
+    !expanded && lines.length > maxLines ? lines.slice(0, maxLines).join('\n') + '...' : json;
   return (
     <span id={id} data-testid={testId} data-state={state} data-trace-id={traceId} className="tf-cell-formatter-json">
       <code className="tf-cell-formatter-json__code">{display}</code>

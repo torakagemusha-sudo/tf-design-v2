@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import type { ScatterPoint } from './types';
+import TrendLine from './TrendLine';
 
 /**
  * Props for ScatterPlot component.
@@ -31,8 +32,8 @@ export interface ScatterPlotProps {
  * ```
  */
 const ScatterPlot: React.FC<ScatterPlotProps> = ({
-  data, xAxisLabel?, yAxisLabel?, showGrid?, showTrendline?, onPointClick?, width?, height?, className?
-}}) => {
+  data, xAxisLabel, yAxisLabel, showGrid, showTrendline, onPointClick, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

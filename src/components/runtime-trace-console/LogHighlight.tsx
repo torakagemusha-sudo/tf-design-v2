@@ -2,7 +2,7 @@
  * @fileoverview LogHighlight — Highlighted search terms in log messages.
  * Wraps matching terms in highlighted mark elements.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogHighlight
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogHighlight
  */
 
 import React, { useMemo } from "react";

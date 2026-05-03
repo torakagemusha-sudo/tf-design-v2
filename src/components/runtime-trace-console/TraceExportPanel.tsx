@@ -2,7 +2,7 @@
  * @fileoverview TraceExportPanel — Export options panel for traces.
  * Configures export format, filters, and destination.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceExportPanel
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceExportPanel
  */
 
 import React, { useState } from "react";

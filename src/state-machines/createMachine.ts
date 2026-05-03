@@ -15,8 +15,8 @@
  * - Forced transitions for recovery
  * - Snapshot serialization
  *
- * @module torafirma/state-machines/createMachine
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/createMachine
+ * @version 0.2.0
  */
 
 import {
@@ -30,6 +30,7 @@ import {
   type MachineSnapshot,
   type GuardFunction,
   type ActionFunction,
+  type ActionSequence,
 } from './types';
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -48,6 +49,20 @@ function mergeContext<C extends MachineContext>(
 ): C {
   const resolved = typeof base === 'function' ? (base as () => C)() : { ...base };
   return override ? { ...resolved, ...override } as C : resolved;
+}
+
+function runActionSequence<C extends MachineContext, P = unknown>(
+  action: ActionSequence<C, P> | undefined,
+  context: C,
+  payload?: P,
+): void {
+  if (!action) {
+    return;
+  }
+  const steps = Array.isArray(action) ? action : [action];
+  for (const step of steps) {
+    step(context, payload);
+  }
 }
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -126,7 +141,7 @@ export function createMachine<
     const actions = definition.stateActions?.[state];
     if (actions?.entry) {
       try {
-        actions.entry(ctx);
+        runActionSequence(actions.entry, ctx);
       } catch (err) {
         // Entry action errors are non-fatal but logged
         console.error(`[state-machine:${definition.id}] Entry action failed for state "${state}":`, err);
@@ -139,7 +154,7 @@ export function createMachine<
     const actions = definition.stateActions?.[state];
     if (actions?.exit) {
       try {
-        actions.exit(ctx);
+        runActionSequence(actions.exit, ctx);
       } catch (err) {
         console.error(`[state-machine:${definition.id}] Exit action failed for state "${state}":`, err);
       }
@@ -261,7 +276,7 @@ export function createMachine<
       // Run transition action
       if (transition.action) {
         try {
-          transition.action(ctx, payload);
+          runActionSequence(transition.action, ctx, payload);
         } catch (err) {
           const result = buildResult(
             false,
@@ -420,9 +435,11 @@ export function createMachine<
  * @param instance — The machine instance to snapshot.
  * @returns A serializable `MachineSnapshot`.
  */
-export function serializeSnapshot<S extends State, C extends MachineContext>(
-  instance: StateMachineInstance<S, unknown, C>,
+export function serializeSnapshot<S extends State, E extends Event, C extends MachineContext>(
+  instance: StateMachineInstance<S, E, C>,
 ): MachineSnapshot<S, C> {
+  const history = instance.history;
+  const last = history.length > 0 ? history[history.length - 1] : undefined;
   return {
     machineId: instance.definition.id,
     machineVersion: instance.definition.version ?? 'unknown',
@@ -430,7 +447,7 @@ export function serializeSnapshot<S extends State, C extends MachineContext>(
     context: instance.context,
     history: instance.history,
     createdAt: instance.createdAt,
-    lastUpdatedAt: instance.history.at(-1)?.timestamp ?? instance.createdAt,
+    lastUpdatedAt: last?.timestamp ?? instance.createdAt,
     transitionCount: instance.transitionCount,
   };
 }

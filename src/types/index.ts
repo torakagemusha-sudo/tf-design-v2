@@ -106,6 +106,10 @@ export interface TorafirmaComponentBaseProps {
   traceId?: string;
   /** Test identifier for automation. */
   testId?: string;
+  /** Additional CSS classes for the outer element. */
+  className?: string;
+  /** DOM `data-testid` attribute for automation (alias of `testId` in some components). */
+  'data-testid'?: string;
 }
 
 // ============================================================================

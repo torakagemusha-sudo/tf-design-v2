@@ -28,8 +28,8 @@ export interface RegimeTransitionMarkerProps {
  * ```
  */
 const RegimeTransitionMarker: React.FC<RegimeTransitionMarkerProps> = ({
-  timestamp, fromRegime, toRegime, reason?, onClick?, className?
-}}) => {
+  timestamp, fromRegime, toRegime, reason, onClick, className
+}) => {
   return (
     <div className={`tf-regime-transition-marker ${className || ''}`} onClick={onClick}>
       <div className="tf-regime-transition-marker__line" />

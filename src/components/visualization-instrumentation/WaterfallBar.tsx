@@ -31,8 +31,8 @@ export interface WaterfallBarProps {
  * ```
  */
 const WaterfallBar: React.FC<WaterfallBarProps> = ({
-  value, x, y, width, height, color?, showValue?, onClick?, className?
-}}) => {
+  value, x, y, width, height, color, showValue, onClick, className
+}) => {
   return (
     <g className={`tf-waterfall-bar ${className || ''}`} onClick={onClick}>
       <rect x={x} y={y} width={width} height={height} className={`tf-waterfall-bar__rect ${value >= 0 ? 'tf-waterfall-bar__rect--positive' : 'tf-waterfall-bar__rect--negative'}`} style={{ fill: color || (value >= 0 ? '#22c55e' : '#ef4444') }} />

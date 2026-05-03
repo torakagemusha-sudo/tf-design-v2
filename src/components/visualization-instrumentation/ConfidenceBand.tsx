@@ -31,8 +31,8 @@ export interface ConfidenceBandProps {
  * ```
  */
 const ConfidenceBand: React.FC<ConfidenceBandProps> = ({
-  upper, lower, xValues, width, height, padding, color?, opacity?, className?
-}}) => {
+  upper, lower, xValues, width, height, padding, color, opacity, className
+}) => {
   const points = [...upper.map((u, i) => `${padding + (xValues[i] / Math.max(...xValues)) * (width - padding * 2)},${height / 2 - (u / 100) * (height / 2)}`), ...lower.map((l, i) => `${padding + (xValues[xValues.length - 1 - i] / Math.max(...xValues)) * (width - padding * 2)},${height / 2 - (lower[lower.length - 1 - i] / 100) * (height / 2)}`)].join(' ');
 
   return (

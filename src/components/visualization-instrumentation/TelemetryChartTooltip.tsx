@@ -29,8 +29,8 @@ export interface TelemetryChartTooltipProps {
  * ```
  */
 const TelemetryChartTooltip: React.FC<TelemetryChartTooltipProps> = ({
-  point, series, visible, x, y, formatter?, className?
-}}) => {
+  point, series, visible, x, y, formatter, className
+}) => {
   if (!visible || !point) return null;
 
   return (

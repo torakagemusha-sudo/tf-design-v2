@@ -28,8 +28,8 @@ export interface TreemapProps {
  * ```
  */
 const Treemap: React.FC<TreemapProps> = ({
-  data, width?, height?, onNodeClick?, colorScale?, className?
-}}) => {
+  data, width, height, onNodeClick, colorScale, className
+}) => {
   const w = width || 600;
   const h = height || 400;
 

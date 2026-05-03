@@ -2,7 +2,7 @@
  * @fileoverview LogTimestamp — Formatted timestamp display for log entries.
  * Supports ISO, locale, and relative time formats.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogTimestamp
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogTimestamp
  */
 
 import React, { useMemo } from "react";

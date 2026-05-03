@@ -2,7 +2,7 @@
  * @fileoverview TraceEventCard — Detailed trace event card.
  * Full-detail view for a single trace event with all fields.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventCard
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventCard
  */
 
 import React from "react";

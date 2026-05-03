@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { TrainingExample } from './types';
+import AITrainingExample from './AITrainingExample';
 
 /** Props for the AITrainingSet component */
 export interface AITrainingSetProps {

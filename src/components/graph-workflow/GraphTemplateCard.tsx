@@ -6,7 +6,7 @@
 import React from 'react';
 import type { GraphTemplate, GraphComponentProps } from './types';
 
-export interface GraphTemplateCardProps extends GraphComponentProps {
+export interface GraphTemplateCardProps extends Omit<GraphComponentProps, 'onClick'> {
   /** Template data */
   template: GraphTemplate;
   /** Whether this card is selected */

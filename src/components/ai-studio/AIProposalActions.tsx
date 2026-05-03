@@ -11,6 +11,9 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
+import AcceptButton from './AcceptButton';
+import RejectButton from './RejectButton';
+import ReviseButton from './ReviseButton';
 
 /** Props for the AIProposalActions component */
 export interface AIProposalActionsProps {

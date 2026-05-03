@@ -45,8 +45,6 @@ export interface CardProps extends TorafirmaComponentBaseProps {
   footer?: React.ReactNode;
   /** Whether the card is clickable. */
   clickable?: boolean;
-  /** On card click. */
-  onClick?: () => void;
   /** Hover effect. */
   hoverable?: boolean;
   /** Border style. */
@@ -94,7 +92,6 @@ const Card: React.FC<CardProps> = ({
   headerActions,
   footer,
   clickable = false,
-  onClick,
   hoverable = false,
   bordered = true,
 }) => {

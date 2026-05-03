@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import type { MapMarkerData } from './types';
+import type { MapMarkerData, GeoPoint } from './types';
 
 /**
  * Props for MapCluster component.
@@ -29,8 +29,8 @@ export interface MapClusterProps {
  * ```
  */
 const MapCluster: React.FC<MapClusterProps> = ({
-  count, position, markers, onExpand?, onClick?, maxZoom?, className?
-}}) => {
+  count, position, markers, onExpand, onClick, maxZoom, className
+}) => {
   const getClusterSize = () => {
     if (count < 10) return 'sm';
     if (count < 100) return 'md';

@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AIExperiment } from './types';
+import AIExperimentMetrics from './AIExperimentMetrics';
 
 /** Props for the AIExperimentCard component */
 export interface AIExperimentCardProps {

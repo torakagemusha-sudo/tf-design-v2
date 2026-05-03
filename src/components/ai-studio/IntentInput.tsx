@@ -10,7 +10,6 @@
  */
 
 import React from 'react';
-import type { IntentInput } from './types';
 import type { ComponentSize, ConfidenceLevel } from './types';
 
 /** Props for the IntentInput component */
@@ -37,12 +36,12 @@ export interface IntentInputProps {
  */
 const IntentInput: React.FC<IntentInputProps> = ({
   value,
-onChange,
-onSubmit,
-placeholder?,
-isProcessing?,
-disabled?,
-size?,
+  onChange,
+  onSubmit,
+  placeholder,
+  isProcessing,
+  disabled,
+  size,
 }) => {
   const [isFocused, setIsFocused] = React.useState(false);
 
@@ -54,7 +53,7 @@ size?,
 
   return (
     <div
-      className={\`tf-intent-input tf-intent-input--\${size || 'md'}\${isFocused ? ' tf-intent-input--focused' : ''}\${isProcessing ? ' tf-intent-input--processing' : ''}\${disabled ? ' tf-intent-input--disabled' : ''}\`}
+      className={`tf-intent-input tf-intent-input--${size || 'md'}${isFocused ? ' tf-intent-input--focused' : ''}${isProcessing ? ' tf-intent-input--processing' : ''}${disabled ? ' tf-intent-input--disabled' : ''}`}
     >
       <div className="tf-intent-input__wrapper">
         <input

@@ -11,11 +11,12 @@
  *
  * Spec: 01 Section 8 — AI Assistance Boundary
  *
- * @module torafirma/state-machines/aiProposal
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/aiProposal
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -148,7 +149,7 @@ export const aiProposalMachineDefinition: StateMachineDefinition<
   id: 'torafirma.ai.proposal',
   name: 'AI Proposal Lifecycle State Machine',
   description: 'Lifecycle for AI-generated proposals with mandatory operator review and approval.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'drafting',
 
@@ -240,7 +241,6 @@ export function createAIProposalMachine(
   reviewerId: string,
   overrides?: Partial<AIProposalContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(aiProposalMachineDefinition, {
     context: {
       proposalId,

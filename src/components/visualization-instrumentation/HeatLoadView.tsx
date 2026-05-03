@@ -30,8 +30,8 @@ export interface HeatLoadViewProps {
  * ```
  */
 const HeatLoadView: React.FC<HeatLoadViewProps> = ({
-  data, xLabels, yLabels, colorScale?, minValue, maxValue, onCellClick?, className?
-}}) => {
+  data, xLabels, yLabels, colorScale, minValue, maxValue, onCellClick, className
+}) => {
   const [hoveredCell, setHoveredCell] = useState<{ x: number; y: number } | null>(null);
 
   const getColor = useCallback((value: number) => {

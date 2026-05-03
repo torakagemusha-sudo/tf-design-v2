@@ -12,6 +12,9 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { FileDiff } from './types';
+import PatchPreviewActionBar from './PatchPreviewActionBar';
+import PatchPreviewDiff from './PatchPreviewDiff';
+import PatchPreviewHeader from './PatchPreviewHeader';
 
 /** Props for the PatchPreview component */
 export interface PatchPreviewProps {

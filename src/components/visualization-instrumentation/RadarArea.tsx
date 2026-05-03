@@ -28,8 +28,8 @@ export interface RadarAreaProps {
  * ```
  */
 const RadarArea: React.FC<RadarAreaProps> = ({
-  values, maxValue, radius, color?, opacity?, className?
-}}) => {
+  values, maxValue, radius, color, opacity, className
+}) => {
   const angleStep = (2 * Math.PI) / values.length;
   const cx = 50;
   const cy = 50;

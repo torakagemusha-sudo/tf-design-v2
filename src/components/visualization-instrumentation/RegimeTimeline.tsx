@@ -27,8 +27,8 @@ export interface RegimeTimelineProps {
  * ```
  */
 const RegimeTimeline: React.FC<RegimeTimelineProps> = ({
-  regimes, timeRange, onSelectRegime?, height?, className?
-}}) => {
+  regimes, timeRange, onSelectRegime, height, className
+}) => {
   const totalDuration = timeRange.end - timeRange.start;
   const h = height || 60;
 

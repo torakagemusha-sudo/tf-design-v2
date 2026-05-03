@@ -26,8 +26,8 @@ export interface QQPlotProps {
  * ```
  */
 const QQPlot: React.FC<QQPlotProps> = ({
-  data, width?, height?, className?
-}}) => {
+  data, width, height, className
+}) => {
   const w = width || 400;
   const h = height || 400;
   const padding = 40;

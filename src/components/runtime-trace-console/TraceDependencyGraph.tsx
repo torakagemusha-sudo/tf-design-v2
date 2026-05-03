@@ -2,7 +2,7 @@
  * @fileoverview TraceDependencyGraph — Trace dependency map visualization.
  * Shows relationships between trace spans/services as a directed graph.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceDependencyGraph
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceDependencyGraph
  */
 
 import React, { useMemo } from "react";

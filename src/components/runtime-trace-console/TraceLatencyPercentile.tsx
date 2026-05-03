@@ -2,7 +2,7 @@
  * @fileoverview TraceLatencyPercentile — Percentile latency table.
  * Shows P50, P75, P90, P95, P99 latency values.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceLatencyPercentile
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceLatencyPercentile
  */
 
 import React, { useMemo } from "react";
