@@ -27,8 +27,8 @@ export interface CDFChartProps {
  * ```
  */
 const CDFChart: React.FC<CDFChartProps> = ({
-  data, width?, height?, showMarkers?, className?
-}}) => {
+  data, width, height, showMarkers, className
+}) => {
   const w = width || 600;
   const h = height || 300;
   const padding = 40;

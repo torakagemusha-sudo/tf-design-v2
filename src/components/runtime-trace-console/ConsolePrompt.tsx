@@ -2,7 +2,7 @@
  * @fileoverview ConsolePrompt — Interactive console prompt.
  * Input area with prompt string, autocomplete, and history navigation.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsolePrompt
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsolePrompt
  */
 
 import React, { useCallback, useRef, useState } from "react";

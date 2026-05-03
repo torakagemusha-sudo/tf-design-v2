@@ -31,8 +31,8 @@ export interface MapMarkerProps {
  * ```
  */
 const MapMarker: React.FC<MapMarkerProps> = ({
-  id, position, label?, status?, icon?, popup?, onClick?, draggable?, className?
-}}) => {
+  id, position, label, status, icon, popup, onClick, draggable, className
+}) => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (

@@ -5,8 +5,8 @@
  * `useMachine` hook. Integrates with React's state system to trigger
  * re-renders on machine transitions while preserving full type safety.
  *
- * @module torafirma/state-machines/useMachine
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/useMachine
+ * @version 0.2.0
  * @requires react >=18.0.0
  */
 

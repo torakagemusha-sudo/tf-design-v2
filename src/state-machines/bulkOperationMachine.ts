@@ -8,11 +8,12 @@
  * **9 states**: idle → selecting → validating → staged → executing →
  * partial → complete → failed → reverting
  *
- * @module torafirma/state-machines/bulkOperation
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/bulkOperation
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -210,7 +211,7 @@ export const bulkOperationMachineDefinition: StateMachineDefinition<
   id: 'torafirma.bulk.operation',
   name: 'Bulk Operation State Machine',
   description: 'Bulk operation lifecycle with selection, validation, staging, execution, partial completion, and revert.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'idle',
 
@@ -305,7 +306,6 @@ export function createBulkOperationMachine(
   totalItems?: number,
   overrides?: Partial<BulkOperationContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(bulkOperationMachineDefinition, {
     context: {
       operationId,

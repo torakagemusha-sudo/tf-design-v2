@@ -2,7 +2,7 @@
  * @fileoverview TraceSpanDetail — Span detail panel.
  * Shows full information about a trace span including events and tags.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceSpanDetail
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceSpanDetail
  */
 
 import React from "react";

@@ -2,7 +2,7 @@
  * @fileoverview TraceEventActor — Actor information display.
  * Shows who triggered the event (user, system, AI, service).
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventActor
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventActor
  */
 
 import React from "react";

@@ -28,8 +28,8 @@ export interface MapTooltipProps {
  * ```
  */
 const MapTooltip: React.FC<MapTooltipProps> = ({
-  content, visible, x, y, title?, className?
-}}) => {
+  content, visible, x, y, title, className
+}) => {
   if (!visible) return null;
 
   return (

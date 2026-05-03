@@ -10,7 +10,6 @@
  */
 
 import React from 'react';
-import type { IntentInputToolbar } from './types';
 import type { ComponentSize, ConfidenceLevel } from './types';
 
 /** Props for the IntentInputToolbar component */
@@ -37,19 +36,19 @@ export interface IntentInputToolbarProps {
  * ```
  */
 const IntentInputToolbar: React.FC<IntentInputToolbarProps> = ({
-  onAttachFile?,
-onAddContext?,
-onToggleVoice?,
-onShowTemplates?,
-onSubmit?,
-isVoiceEnabled?,
-hasAttachment?,
-canSubmit?,
+  onAttachFile,
+  onAddContext,
+  onToggleVoice,
+  onShowTemplates,
+  onSubmit,
+  isVoiceEnabled,
+  hasAttachment,
+  canSubmit,
 }) => {
   return (
     <div className="tf-intent-input-toolbar" role="toolbar" aria-label="Intent input tools">
       <button
-        className={\`tf-intent-input-toolbar__btn\${hasAttachment ? ' tf-intent-input-toolbar__btn--active' : ''}\`}
+        className={`tf-intent-input-toolbar__btn${hasAttachment ? ' tf-intent-input-toolbar__btn--active' : ''}`}
         onClick={onAttachFile}
         type="button"
         aria-label="Attach file"
@@ -69,7 +68,7 @@ canSubmit?,
         <span className="tf-intent-input-toolbar__label">Context</span>
       </button>
       <button
-        className={\`tf-intent-input-toolbar__btn tf-intent-input-toolbar__btn--voice\${isVoiceEnabled ? ' tf-intent-input-toolbar__btn--active' : ''}\`}
+        className={`tf-intent-input-toolbar__btn tf-intent-input-toolbar__btn--voice${isVoiceEnabled ? ' tf-intent-input-toolbar__btn--active' : ''}`}
         onClick={onToggleVoice}
         type="button"
         aria-label="Toggle voice input"

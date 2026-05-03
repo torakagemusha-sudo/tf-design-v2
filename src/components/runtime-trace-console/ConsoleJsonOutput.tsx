@@ -2,7 +2,7 @@
  * @fileoverview ConsoleJsonOutput — Collapsible JSON display.
  * Pretty-prints JSON with expand/collapse for nested objects.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleJsonOutput
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleJsonOutput
  */
 
 import React, { useState } from "react";

@@ -29,8 +29,8 @@ export interface MapHeatmapLayerProps {
  * ```
  */
 const MapHeatmapLayer: React.FC<MapHeatmapLayerProps> = ({
-  points, radius?, blur?, maxIntensity?, gradient?, opacity?, className?
-}}) => {
+  points, radius, blur, maxIntensity, gradient, opacity, className
+}) => {
   return (
     <div className={`tf-map-heatmap-layer ${className || ''}`} style={{ opacity: opacity || 0.7 }}>
       <svg className="tf-map-heatmap-layer__svg" viewBox="0 0 800 600">

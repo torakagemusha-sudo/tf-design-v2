@@ -2,7 +2,7 @@
  * @fileoverview TraceWaterfallBar — Duration bar in waterfall chart.
  * Colored horizontal bar positioned by start time.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceWaterfallBar
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceWaterfallBar
  */
 
 import React from "react";

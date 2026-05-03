@@ -12,6 +12,7 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { DiffHunk, DiffDisplayMode } from './types';
+import PatchPreviewHunk from './PatchPreviewHunk';
 
 /** Props for the PatchPreviewDiff component */
 export interface PatchPreviewDiffProps {

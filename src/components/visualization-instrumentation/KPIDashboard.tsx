@@ -28,8 +28,8 @@ export interface KPIDashboardProps {
  * ```
  */
 const KPIDashboard: React.FC<KPIDashboardProps> = ({
-  children, columns?, gap?, title?, subtitle?, className?
-}}) => {
+  children, columns, gap, title, subtitle, className
+}) => {
   return (
     <div className={`tf-kpi-dashboard ${className || ''}`}>
       {(title || subtitle) && (

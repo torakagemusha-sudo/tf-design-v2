@@ -29,8 +29,8 @@ export interface MetricTileSparklineProps {
  * ```
  */
 const MetricTileSparkline: React.FC<MetricTileSparklineProps> = ({
-  data, width?, height?, color?, fill?, strokeWidth?, className?
-}}) => {
+  data, width, height, color, fill, strokeWidth, className
+}) => {
   if (data.length < 2) return null;
   const w = width || 120;
   const h = height || 30;

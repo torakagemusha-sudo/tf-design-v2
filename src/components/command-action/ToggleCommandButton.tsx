@@ -5,7 +5,7 @@ import { CommandDescriptor, TorafirmaComponentBaseProps } from '../../types';
  * Props for the ToggleCommandButton component.
  * On/off state toggle with Run/Stop style labels.
  */
-export interface ToggleCommandButtonProps extends TorafirmaComponentBaseProps {
+export interface ToggleCommandButtonProps extends Omit<TorafirmaComponentBaseProps, 'state'> {
   /** The on-state command descriptor */
   onCommand: CommandDescriptor;
   /** The off-state command descriptor */

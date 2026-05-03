@@ -2,7 +2,7 @@
  * @fileoverview TraceTreeToggle — Expand/collapse toggle for trace tree nodes.
  * Small button to toggle visibility of child events.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceTreeToggle
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceTreeToggle
  */
 
 import React from "react";

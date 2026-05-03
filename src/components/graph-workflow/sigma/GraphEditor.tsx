@@ -11,6 +11,7 @@ import {
   importGraphJSON,
 } from './graphUtils';
 
+type GraphInstance = InstanceType<typeof Graph>;
 type EditorMode = 'select' | 'addNode' | 'addEdge';
 
 interface HistoryEntry {
@@ -18,7 +19,7 @@ interface HistoryEntry {
 }
 
 export default function GraphEditor() {
-  const [graph, setGraph] = useState<Graph>(() => {
+  const [graph, setGraph] = useState<GraphInstance>(() => {
     const g = new Graph();
     // Seed with empty graph so user can build from scratch
     return g;
@@ -32,7 +33,7 @@ export default function GraphEditor() {
   const edgeSourceRef = useRef<string | null>(null);
 
   const pushHistory = useCallback(
-    (g: Graph) => {
+    (g: GraphInstance) => {
       const json = exportGraphJSON(g);
       const next = history.slice(0, historyIndex + 1);
       next.push({ json });

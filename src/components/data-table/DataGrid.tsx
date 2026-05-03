@@ -1,4 +1,6 @@
 import React from 'react';
+import DenseTable from './DenseTable';
+import TablePagination from './TablePagination';
 import type {
   TorafirmaComponentState,
   AuthorityLevel,

@@ -2,7 +2,7 @@
  * @fileoverview LogLevelBadge — Log level indicator badge.
  * Colored badge showing TRACE, DEBUG, INFO, WARN, ERROR, FATAL.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogLevelBadge
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogLevelBadge
  */
 
 import React from "react";
@@ -19,7 +19,7 @@ export interface LogLevelBadgeProps extends BaseComponentProps {
 }
 
 /** Level-to-icon mapping. */
-const LEVEL_ICONS: Record<LogLevel, string> = {
+export const LEVEL_ICONS: Record<LogLevel, string> = {
   trace: "⋮",
   debug: "ὐ",
   info: "ℹ",

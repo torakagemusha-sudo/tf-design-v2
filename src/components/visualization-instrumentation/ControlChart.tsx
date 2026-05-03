@@ -32,8 +32,8 @@ export interface ControlChartProps {
  * ```
  */
 const ControlChart: React.FC<ControlChartProps> = ({
-  data, ucl, lcl, center, sampleSize?, rules?, onViolation?, width?, height?, className?
-}}) => {
+  data, ucl, lcl, center, sampleSize, rules, onViolation, width, height, className
+}) => {
   const [violations, setViolations] = useState<Array<{ rule: string; index: number }>>([]);
 
   useEffect(() => {

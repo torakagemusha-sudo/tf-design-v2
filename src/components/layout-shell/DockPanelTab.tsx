@@ -38,7 +38,7 @@ export interface DockPanelTabProps extends TorafirmaComponentBaseProps {
   /** Tab ID. */
   tabId: string;
   /** Tab label. */
-  label: string;
+  tabLabel: string;
   /** Tab icon. */
   icon?: React.ReactNode;
   /** Whether the tab is active. */
@@ -90,7 +90,7 @@ const DockPanelTab: React.FC<DockPanelTabProps> = ({
   onClick,
   variant = "neutral",
   tabId,
-  label,
+  tabLabel,
   icon,
   active = false,
   closable = true,
@@ -120,12 +120,12 @@ const DockPanelTab: React.FC<DockPanelTabProps> = ({
       onClick={onClick}
       className={`tf-dock-panel-tab ${stateClass} ${variantClass} ${densityClass} ${criticalityClass} ${disabledClass} ${className}`}
       role="region"
-      aria-label={label}
+      aria-label={tabLabel}
       aria-description={description}
     >
-      {label && (
+      {tabLabel && (
         <div className="tf-dock-panel-tab__header">
-          <span className="tf-dock-panel-tab__label">{label}</span>
+          <span className="tf-dock-panel-tab__label">{tabLabel}</span>
           {state !== "idle" && (
             <span className={`tf-dock-panel-tab__state-badge tf-state-badge ${stateClass}`}>
               {state.toUpperCase()}

@@ -8,62 +8,59 @@
     "type": "git",
     "url": "git+https://github.com/torakagemusha-sudo/tf-design-v2.git"
   },
-  "files": [
-    "src",
-    "README.md"
-  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./src/index.ts",
-      "require": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
-    "./styles": {
-      "import": "./src/styles/tokens.css",
-      "require": "./src/styles/tokens.css"
-    },
+    "./styles": "./src/styles/tokens.css",
     "./styles/tokens.css": "./src/styles/tokens.css",
     "./styles/themes.css": "./src/styles/themes.css",
     "./styles/components.css": "./src/styles/components.css",
     "./styles/utilities.css": "./src/styles/utilities.css",
-    "./tokens": {
-      "import": "./src/styles/tokens.css",
-      "require": "./src/styles/tokens.css"
-    },
-    "./tailwind": {
-      "import": "./src/styles/tailwind.config.js",
-      "require": "./src/styles/tailwind.config.js"
-    },
+    "./tokens": "./src/styles/tokens.css",
+    "./tailwind": "./src/styles/tailwind.config.js",
     "./types": {
-      "import": "./src/types/index.d.ts",
-      "require": "./src/types/index.d.ts"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js"
     },
     "./components": {
-      "import": "./src/components/index.ts",
-      "require": "./src/components/index.ts"
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
     },
     "./hooks": {
-      "import": "./src/hooks/index.ts",
-      "require": "./src/hooks/index.ts"
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js"
     },
     "./utils": {
-      "import": "./src/utils/index.ts",
-      "require": "./src/utils/index.ts"
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
     },
     "./state-machines": {
-      "import": "./src/state-machines/index.ts",
-      "require": "./src/state-machines/index.ts"
+      "types": "./dist/state-machines/index.d.ts",
+      "import": "./dist/state-machines/index.js"
     },
     "./layouts": {
-      "import": "./src/layouts/index.ts",
-      "require": "./src/layouts/index.ts"
+      "types": "./dist/layouts/index.d.ts",
+      "import": "./dist/layouts/index.js"
     },
     "./rules": {
-      "import": "./src/rules/index.ts",
-      "require": "./src/rules/index.ts"
+      "types": "./dist/rules/index.d.ts",
+      "import": "./dist/rules/index.js"
     }
   },
   "sideEffects": [
-    "*.css"
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "src/styles",
+    "LICENSE",
+    "README.md"
   ],
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -77,14 +74,29 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build": "tsc --noEmit && echo 'Source package validated'",
-    "typecheck": "tsc --noEmit"
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "prepack": "npm run build"
   },
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [],
-  "type": "module",
+  "keywords": [
+    "design-system",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "component-library",
+    "design-tokens",
+    "dark-theme",
+    "command-ui",
+    "operator-ui",
+    "dashboard",
+    "state-machine",
+    "governance",
+    "audit-trail"
+  ],
   "bugs": {
     "url": "https://github.com/torakagemusha-sudo/tf-design-v2/issues"
   },

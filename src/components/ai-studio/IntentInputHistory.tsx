@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import type { IntentInputHistory } from './types';
+import type { IntentHistoryEntry } from './types';
 import type { ComponentSize, ConfidenceLevel } from './types';
 
 /** Props for the IntentInputHistory component */
@@ -34,9 +34,9 @@ export interface IntentInputHistoryProps {
  */
 const IntentInputHistory: React.FC<IntentInputHistoryProps> = ({
   entries,
-onSelect,
-onClear,
-maxVisible?,
+  onSelect,
+  onClear,
+  maxVisible,
 }) => {
   const visible = maxVisible ? entries.slice(0, maxVisible) : entries;
 
@@ -62,7 +62,7 @@ maxVisible?,
                 type="button"
               >
                 <span className="tf-intent-input-history__text">{entry.text}</span>
-                <span className={\`tf-intent-input-history__status tf-intent-input-history__status--\${entry.status}\`}>
+                <span className={`tf-intent-input-history__status tf-intent-input-history__status--${entry.status}`}>
                   {entry.status}
                 </span>
               </button>

@@ -27,8 +27,8 @@ export interface AnomalyBadgeProps {
  * ```
  */
 const AnomalyBadge: React.FC<AnomalyBadgeProps> = ({
-  severity, count?, label?, onClick?, className?
-}}) => {
+  severity, count, label, onClick, className
+}) => {
   return (
     <span
       className={`tf-anomaly-badge tf-anomaly-badge--${severity} ${className || ''}`}

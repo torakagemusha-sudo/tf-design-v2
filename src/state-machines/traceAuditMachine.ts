@@ -10,11 +10,12 @@
  *
  * Spec: 01 Section 11 — Trace and Audit
  *
- * @module torafirma/state-machines/traceAudit
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/traceAudit
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -150,7 +151,7 @@ export const traceAuditMachineDefinition: StateMachineDefinition<
   id: 'torafirma.trace.audit',
   name: 'Trace/Audit Pipeline State Machine',
   description: 'Trace event lifecycle from capture through archival and purge.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'capturing',
 
@@ -242,7 +243,6 @@ export function createTraceAuditMachine(
   actor: string,
   overrides?: Partial<TraceAuditContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(traceAuditMachineDefinition, {
     context: {
       traceId,

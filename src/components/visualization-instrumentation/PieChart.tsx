@@ -31,8 +31,8 @@ export interface PieChartProps {
  * ```
  */
 const PieChart: React.FC<PieChartProps> = ({
-  data, donut?, donutSize?, showLabels?, showLegend?, onSliceClick?, width?, height?, className?
-}}) => {
+  data, donut, donutSize, showLabels, showLegend, onSliceClick, width, height, className
+}) => {
   const w = width || 300;
   const h = height || 300;
   const cx = w / 2;

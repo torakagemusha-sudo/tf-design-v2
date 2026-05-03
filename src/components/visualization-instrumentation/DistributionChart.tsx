@@ -29,8 +29,8 @@ export interface DistributionChartProps {
  * ```
  */
 const DistributionChart: React.FC<DistributionChartProps> = ({
-  data, bins?, showKDE?, showHistogram?, width?, height?, className?
-}}) => {
+  data, bins, showKDE, showHistogram, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 300;
   const padding = 40;

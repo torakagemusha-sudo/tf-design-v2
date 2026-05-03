@@ -28,8 +28,8 @@ export interface SparklineWinLossProps {
  * ```
  */
 const SparklineWinLoss: React.FC<SparklineWinLossProps> = ({
-  data, width?, height?, winColor?, lossColor?, className?
-}}) => {
+  data, width, height, winColor, lossColor, className
+}) => {
   if (data.length === 0) return null;
   const w = width || 120;
   const h = height || 30;

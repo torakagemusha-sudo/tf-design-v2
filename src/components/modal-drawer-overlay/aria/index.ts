@@ -1,6 +1,6 @@
 /**
  * @fileoverview Accessibility Utilities
- * @module @torafirma/design-system/components/modal-drawer-overlay/aria
+ * @module @torakagemusha-sudo/tf-design-v2/components/modal-drawer-overlay/aria
  *
  * Screen-reader helpers and aria-live regions for accessible interfaces.
  */

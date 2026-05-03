@@ -47,8 +47,6 @@ export interface BreadcrumbItemProps extends TorafirmaComponentBaseProps {
   current?: boolean;
   /** Item authority level. */
   itemAuthority?: AuthorityLevel;
-  /** On click callback. */
-  onClick?: (itemId: string) => void;
 }
 
 /**
@@ -93,7 +91,6 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   icon,
   current = false,
   itemAuthority,
-  onClick,
 }) => {
   const stateClass = `tf-state--${state}`;
   const variantClass = `tf-variant--${variant}`;

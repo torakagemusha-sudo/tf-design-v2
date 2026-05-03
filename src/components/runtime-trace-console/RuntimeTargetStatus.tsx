@@ -2,7 +2,7 @@
  * @fileoverview RuntimeTargetStatus — Connection and state status display.
  * Visual indicator of runtime health and connection quality.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeTargetStatus
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeTargetStatus
  */
 
 import React from "react";

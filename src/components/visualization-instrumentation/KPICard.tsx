@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-
-
+import TrendArrow from './TrendArrow';
 /**
  * Props for KPICard component.
  *
@@ -32,8 +31,8 @@ export interface KPICardProps {
  * ```
  */
 const KPICard: React.FC<KPICardProps> = ({
-  title, value, target?, unit?, trend?, trendValue?, status?, icon?, children?, className?
-}}) => {
+  title, value, target, unit, trend, trendValue, status, icon, children, className
+}) => {
   return (
     <div className={`tf-kpi-card tf-kpi-card--${status || 'on-track'} ${className || ''}`}>
       <div className="tf-kpi-card__header">

@@ -2,7 +2,7 @@
  * @fileoverview ConsoleSpinner — Loading spinner for console.
  * Animated indicator for in-progress operations.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleSpinner
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleSpinner
  */
 
 import React from "react";

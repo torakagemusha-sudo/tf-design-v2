@@ -27,8 +27,8 @@ export interface MetricTileLabelProps {
  * ```
  */
 const MetricTileLabel: React.FC<MetricTileLabelProps> = ({
-  label, subtitle?, info?, icon?, className?
-}}) => {
+  label, subtitle, info, icon, className
+}) => {
   return (
     <div className={`tf-metric-tile-label ${className || ''}`}>
       {icon && <span className="tf-metric-tile-label__icon">{icon}</span>}

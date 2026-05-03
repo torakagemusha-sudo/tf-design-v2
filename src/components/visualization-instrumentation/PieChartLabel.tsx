@@ -28,8 +28,8 @@ export interface PieChartLabelProps {
  * ```
  */
 const PieChartLabel: React.FC<PieChartLabelProps> = ({
-  angle, radius, text, percent?, value?, className?
-}}) => {
+  angle, radius, text, percent, value, className
+}) => {
   const rad = (angle * Math.PI) / 180;
   const x = 50 + radius * Math.cos(rad);
   const y = 50 + radius * Math.sin(rad);

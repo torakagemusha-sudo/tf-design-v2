@@ -1,6 +1,6 @@
 /**
  * @fileoverview Sigma.js Force-Directed Graph Components
- * @module @torafirma/design-system/components/graph-workflow/sigma
+ * @module @torakagemusha-sudo/tf-design-v2/components/graph-workflow/sigma
  *
  * High-performance WebGL graph rendering using sigma.js and graphology.
  * Alternative to the ReactFlow-based graph components for force-directed layouts.

@@ -2,7 +2,7 @@
  * @fileoverview TraceWaterfallRow — Single row in the waterfall chart.
  * Contains label, duration bar, and timing text.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceWaterfallRow
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceWaterfallRow
  */
 
 import React from "react";

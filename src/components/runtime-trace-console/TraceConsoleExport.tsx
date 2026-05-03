@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleExport — Export trace data in various formats.
  * Supports JSON, CSV, and structured log export with selectable event ranges.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleExport
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleExport
  */
 
 import React, { useCallback, useState } from "react";

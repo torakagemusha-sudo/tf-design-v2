@@ -12,6 +12,8 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AIAssumption } from './types';
+import AssumptionConfidence from './AssumptionConfidence';
+import AssumptionValidation from './AssumptionValidation';
 
 /** Props for the AssumptionItem component */
 export interface AssumptionItemProps {

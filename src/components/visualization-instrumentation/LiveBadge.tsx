@@ -26,8 +26,8 @@ export interface LiveBadgeProps {
  * ```
  */
 const LiveBadge: React.FC<LiveBadgeProps> = ({
-  label?, pulse?, color?, className?
-}}) => {
+  label, pulse, color, className
+}) => {
   return (
     <span className={`tf-live-badge ${pulse ? 'tf-live-badge--pulse' : ''} ${className || ''}`}>
       <span className="tf-live-badge__dot" style={{ backgroundColor: color || '#22c55e' }} />

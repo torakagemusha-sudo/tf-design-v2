@@ -27,8 +27,8 @@ export interface MetricTileTrendProps {
  * ```
  */
 const MetricTileTrend: React.FC<MetricTileTrendProps> = ({
-  direction, value?, previousValue?, invertColors?, className?
-}}) => {
+  direction, value, previousValue, invertColors, className
+}) => {
   const isPositive = invertColors ? direction === 'down' : direction === 'up';
   const pct = value !== undefined ? value : previousValue ? ((value || 0 - previousValue) / previousValue) * 100 : 0;
 

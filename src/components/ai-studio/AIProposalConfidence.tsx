@@ -11,7 +11,6 @@
 
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
-import type { ConfidenceLevel, ComponentSize } from './types';
 
 /** Props for the AIProposalConfidence component */
 export interface AIProposalConfidenceProps {

@@ -2,7 +2,7 @@
  * @fileoverview EventStreamFilter — Filter controls for event streams.
  * Filters by event type, severity, and source.
  *
- * @module @torafirma/design-system/runtime-trace-console/EventStreamFilter
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/EventStreamFilter
  */
 
 import React, { useCallback, useState } from "react";

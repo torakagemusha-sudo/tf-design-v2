@@ -2,7 +2,7 @@
  * @fileoverview ConsoleTableOutput — Tabular data display for console.
  * Renders arrays of objects as formatted tables.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleTableOutput
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleTableOutput
  */
 
 import React, { useMemo } from "react";

@@ -4,6 +4,7 @@ import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { ConfirmModalMessage } from './ConfirmModalMessage';
 
 /**
  * ConfirmModal — a standard confirmation dialog with primary action

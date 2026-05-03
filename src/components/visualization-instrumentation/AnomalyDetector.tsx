@@ -27,8 +27,8 @@ export interface AnomalyDetectorProps {
  * ```
  */
 const AnomalyDetector: React.FC<AnomalyDetectorProps> = ({
-  data, threshold?, method?, onAnomalyDetected?, className?
-}}) => {
+  data, threshold, method, onAnomalyDetected, className
+}) => {
   const anomalies = useMemo(() => {
     if (method === 'threshold' && threshold !== undefined) {
       return data.map((v, i) => Math.abs(v) > threshold ? i : -1).filter((i) => i >= 0);

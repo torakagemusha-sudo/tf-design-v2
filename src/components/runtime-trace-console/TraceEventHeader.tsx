@@ -2,7 +2,7 @@
  * @fileoverview TraceEventHeader — Compact event header for trace cards.
  * Shows severity, action, target, and timestamp in a single line.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventHeader
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventHeader
  */
 
 import React from "react";

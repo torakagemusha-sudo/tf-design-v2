@@ -2,7 +2,7 @@
  * @fileoverview TraceFlameTooltip — Tooltip for flame graph bars.
  * Shows node name, value, and custom tooltip text on hover.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceFlameTooltip
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceFlameTooltip
  */
 
 import React from "react";

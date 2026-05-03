@@ -31,8 +31,8 @@ export interface SunburstArcProps {
  * ```
  */
 const SunburstArc: React.FC<SunburstArcProps> = ({
-  startAngle, endAngle, innerRadius, outerRadius, color, label?, cx?, cy?, className?
-}}) => {
+  startAngle, endAngle, innerRadius, outerRadius, color, label, cx, cy, className
+}) => {
   const cx0 = cx || 50;
   const cy0 = cy || 50;
   const sRad = (startAngle * Math.PI) / 180;

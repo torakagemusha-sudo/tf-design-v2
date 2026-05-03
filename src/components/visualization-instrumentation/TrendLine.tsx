@@ -33,8 +33,8 @@ export interface TrendLineProps {
  * ```
  */
 const TrendLine: React.FC<TrendLineProps> = ({
-  data, y, width, height, padding, minX, maxX, minY, maxY, color?, className?
-}}) => {
+  data, width, height, padding, minX, maxX, minY, maxY, color, className
+}) => {
   const n = data.length;
   const sumX = data.reduce((s, d) => s + d.x, 0);
   const sumY = data.reduce((s, d) => s + d.y, 0);

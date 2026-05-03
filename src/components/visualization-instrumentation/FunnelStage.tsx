@@ -27,8 +27,8 @@ export interface FunnelStageProps {
  * ```
  */
 const FunnelStage: React.FC<FunnelStageProps> = ({
-  label, value, color?, conversionRate?, className?
-}}) => {
+  label, value, color, conversionRate, className
+}) => {
   return (
     <div className={`tf-funnel-stage ${className || ''}`}>
       <span className="tf-funnel-stage__label">{label}</span>

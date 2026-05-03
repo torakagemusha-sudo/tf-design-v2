@@ -31,8 +31,8 @@ export interface HeatLoadCellProps {
  * ```
  */
 const HeatLoadCell: React.FC<HeatLoadCellProps> = ({
-  value, row, col, color, formattedValue?, label?, onHover?, onClick?, className?
-}}) => {
+  value, row, col, color, formattedValue, label, onHover, onClick, className
+}) => {
   return (
     <div
       className={`tf-heat-load-cell ${className || ''}`}

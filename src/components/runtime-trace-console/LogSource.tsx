@@ -2,7 +2,7 @@
  * @fileoverview LogSource — Log source identifier display.
  * Shows the originating component, service, or thread for a log line.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogSource
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogSource
  */
 
 import React from "react";

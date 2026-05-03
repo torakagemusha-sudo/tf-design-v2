@@ -10,11 +10,12 @@
  *
  * Spec: 01 Section 9 — Runtime Boundary Rules
  *
- * @module torafirma/state-machines/runtimeConnection
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/runtimeConnection
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -165,7 +166,7 @@ export const runtimeConnectionMachineDefinition: StateMachineDefinition<
   id: 'torafirma.runtime.connection',
   name: 'Runtime Connection State Machine',
   description: 'Connection lifecycle with circuit breaker for runtime targets.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'disconnected',
 
@@ -275,7 +276,6 @@ export function createRuntimeConnectionMachine(
   endpoint: string,
   overrides?: Partial<RuntimeConnectionContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(runtimeConnectionMachineDefinition, {
     context: {
       runtimeId,

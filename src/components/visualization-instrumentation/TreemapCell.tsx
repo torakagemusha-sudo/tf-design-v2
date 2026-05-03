@@ -32,8 +32,8 @@ export interface TreemapCellProps {
  * ```
  */
 const TreemapCell: React.FC<TreemapCellProps> = ({
-  label, value, x, y, width, height, color?, children?, onClick?, className?
-}}) => {
+  label, value, x, y, width, height, color, children, onClick, className
+}) => {
   return (
     <g className={`tf-treemap-cell ${className || ''}`} onClick={onClick}>
       <rect x={x} y={y} width={Math.max(width, 0.5)} height={Math.max(height, 0.5)} className="tf-treemap-cell__rect" style={{ fill: color || '#0ea5e9' }} />

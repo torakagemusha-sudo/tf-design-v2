@@ -39,8 +39,6 @@ export interface PanelFooterProps extends TorafirmaComponentBaseProps {
   actions?: React.ReactNode;
   /** Status text or badge displayed on the left. */
   status?: React.ReactNode;
-  /** Trace ID displayed in the footer. */
-  traceId?: string;
   /** Whether the footer has a top border. */
   bordered?: boolean;
 }
@@ -83,7 +81,6 @@ const PanelFooter: React.FC<PanelFooterProps> = ({
   variant = "neutral",
   actions,
   status,
-  traceId,
   bordered = true,
 }) => {
   const stateClass = `tf-state--${state}`;

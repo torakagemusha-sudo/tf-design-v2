@@ -2,7 +2,7 @@
  * @fileoverview TraceEventMetadata — Event metadata key-value display.
  * Shows arbitrary metadata attached to a trace event.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventMetadata
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventMetadata
  */
 
 import React from "react";

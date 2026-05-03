@@ -2,7 +2,7 @@
  * @fileoverview RuntimeMetricGauge — Individual metric gauge.
  * Shows current value, threshold bar, and state indicator.
  *
- * @module @torafirma/design-system/runtime-trace-console/RuntimeMetricGauge
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/RuntimeMetricGauge
  */
 
 import React from "react";

@@ -228,3 +228,6 @@ export interface SecretEntry {
   lastRotated?: number;
   expiresAt?: number;
 }
+
+/** Props for the schema property editor dialog (see `core/SchemaPropertyEditor.tsx`). */
+export type { SchemaPropertyEditorProps } from './core/SchemaPropertyEditor';

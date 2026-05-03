@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, type ReactNode, type CSSProperties, type ChangeEvent, type FocusEvent, type KeyboardEvent, type MouseEvent } from "react";
 import type { BaseComponentProps, PropertyDefinition, ValidationRule, SchemaNodeData, SchemaEdgeData, CodeDocument, JsonViewMode, PatchHunk, PatchLine, PatchOperation, FieldOption, FormFieldConfig, FieldCondition, FormStepConfig, ConfigVersion, DependencyNode, AutocompleteSuggestion, CurrencyConfig, DurationValue, UploadedFile, ConfigTemplate, SecretEntry, SchemaPropertyEditorProps } from "../types";
+import { FormField } from "./FormField";
 
 /**
  * FormFieldSignature — digital signature pad for drawing signatures.
@@ -47,7 +48,7 @@ export const FormFieldSignature: React.FC<FormFieldSignatureProps> = ({
     return { x: e.clientX - rect.left, y: e.clientY - rect.top };
   }, []);
 
-  const startDraw = useCallback((e: React.MouseEvent) => {
+  const startDraw = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
     if (disabled) return;
     setIsDrawing(true);
     const { x, y } = getPos(e);
@@ -55,7 +56,7 @@ export const FormFieldSignature: React.FC<FormFieldSignatureProps> = ({
     if (ctx) { ctx.beginPath(); ctx.moveTo(x, y); }
   }, [disabled, getPos]);
 
-  const draw = useCallback((e: React.MouseEvent) => {
+  const draw = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
     if (!isDrawing || disabled) return;
     const { x, y } = getPos(e);
     const ctx = canvasRef.current?.getContext("2d");

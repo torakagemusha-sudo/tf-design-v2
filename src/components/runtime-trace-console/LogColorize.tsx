@@ -2,7 +2,7 @@
  * @fileoverview LogColorize — Colorize log output by severity level.
  * Applies CSS color classes based on log level for visual scanning.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogColorize
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogColorize
  */
 
 import React from "react";

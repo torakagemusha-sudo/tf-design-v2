@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleToolbar — Toolbar for trace console actions.
  * Provides quick access to common trace operations: pause, clear, export, settings.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleToolbar
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleToolbar
  */
 
 import React, { useCallback } from "react";

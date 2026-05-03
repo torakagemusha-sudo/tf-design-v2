@@ -1,4 +1,5 @@
 import React from 'react';
+import FilterBar from './FilterBar';
 import type {
   TorafirmaComponentState,
   AuthorityLevel,

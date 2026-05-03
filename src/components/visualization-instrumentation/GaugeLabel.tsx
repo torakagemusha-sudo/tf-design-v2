@@ -28,8 +28,8 @@ export interface GaugeLabelProps {
  * ```
  */
 const GaugeLabel: React.FC<GaugeLabelProps> = ({
-  angle, radius, text, fontSize?, color?, className?
-}}) => {
+  angle, radius, text, fontSize, color, className
+}) => {
   const rad = (angle - 90) * Math.PI / 180;
   const x = 50 + radius * Math.cos(rad);
   const y = 50 + radius * Math.sin(rad);

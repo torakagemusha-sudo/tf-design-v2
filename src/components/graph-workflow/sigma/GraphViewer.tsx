@@ -5,20 +5,22 @@ import forceAtlas2 from 'graphology-layout-forceatlas2';
 import type { EdgeType, NodeType } from './graphUtils';
 import { NODE_COLORS, EDGE_COLORS } from './graphUtils';
 
+type GraphInstance = InstanceType<typeof Graph>;
+type SigmaInstance = InstanceType<typeof Sigma>;
 export type GraphSelection =
   | { kind: 'node'; id: string; attrs: Record<string, unknown> }
   | { kind: 'edge'; id: string; attrs: Record<string, unknown> }
   | null;
 
 interface GraphViewerProps {
-  graph: Graph;
+  graph: GraphInstance;
   selection?: GraphSelection;
   onSelect?: (sel: GraphSelection) => void;
 }
 
 export default function GraphViewer({ graph, onSelect }: GraphViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const sigmaRef = useRef<Sigma | null>(null);
+  const sigmaRef = useRef<SigmaInstance | null>(null);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [hoveredEdge, setHoveredEdge] = useState<string | null>(null);
   const [initError, setInitError] = useState<string>('');
@@ -43,7 +45,7 @@ export default function GraphViewer({ graph, onSelect }: GraphViewerProps) {
 
     try {
       // Work on a copy so we don't mutate the caller's graph
-      const displayGraph = graph.copy() as Graph;
+      const displayGraph = graph.copy() as GraphInstance;
 
       // Initialise node positions if missing
       displayGraph.forEachNode((node, attr) => {

@@ -30,8 +30,8 @@ export interface SankeyNodeProps {
  * ```
  */
 const SankeyNode: React.FC<SankeyNodeProps> = ({
-  id, label, x, y, height, color?, value?, className?
-}}) => {
+  id, label, x, y, height, color, value, className
+}) => {
   return (
     <g className={`tf-sankey-node ${className || ''}`}>
       <rect x={x} y={y} width={20} height={height} className="tf-sankey-node__rect" style={{ fill: color || '#0ea5e9' }} />

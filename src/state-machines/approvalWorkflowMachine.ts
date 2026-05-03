@@ -9,11 +9,12 @@
  *
  * Spec: 01 Section 6 — Authority Model, 03.0 Section 8 — Authority Semantics
  *
- * @module torafirma/state-machines/approvalWorkflow
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/approvalWorkflow
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -169,7 +170,7 @@ export const approvalWorkflowMachineDefinition: StateMachineDefinition<
   id: 'torafirma.approval.workflow',
   name: 'Approval Workflow State Machine',
   description: 'Multi-stage approval workflow with delegation, escalation, and expiry.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'draft',
 
@@ -265,7 +266,6 @@ export function createApprovalWorkflowMachine(
   requesterId: string,
   overrides?: Partial<ApprovalWorkflowContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(approvalWorkflowMachineDefinition, {
     context: {
       workflowId,

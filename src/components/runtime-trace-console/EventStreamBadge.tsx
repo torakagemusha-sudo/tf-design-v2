@@ -2,7 +2,7 @@
  * @fileoverview EventStreamBadge — Event type badge with severity-based coloring.
  * Small inline badge for labeling event categories in the stream.
  *
- * @module @torafirma/design-system/runtime-trace-console/EventStreamBadge
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/EventStreamBadge
  */
 
 import React from "react";

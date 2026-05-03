@@ -2,7 +2,7 @@
  * @fileoverview ProcessStats — Process statistics and aggregate view.
  * Shows distribution by state, top consumers, and summary metrics.
  *
- * @module @torafirma/design-system/runtime-trace-console/ProcessStats
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ProcessStats
  */
 
 import React, { useMemo } from "react";

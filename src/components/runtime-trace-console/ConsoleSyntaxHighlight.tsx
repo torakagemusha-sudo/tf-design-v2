@@ -2,7 +2,7 @@
  * @fileoverview ConsoleSyntaxHighlight — Syntax highlighting for console output.
  * Highlights JSON, key-value pairs, and structured command syntax.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleSyntaxHighlight
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleSyntaxHighlight
  */
 
 import React, { useMemo } from "react";

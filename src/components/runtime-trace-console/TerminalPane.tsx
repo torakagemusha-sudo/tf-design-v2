@@ -2,7 +2,7 @@
  * @fileoverview TerminalPane — Terminal/console pane with history, input, and autocomplete.
  * Provides an interactive command-line interface within the Torafirma environment.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalPane
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalPane
  */
 
 import React, { useCallback, useEffect, useRef, useState } from "react";

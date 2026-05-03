@@ -5,7 +5,7 @@ import { CommandState, TorafirmaComponentBaseProps } from '../../types';
  * Props for the CommandStatusIndicator component.
  * Small inline status next to a command.
  */
-export interface CommandStatusIndicatorProps extends TorafirmaComponentBaseProps {
+export interface CommandStatusIndicatorProps extends Omit<TorafirmaComponentBaseProps, 'state'> {
   /** The command state to display */
   state: CommandState;
   /** Optional progress percentage (0-100) for running state */

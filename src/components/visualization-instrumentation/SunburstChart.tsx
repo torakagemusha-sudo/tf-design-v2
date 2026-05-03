@@ -27,8 +27,8 @@ export interface SunburstChartProps {
  * ```
  */
 const SunburstChart: React.FC<SunburstChartProps> = ({
-  data, width?, height?, onArcClick?, className?
-}}) => {
+  data, width, height, onArcClick, className
+}) => {
   const w = width || 400;
   const h = height || 400;
   const cx = w / 2;

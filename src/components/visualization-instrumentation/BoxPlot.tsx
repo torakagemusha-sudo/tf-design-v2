@@ -28,8 +28,8 @@ export interface BoxPlotProps {
  * ```
  */
 const BoxPlot: React.FC<BoxPlotProps> = ({
-  data, orientation?, showOutliers?, width?, height?, className?
-}}) => {
+  data, orientation, showOutliers, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

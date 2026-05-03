@@ -10,11 +10,12 @@
  *
  * Spec: 01 Section 10 — Persistence and Lineage
  *
- * @module torafirma/state-machines/deployment
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/deployment
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -163,7 +164,7 @@ export const deploymentMachineDefinition: StateMachineDefinition<
   id: 'torafirma.deployment',
   name: 'Deployment Lifecycle State Machine',
   description: 'Full deployment pipeline with build, test, stage, deploy, verify, and rollback.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'pending',
 
@@ -266,7 +267,6 @@ export function createDeploymentMachine(
   version: string,
   overrides?: Partial<DeploymentContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(deploymentMachineDefinition, {
     context: {
       deploymentId,

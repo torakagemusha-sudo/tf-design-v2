@@ -4,6 +4,9 @@ import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { FaultModalError } from './FaultModalError';
+import { FaultModalStackTrace } from './FaultModalStackTrace';
+import { FaultModalRecovery } from './FaultModalRecovery';
 
 /**
  * FaultModal — displays system errors, faults, and exceptions.

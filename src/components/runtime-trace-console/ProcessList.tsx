@@ -2,7 +2,7 @@
  * @fileoverview ProcessList — Tabular list of processes.
  * Displays processes with sortable columns for PID, name, CPU, memory, state.
  *
- * @module @torafirma/design-system/runtime-trace-console/ProcessList
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ProcessList
  */
 
 import React, { useMemo, useState } from "react";

@@ -27,8 +27,8 @@ export interface MetricTileDeltaProps {
  * ```
  */
 const MetricTileDelta: React.FC<MetricTileDeltaProps> = ({
-  current, previous, formatter?, showPercentage?, className?
-}}) => {
+  current, previous, formatter, showPercentage, className
+}) => {
   const delta = current - previous;
   const pct = previous !== 0 ? (delta / previous) * 100 : 0;
   const isPositive = delta >= 0;

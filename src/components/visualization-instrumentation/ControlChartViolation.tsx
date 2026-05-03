@@ -28,8 +28,8 @@ export interface ControlChartViolationProps {
  * ```
  */
 const ControlChartViolation: React.FC<ControlChartViolationProps> = ({
-  rule, index, value, timestamp?, onClick?, className?
-}}) => {
+  rule, index, value, timestamp, onClick, className
+}) => {
   return (
     <div className={`tf-control-chart-violation ${className || ''}`} onClick={onClick} role="alert">
       <span className="tf-control-chart-violation__icon">&#9888;</span>

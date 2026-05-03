@@ -2,8 +2,8 @@
  * @fileoverview Central types module for the Torafirma Runtime, Trace & Console component family.
  * All components in this directory import types from this module.
  *
- * @module @torafirma/design-system/runtime-trace-console/types
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/types
+ * @version 0.2.0
  */
 
 import type React from "react";

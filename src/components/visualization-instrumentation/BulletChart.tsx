@@ -30,8 +30,8 @@ export interface BulletChartProps {
  * ```
  */
 const BulletChart: React.FC<BulletChartProps> = ({
-  title, value, target, ranges, unit?, width?, height?, className?
-}}) => {
+  title, value, target, ranges, unit, width, height, className
+}) => {
   const w = width || 400;
   const h = height || 60;
   const maxRange = Math.max(...ranges.map((r) => r.max), target * 1.2);

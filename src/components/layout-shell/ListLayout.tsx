@@ -37,8 +37,8 @@ export interface ListLayoutProps extends TorafirmaComponentBaseProps {
   variant?: SemanticVariant;
   /** Whether to show dividers between items. */
   dividers?: boolean;
-  /** List density. */
-  density?: "compact" | "normal" | "spacious";
+  /** Visual density of list rows (distinct from layout `density`). */
+  listDensity?: "compact" | "normal" | "spacious";
   /** Whether items are selectable. */
   selectable?: boolean;
   /** Selected item ID. */
@@ -86,7 +86,7 @@ const ListLayout: React.FC<ListLayoutProps> = ({
   onClick,
   variant = "neutral",
   dividers = true,
-  density = "normal",
+  listDensity = "normal",
   selectable = false,
   selectedId,
   onItemSelect,

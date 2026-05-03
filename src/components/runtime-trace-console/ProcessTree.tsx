@@ -2,7 +2,7 @@
  * @fileoverview ProcessTree — Hierarchical tree view of processes.
  * Shows parent-child relationships with expand/collapse controls.
  *
- * @module @torafirma/design-system/runtime-trace-console/ProcessTree
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ProcessTree
  */
 
 import React, { useState } from "react";

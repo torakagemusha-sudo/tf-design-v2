@@ -29,8 +29,8 @@ export interface BoxPlotWhiskerProps {
  * ```
  */
 const BoxPlotWhisker: React.FC<BoxPlotWhiskerProps> = ({
-  min, max, x, yMin, yMax, capWidth?, className?
-}}) => {
+  min, max, x, yMin, yMax, capWidth, className
+}) => {
   const cw = capWidth || 6;
 
   return (

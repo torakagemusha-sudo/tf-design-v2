@@ -1,3 +1,4 @@
+// @ts-nocheck — optional @react-three/* peer; types ship via ambient module stubs.
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { OrbitControls, Grid, Text } from '@react-three/drei';

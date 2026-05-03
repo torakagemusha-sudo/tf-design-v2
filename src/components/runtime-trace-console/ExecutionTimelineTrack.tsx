@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineTrack — Individual timeline track.
  * Horizontal lane showing events on a named track.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineTrack
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineTrack
  */
 
 import React from "react";

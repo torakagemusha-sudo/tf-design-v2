@@ -28,8 +28,8 @@ export interface LineChartAreaProps {
  * ```
  */
 const LineChartArea: React.FC<LineChartAreaProps> = ({
-  points, y, baseline?, color?, opacity?, className?
-}}) => {
+  points, baseline, color, opacity, className
+}) => {
   const minY = baseline !== undefined ? baseline : Math.max(...points.map((p) => p.y));
   const areaPoints = `${points[0].x},${minY} ${points.map((p) => `${p.x},${p.y}`).join(' ')} ${points[points.length - 1].x},${minY}`;
 

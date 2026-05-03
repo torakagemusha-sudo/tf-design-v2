@@ -2,7 +2,7 @@
  * @fileoverview TraceComparison — Compare two traces side by side.
  * Diff view showing differences between two trace executions.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceComparison
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceComparison
  */
 
 import React from "react";

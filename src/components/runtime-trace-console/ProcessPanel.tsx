@@ -2,7 +2,7 @@
  * @fileoverview ProcessPanel — Process/thread monitoring panel.
  * Displays process list, tree view, and aggregate statistics.
  *
- * @module @torafirma/design-system/runtime-trace-console/ProcessPanel
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ProcessPanel
  */
 
 import React, { useState } from "react";

@@ -32,8 +32,8 @@ export interface BarChartProps {
  * ```
  */
 const BarChart: React.FC<BarChartProps> = ({
-  data, orientation?, xAxisLabel?, yAxisLabel?, showGrid?, showValues?, onBarClick?, width?, height?, className?
-}}) => {
+  data, orientation, xAxisLabel, yAxisLabel, showGrid, showValues, onBarClick, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 60;

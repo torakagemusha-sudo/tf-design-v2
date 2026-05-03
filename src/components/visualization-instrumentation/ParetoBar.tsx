@@ -30,8 +30,8 @@ export interface ParetoBarProps {
  * ```
  */
 const ParetoBar: React.FC<ParetoBarProps> = ({
-  value, label, x, y, width, height, color?, className?
-}}) => {
+  value, label, x, y, width, height, color, className
+}) => {
   return (
     <g className={`tf-pareto-bar ${className || ''}`}>
       <rect x={x} y={y} width={width} height={height} className="tf-pareto-bar__rect" style={{ fill: color || '#0ea5e9' }} />

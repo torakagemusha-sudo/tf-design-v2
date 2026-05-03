@@ -1,3 +1,4 @@
+// @ts-nocheck — optional framer-motion peer dependency.
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ReactNode } from 'react';
 

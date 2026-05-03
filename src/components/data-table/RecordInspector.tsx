@@ -159,6 +159,7 @@ const RecordInspector: React.FC<RecordInspectorProps> = ({
   collapsible = true,
   onClose,
   onFieldChange,
+  onAction,
   state = 'idle',
   authority,
   traceId,
@@ -183,7 +184,7 @@ const RecordInspector: React.FC<RecordInspectorProps> = ({
         </div>
         <div className="tf-record-inspector__header-actions">
           {actions.map((action) => (
-            <button key={action.id} className={`tf-record-inspector__action-btn tf-record-inspector__action-btn--${action.variant || 'neutral'}`} onClick={() => onAction?.(action.id) ?? action.onAction()} disabled={action.disabled || disabled} title={action.disabled ? 'Action requires higher authority' : action.label}>{action.label}</button>
+            <button key={action.id} className={`tf-record-inspector__action-btn tf-record-inspector__action-btn--${action.variant || 'neutral'}`} onClick={() => (onAction ? onAction(action.id) : action.onAction())} disabled={action.disabled || disabled} title={action.disabled ? 'Action requires higher authority' : action.label}>{action.label}</button>
           ))}
           {onClose && <button className="tf-record-inspector__close-btn" onClick={onClose} aria-label="Close inspector">&#x2715;</button>}
         </div>

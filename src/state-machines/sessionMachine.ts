@@ -8,11 +8,12 @@
  * **8 states**: anonymous → identifying → active → idle → warning →
  * extended → terminated → logged_out
  *
- * @module torafirma/state-machines/session
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/session
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -148,7 +149,7 @@ export const sessionMachineDefinition: StateMachineDefinition<
   id: 'torafirma.session',
   name: 'User Session State Machine',
   description: 'Full user session lifecycle with idle detection, warning, extension, and termination.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'anonymous',
 
@@ -242,7 +243,6 @@ export function createSessionMachine(
   idleTimeoutMs?: number,
   overrides?: Partial<SessionContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(sessionMachineDefinition, {
     context: {
       sessionId: sessionId ?? '',

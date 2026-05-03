@@ -2,11 +2,12 @@
  * @fileoverview TraceTreeView — Hierarchical trace view.
  * Displays trace events in a nested tree structure.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceTreeView
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceTreeView
  */
 
 import React, { useState } from "react";
 import type { BaseComponentProps, TraceEvent } from "./types";
+import TraceTreeToggle from "./TraceTreeToggle";
 
 /** Props for TraceTreeView. */
 export interface TraceTreeViewProps extends BaseComponentProps {

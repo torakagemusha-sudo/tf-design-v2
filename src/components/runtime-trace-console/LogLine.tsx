@@ -2,7 +2,7 @@
  * @fileoverview LogLine — Single log line with colorization and selection.
  * Renders one log entry with timestamp, level badge, source, and message.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogLine
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogLine
  */
 
 import React from "react";

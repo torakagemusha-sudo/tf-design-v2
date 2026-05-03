@@ -1,5 +1,6 @@
 import Graph from 'graphology';
 
+type GraphInstance = InstanceType<typeof Graph>;
 export type NodeType = 'system' | 'sensor' | 'actuator' | 'controller';
 export type EdgeType = 'plastic' | 'active' | 'adaptive' | 'passive';
 
@@ -17,7 +18,7 @@ export const EDGE_COLORS: Record<EdgeType, string> = {
   passive: '#6a7d8d',
 };
 
-export function createSampleGraph(): Graph {
+export function createSampleGraph(): GraphInstance {
   const graph = new Graph();
 
   const nodes: { id: string; type: NodeType; label: string }[] = [
@@ -63,11 +64,11 @@ export function createSampleGraph(): Graph {
   return graph;
 }
 
-export function exportGraphJSON(graph: Graph): string {
+export function exportGraphJSON(graph: GraphInstance): string {
   return JSON.stringify(graph.export());
 }
 
-export function importGraphJSON(json: string): Graph {
+export function importGraphJSON(json: string): GraphInstance {
   const graph = new Graph();
   graph.import(JSON.parse(json));
   return graph;

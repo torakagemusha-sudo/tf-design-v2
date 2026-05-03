@@ -27,8 +27,8 @@ export interface DialPointerProps {
  * ```
  */
 const DialPointer: React.FC<DialPointerProps> = ({
-  angle, length?, color?, width?, className?
-}}) => {
+  angle, length, color, width, className
+}) => {
   const rad = (angle - 90) * Math.PI / 180;
   const x2 = 50 + (length || 35) * Math.cos(rad);
   const y2 = 50 + (length || 35) * Math.sin(rad);

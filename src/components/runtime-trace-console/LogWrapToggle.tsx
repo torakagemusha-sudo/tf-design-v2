@@ -2,7 +2,7 @@
  * @fileoverview LogWrapToggle — Toggle line wrapping in the log viewer.
  * Switches between truncated and wrapped line display.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogWrapToggle
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogWrapToggle
  */
 
 import React from "react";

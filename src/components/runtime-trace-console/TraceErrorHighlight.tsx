@@ -2,7 +2,7 @@
  * @fileoverview TraceErrorHighlight — Error highlighting in traces.
  * Visually emphasizes error and fatal events in trace displays.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceErrorHighlight
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceErrorHighlight
  */
 
 import React from "react";

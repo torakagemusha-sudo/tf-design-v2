@@ -2,7 +2,7 @@
  * @fileoverview TerminalPrompt — Terminal input prompt display.
  * Shows the prompt string (e.g., "torafirma>") before the input line.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalPrompt
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalPrompt
  */
 
 import React from "react";

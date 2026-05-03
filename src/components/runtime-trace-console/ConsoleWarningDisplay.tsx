@@ -2,7 +2,7 @@
  * @fileoverview ConsoleWarningDisplay — Formatted warning display for console.
  * Shows warning messages with acknowledgment option.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleWarningDisplay
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleWarningDisplay
  */
 
 import React from "react";

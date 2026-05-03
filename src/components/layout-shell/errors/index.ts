@@ -1,6 +1,6 @@
 /**
  * @fileoverview Error Boundary Components
- * @module @torafirma/design-system/components/layout-shell/errors
+ * @module @torakagemusha-sudo/tf-design-v2/components/layout-shell/errors
  *
  * React error boundaries for graceful failure handling.
  */

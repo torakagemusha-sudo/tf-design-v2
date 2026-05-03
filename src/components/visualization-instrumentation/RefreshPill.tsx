@@ -27,8 +27,8 @@ export interface RefreshPillProps {
  * ```
  */
 const RefreshPill: React.FC<RefreshPillProps> = ({
-  interval, lastRefresh?, onRefresh?, disabled?, className?
-}}) => {
+  interval, lastRefresh, onRefresh, disabled, className
+}) => {
   const [countdown, setCountdown] = useState(interval);
 
   useEffect(() => {

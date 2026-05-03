@@ -12,7 +12,7 @@
  *   useMachine,
  *   componentStateMachineDefinition,
  *   createComponentMachine,
- * } from '@torafirma/state-machines';
+ * } from '@torakagemusha-sudo/tf-design-v2/state-machines';
  *
  * // Use in a React component
  * const MyComponent = () => {
@@ -23,8 +23,8 @@
  * };
  * ```
  *
- * @module torafirma/state-machines
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines
+ * @version 0.2.0
  */
 
 // ───────────────────────────────────────────────────────────────────────────────

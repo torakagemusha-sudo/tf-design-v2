@@ -32,8 +32,8 @@ export interface TelemetryChartToolbarProps {
  * ```
  */
 const TelemetryChartToolbar: React.FC<TelemetryChartToolbarProps> = ({
-  onZoomIn?, onZoomOut?, onPanLeft?, onPanRight?, onRefresh?, onExport?, onSettings?, canZoomIn?, canZoomOut?, className?
-}}) => {
+  onZoomIn, onZoomOut, onPanLeft, onPanRight, onRefresh, onExport, onSettings, canZoomIn, canZoomOut, className
+}) => {
   return (
     <div className={`tf-telemetry-chart-toolbar ${className || ''}`}>
       <div className="tf-telemetry-chart-toolbar__group">

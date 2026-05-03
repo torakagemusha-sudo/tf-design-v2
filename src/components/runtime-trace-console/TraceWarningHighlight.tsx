@@ -2,7 +2,7 @@
  * @fileoverview TraceWarningHighlight — Warning highlighting in traces.
  * Visually emphasizes warning-level events.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceWarningHighlight
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceWarningHighlight
  */
 
 import React from "react";

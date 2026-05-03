@@ -29,8 +29,8 @@ export interface MetricTileValueProps {
  * ```
  */
 const MetricTileValue: React.FC<MetricTileValueProps> = ({
-  value, decimals?, unit?, prefix?, formatter?, animate?, className?
-}}) => {
+  value, decimals, unit, prefix, formatter, animate, className
+}) => {
   const formatted = formatter ? formatter(value) : value.toFixed(decimals !== undefined ? decimals : 2);
 
   return (

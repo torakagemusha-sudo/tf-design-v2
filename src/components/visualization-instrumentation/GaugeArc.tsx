@@ -28,8 +28,8 @@ export interface GaugeArcProps {
  * ```
  */
 const GaugeArc: React.FC<GaugeArcProps> = ({
-  startAngle, endAngle, radius, color?, width?, className?
-}}) => {
+  startAngle, endAngle, radius, color, width, className
+}) => {
   const startRad = (startAngle - 90) * Math.PI / 180;
   const endRad = (endAngle - 90) * Math.PI / 180;
   const largeArc = endAngle - startAngle > 180 ? 1 : 0;

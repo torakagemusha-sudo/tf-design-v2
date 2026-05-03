@@ -5,8 +5,8 @@
  * and patrol units. All components feature 44-56px minimum touch targets, dark theme,
  * authority-aware state machines, and semantic `tf-` CSS class prefixes.
  *
- * @module @torafirma/mobile-field-emergency
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/components/mobile-field-emergency
+ * @version 0.2.0
  */
 
 // ── Core Field Actions ──

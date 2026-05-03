@@ -6,7 +6,7 @@
 import React, { useCallback } from 'react';
 import type { PortData, GraphComponentProps } from './types';
 
-export interface PortProps extends GraphComponentProps {
+export interface PortProps extends Omit<GraphComponentProps, 'onClick'> {
   /** Port data model */
   port: PortData;
   /** Parent node ID */

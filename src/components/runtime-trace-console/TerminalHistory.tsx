@@ -2,7 +2,7 @@
  * @fileoverview TerminalHistory — Command history list.
  * Navigable list of previously executed commands.
  *
- * @module @torafirma/design-system/runtime-trace-console/TerminalHistory
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TerminalHistory
  */
 
 import React from "react";

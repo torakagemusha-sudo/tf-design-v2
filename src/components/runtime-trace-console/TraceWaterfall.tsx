@@ -2,7 +2,7 @@
  * @fileoverview TraceWaterfall — Waterfall chart for trace spans.
  * Shows spans as horizontal bars positioned by start time.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceWaterfall
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceWaterfall
  */
 
 import React from "react";

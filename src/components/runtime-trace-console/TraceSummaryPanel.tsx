@@ -2,7 +2,7 @@
  * @fileoverview TraceSummaryPanel — Trace summary statistics.
  * Shows aggregate counts, durations, error rates, and service breakdown.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceSummaryPanel
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceSummaryPanel
  */
 
 import React, { useMemo } from "react";

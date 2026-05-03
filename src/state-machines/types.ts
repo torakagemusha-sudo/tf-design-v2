@@ -6,8 +6,8 @@
  * used across component lifecycle, authority, validation, AI proposals,
  * runtime connection, trace/audit, and operational governance.
  *
- * @module torafirma/state-machines/types
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/types
+ * @version 0.2.0
  * @license MIT
  */
 
@@ -22,7 +22,7 @@ export type State = string;
 export type Event = string;
 
 /** Generic context object carried through state transitions. */
-export type MachineContext = Record<string, unknown>;
+export type MachineContext = object;
 
 // ───────────────────────────────────────────────────────────────────────────────
 // Guard & Action Function Types
@@ -74,12 +74,17 @@ export type ActionFunction<C extends MachineContext = MachineContext, P = unknow
  * @template S — The state union type.
  * @template C — The machine context shape.
  */
+/** Side-effect function or a sequence of functions run in order. */
+export type ActionSequence<C extends MachineContext = MachineContext, P = unknown> =
+  | ActionFunction<C, P>
+  | readonly ActionFunction<C, P>[];
+
 export interface StateAction<S extends State = State, C extends MachineContext = MachineContext> {
   /** Optional action invoked when the machine enters this state. */
-  entry?: ActionFunction<C>;
+  entry?: ActionSequence<C>;
 
   /** Optional action invoked when the machine exits this state. */
-  exit?: ActionFunction<C>;
+  exit?: ActionSequence<C>;
 
   /** The state to which these actions are bound. */
   state: S;
@@ -132,7 +137,7 @@ export interface Transition<
   guard?: GuardFunction<C>;
 
   /** Optional action — executed when the transition successfully fires. */
-  action?: ActionFunction<C>;
+  action?: ActionSequence<C>;
 
   /** Human-readable description of this transition's purpose. */
   description?: string;

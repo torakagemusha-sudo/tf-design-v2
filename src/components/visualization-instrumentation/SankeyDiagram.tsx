@@ -29,8 +29,8 @@ export interface SankeyDiagramProps {
  * ```
  */
 const SankeyDiagram: React.FC<SankeyDiagramProps> = ({
-  nodes, links, width?, height?, nodeWidth?, onNodeClick?, className?
-}}) => {
+  nodes, links, width, height, nodeWidth, onNodeClick, className
+}) => {
   const w = width || 800;
   const h = height || 500;
   const nodeW = nodeWidth || 20;

@@ -1,5 +1,10 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, type ReactNode, type CSSProperties, type ChangeEvent, type FocusEvent, type KeyboardEvent, type MouseEvent } from "react";
 import type { BaseComponentProps, PropertyDefinition, ValidationRule, SchemaNodeData, SchemaEdgeData, CodeDocument, JsonViewMode, PatchHunk, PatchLine, PatchOperation, FieldOption, FormFieldConfig, FieldCondition, FormStepConfig, ConfigVersion, DependencyNode, AutocompleteSuggestion, CurrencyConfig, DurationValue, UploadedFile, ConfigTemplate, SecretEntry, SchemaPropertyEditorProps } from "../types";
+import { PatchEditorRevertButton } from "./PatchEditorRevertButton";
+import { PatchEditorHunk } from "./PatchEditorHunk";
+import { PatchEditorApplyButton } from "./PatchEditorApplyButton";
+import { PatchEditorToolbar } from "./PatchEditorToolbar";
+import { PatchEditorReviewPanel } from "./PatchEditorReviewPanel";
 
 /**
  * PatchEditor — diff/patch editor for reviewing and applying code changes.

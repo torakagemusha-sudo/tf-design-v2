@@ -27,8 +27,8 @@ export interface SampleSizeIndicatorProps {
  * ```
  */
 const SampleSizeIndicator: React.FC<SampleSizeIndicatorProps> = ({
-  current, recommended, minimum?, showBar?, className?
-}}) => {
+  current, recommended, minimum, showBar, className
+}) => {
   const pct = Math.min(100, (current / recommended) * 100);
   const status = current >= recommended ? 'adequate' : current >= (minimum || recommended * 0.5) ? 'partial' : 'insufficient';
 

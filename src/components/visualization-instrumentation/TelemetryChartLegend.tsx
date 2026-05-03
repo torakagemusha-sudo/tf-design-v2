@@ -26,8 +26,8 @@ export interface TelemetryChartLegendProps {
  * ```
  */
 const TelemetryChartLegend: React.FC<TelemetryChartLegendProps> = ({
-  series, onToggleSeries?, position?, className?
-}}) => {
+  series, onToggleSeries, position, className
+}) => {
   return (
     <div className={`tf-telemetry-chart-legend tf-telemetry-chart-legend--${position || 'bottom'} ${className || ''}`}>
       {series.map((s) => (

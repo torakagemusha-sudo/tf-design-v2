@@ -27,8 +27,8 @@ export interface BarChartGroupProps {
  * ```
  */
 const BarChartGroup: React.FC<BarChartGroupProps> = ({
-  categories, series, width?, height?, className?
-}}) => {
+  categories, series, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 60;

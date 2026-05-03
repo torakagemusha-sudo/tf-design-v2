@@ -12,6 +12,9 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AISuggestion, SuggestionPriority } from './types';
+import AcceptButton from './AcceptButton';
+import RejectButton from './RejectButton';
+import SuggestionQueuePriority from './SuggestionQueuePriority';
 
 /** Props for the SuggestionQueueItem component */
 export interface SuggestionQueueItemProps {

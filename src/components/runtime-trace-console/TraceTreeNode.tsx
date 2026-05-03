@@ -2,7 +2,7 @@
  * @fileoverview TraceTreeNode — Single node in the trace tree.
  * Displays one trace event with expand/collapse and indentation.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceTreeNode
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceTreeNode
  */
 
 import React from "react";

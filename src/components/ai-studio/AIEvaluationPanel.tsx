@@ -12,6 +12,8 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { FeedbackDimension } from './types';
+import AIEvaluationDimension from './AIEvaluationDimension';
+import AIEvaluationScore from './AIEvaluationScore';
 
 /** Props for the AIEvaluationPanel component */
 export interface AIEvaluationPanelProps {

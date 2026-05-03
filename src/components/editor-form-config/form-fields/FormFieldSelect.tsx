@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, type ReactNode, type CSSProperties, type ChangeEvent, type FocusEvent, type KeyboardEvent, type MouseEvent } from "react";
 import type { BaseComponentProps, PropertyDefinition, ValidationRule, SchemaNodeData, SchemaEdgeData, CodeDocument, JsonViewMode, PatchHunk, PatchLine, PatchOperation, FieldOption, FormFieldConfig, FieldCondition, FormStepConfig, ConfigVersion, DependencyNode, AutocompleteSuggestion, CurrencyConfig, DurationValue, UploadedFile, ConfigTemplate, SecretEntry, SchemaPropertyEditorProps } from "../types";
+import type { FormFieldProps } from "./formFieldTypes";
+import { FormField } from "./FormField";
 
 /**
  * FormFieldSelect — dropdown select with option groups support.
@@ -40,8 +42,7 @@ export const FormFieldSelect: React.FC<FormFieldSelectProps> = ({
         name={props.name}
         value={String(props.value ?? "")}
         onChange={e => props.onChange(props.name, e.target.value)}
-        disabled={props.disabled}
-        readOnly={props.readonly}
+        disabled={props.disabled || props.readonly}
       >
         {allowEmpty && <option value="">{emptyLabel}</option>}
         {options.map(opt => (

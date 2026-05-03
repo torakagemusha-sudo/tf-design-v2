@@ -2,7 +2,7 @@
  * @fileoverview TraceEventDiff — Before/after state diff display.
  * Shows side-by-side comparison of state changes in a trace event.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventDiff
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventDiff
  */
 
 import React, { useMemo } from "react";

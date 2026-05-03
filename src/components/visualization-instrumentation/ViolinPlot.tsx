@@ -28,8 +28,8 @@ export interface ViolinPlotProps {
  * ```
  */
 const ViolinPlot: React.FC<ViolinPlotProps> = ({
-  data, width?, height?, showBox?, bandwidth?, className?
-}}) => {
+  data, width, height, showBox, bandwidth, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

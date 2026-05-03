@@ -29,8 +29,8 @@ export interface DialScaleProps {
  * ```
  */
 const DialScale: React.FC<DialScaleProps> = ({
-  min, max, ticks, startAngle, endAngle, radius?, className?
-}}) => {
+  min, max, ticks, startAngle, endAngle, radius, className
+}) => {
   const tickArr = [...Array(ticks)].map((_, i) => {
     const angle = startAngle + (i / (ticks - 1)) * (endAngle - startAngle);
     const value = min + (i / (ticks - 1)) * (max - min);

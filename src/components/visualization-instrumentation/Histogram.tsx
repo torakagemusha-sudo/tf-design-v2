@@ -30,8 +30,8 @@ export interface HistogramProps {
  * ```
  */
 const Histogram: React.FC<HistogramProps> = ({
-  bins, xAxisLabel?, yAxisLabel?, showGrid?, normalized?, width?, height?, className?
-}}) => {
+  bins, xAxisLabel, yAxisLabel, showGrid, normalized, width, height, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

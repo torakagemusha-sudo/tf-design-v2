@@ -548,7 +548,7 @@ export interface GraphEdgeComponentProps extends GraphComponentProps {
   onWaypointRemove?: (edgeId: string, waypointId: string) => void;
 }
 
-export interface PortComponentProps extends GraphComponentProps {
+export interface PortComponentProps extends Omit<GraphComponentProps, 'onClick'> {
   port: PortData;
   nodeId: string;
   onClick?: (nodeId: string, portId: string) => void;

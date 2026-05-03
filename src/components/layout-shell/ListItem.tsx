@@ -45,12 +45,8 @@ export interface ListItemProps extends TorafirmaComponentBaseProps {
   secondaryText?: string;
   /** Whether the item is selected. */
   selected?: boolean;
-  /** Whether the item is disabled. */
-  disabled?: boolean;
   /** Item state. */
   itemState?: TorafirmaComponentState;
-  /** On click callback. */
-  onClick?: (itemId: string) => void;
   /** Item actions. */
   actions?: React.ReactNode;
 }
@@ -96,9 +92,7 @@ const ListItem: React.FC<ListItemProps> = ({
   icon,
   secondaryText,
   selected = false,
-  disabled = false,
   itemState = "idle",
-  onClick,
   actions,
 }) => {
   const stateClass = `tf-state--${state}`;

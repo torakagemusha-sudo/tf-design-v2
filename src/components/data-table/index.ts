@@ -415,4 +415,4 @@ export type {
   RecordField,
   DatasetStatistic,
   CellDataType,
-};
+} from './DenseTable';

@@ -1,4 +1,5 @@
 import React from 'react';
+import ColumnVisibilityToggle from './ColumnVisibilityToggle';
 import type {
   TorafirmaComponentState,
   AuthorityLevel,

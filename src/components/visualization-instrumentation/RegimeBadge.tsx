@@ -27,8 +27,8 @@ export interface RegimeBadgeProps {
  * ```
  */
 const RegimeBadge: React.FC<RegimeBadgeProps> = ({
-  regime, type, size?, pulse?, className?
-}}) => {
+  regime, type, size, pulse, className
+}) => {
   return (
     <span className={`tf-regime-badge tf-regime-badge--${type} tf-regime-badge--${size || 'md'} ${pulse ? 'tf-regime-badge--pulse' : ''} ${className || ''}`}>
       <span className="tf-regime-badge__dot" />

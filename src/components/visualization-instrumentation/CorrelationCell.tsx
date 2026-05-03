@@ -27,8 +27,8 @@ export interface CorrelationCellProps {
  * ```
  */
 const CorrelationCell: React.FC<CorrelationCellProps> = ({
-  value, variableX, variableY, onClick?, className?
-}}) => {
+  value, variableX, variableY, onClick, className
+}) => {
   const getColor = () => {
     if (value > 0) return `rgba(14, 165, 233, ${Math.abs(value)})`;
     if (value < 0) return `rgba(239, 68, 68, ${Math.abs(value)})`;

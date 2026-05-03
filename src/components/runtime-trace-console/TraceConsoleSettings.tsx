@@ -2,7 +2,7 @@
  * @fileoverview TraceConsoleSettings — Console settings panel.
  * Controls display preferences: timestamps, severity colors, auto-scroll, max events.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceConsoleSettings
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceConsoleSettings
  */
 
 import React, { useCallback, useState } from "react";

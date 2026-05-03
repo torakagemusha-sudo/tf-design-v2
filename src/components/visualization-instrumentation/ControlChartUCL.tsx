@@ -27,8 +27,8 @@ export interface ControlChartUCLProps {
  * ```
  */
 const ControlChartUCL: React.FC<ControlChartUCLProps> = ({
-  value, label?, dashed?, color?, className?
-}}) => {
+  value, label, dashed, color, className
+}) => {
   return (
     <div className={`tf-control-chart-ucl ${className || ''}`}>
       <svg className="tf-control-chart-ucl__svg" viewBox="0 0 800 20">

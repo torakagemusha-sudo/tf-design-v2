@@ -2,7 +2,7 @@
  * @fileoverview TraceEventAuthority — Authority level badge for events.
  * Shows the authority level that produced or was required by the event.
  *
- * @module @torafirma/design-system/runtime-trace-console/TraceEventAuthority
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/TraceEventAuthority
  */
 
 import React from "react";

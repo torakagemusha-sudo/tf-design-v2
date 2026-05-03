@@ -27,8 +27,8 @@ export interface TelemetryChartBrushProps {
  * ```
  */
 const TelemetryChartBrush: React.FC<TelemetryChartBrushProps> = ({
-  domain, range, onChange, height?, className?
-}}) => {
+  domain, range, onChange, height, className
+}) => {
   const [start, end] = range;
   const [isDragging, setIsDragging] = useState(false);
   const [dragTarget, setDragTarget] = useState<'start' | 'end' | 'range' | null>(null);

@@ -12,6 +12,10 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { AIProposal } from './types';
+import AIProposalActions from './AIProposalActions';
+import AIProposalConfidence from './AIProposalConfidence';
+import AIProposalContent from './AIProposalContent';
+import AIProposalHeader from './AIProposalHeader';
 
 /** Props for the AIProposalCard component */
 export interface AIProposalCardProps {

@@ -17,3 +17,6 @@ export function useIsMobile() {
 
   return !!isMobile
 }
+
+/** @deprecated Prefer `useIsMobile`; kept for barrel compatibility. */
+export const useMobile = useIsMobile;

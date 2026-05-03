@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import type { AuthorityLevel } from '../../../torafirma-design-system/src/types';
+import type { AuthorityLevel } from '../../types';
 
 /**
  * Props for the AuthorityEscalator component.

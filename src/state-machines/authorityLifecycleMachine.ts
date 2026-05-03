@@ -10,11 +10,12 @@
  *
  * Spec: 01 Section 6 — Authority Model
  *
- * @module torafirma/state-machines/authorityLifecycle
- * @version 2.0.0
+ * @module @torakagemusha-sudo/tf-design-v2/state-machines/authorityLifecycle
+ * @version 0.2.0
  */
 
 import { type StateMachineDefinition, type GuardFunction, type ActionFunction } from './types';
+import { createMachine } from './createMachine';
 
 // ───────────────────────────────────────────────────────────────────────────────
 // State & Event Unions
@@ -163,7 +164,7 @@ export const authorityLifecycleMachineDefinition: StateMachineDefinition<
   id: 'torafirma.authority.lifecycle',
   name: 'Authority Lifecycle State Machine',
   description: 'Models authentication, authority levels, escalation, expiration, and revocation.',
-  version: '2.0.0',
+  version: '0.2.0',
 
   initialState: 'unauthenticated',
 
@@ -300,7 +301,6 @@ export function createAuthorityLifecycleMachine(
   maxLevel?: number,
   overrides?: Partial<AuthorityContext>,
 ) {
-  const { createMachine } = require('./createMachine') as typeof import('./createMachine');
   return createMachine(authorityLifecycleMachineDefinition, {
     context: {
       operatorId,

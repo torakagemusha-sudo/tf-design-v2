@@ -31,8 +31,8 @@ export interface MetricTileProps {
  * ```
  */
 const MetricTile: React.FC<MetricTileProps> = ({
-  value, label, unit?, trend?, trendValue?, sparklineData?, status?, onClick?, className?
-}}) => {
+  value, label, unit, trend, trendValue, sparklineData, status, onClick, className
+}) => {
   return (
     <div className={`tf-metric-tile tf-metric-tile--${status || 'normal'} ${className || ''}`} onClick={onClick} role="button">
       <div className="tf-metric-tile__header">

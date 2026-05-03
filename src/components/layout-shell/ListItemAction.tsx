@@ -41,12 +41,6 @@ export interface ListItemActionProps extends TorafirmaComponentBaseProps {
   actionLabel: string;
   /** Action icon. */
   icon?: React.ReactNode;
-  /** Action variant. */
-  variant?: SemanticVariant;
-  /** On click callback. */
-  onClick?: () => void;
-  /** Whether the action is disabled. */
-  disabled?: boolean;
 }
 
 /**
@@ -88,9 +82,6 @@ const ListItemAction: React.FC<ListItemActionProps> = ({
   actionId,
   actionLabel,
   icon,
-  variant = "neutral",
-  onClick,
-  disabled = false,
 }) => {
   const stateClass = `tf-state--${state}`;
   const variantClass = `tf-variant--${variant}`;

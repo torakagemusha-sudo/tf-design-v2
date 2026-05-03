@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import type { IntentInputSuggestion } from './types';
+import type { IntentSuggestion } from './types';
 import type { ComponentSize, ConfidenceLevel } from './types';
 
 /** Props for the IntentInputSuggestion component */
@@ -34,9 +34,9 @@ export interface IntentInputSuggestionProps {
  */
 const IntentInputSuggestion: React.FC<IntentInputSuggestionProps> = ({
   suggestions,
-onSelect,
-highlightedIndex?,
-visible?,
+  onSelect,
+  highlightedIndex,
+  visible,
 }) => {
   if (!visible || suggestions.length === 0) return null;
 
@@ -46,7 +46,7 @@ visible?,
         {suggestions.map((s, i) => (
           <li
             key={s.id}
-            className={\`tf-intent-input-suggestion__item\${i === highlightedIndex ? ' tf-intent-input-suggestion__item--highlighted' : ''}\`}
+            className={`tf-intent-input-suggestion__item${i === highlightedIndex ? ' tf-intent-input-suggestion__item--highlighted' : ''}`}
             role="option"
             aria-selected={i === highlightedIndex}
             onClick={() => onSelect(s)}

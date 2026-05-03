@@ -2,7 +2,7 @@
  * @fileoverview ConsoleAutoComplete — Autocomplete dropdown for console.
  * Shows filtered suggestions with keyboard and mouse selection.
  *
- * @module @torafirma/design-system/runtime-trace-console/ConsoleAutoComplete
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ConsoleAutoComplete
  */
 
 import React, { useState } from "react";

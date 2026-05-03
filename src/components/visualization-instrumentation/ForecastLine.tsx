@@ -28,8 +28,8 @@ export interface ForecastLineProps {
  * ```
  */
 const ForecastLine: React.FC<ForecastLineProps> = ({
-  historical, forecast, timestamps?, confidence?, color?, className?
-}}) => {
+  historical, forecast, timestamps, confidence, color, className
+}) => {
   const allData = [...historical, ...forecast];
   const maxVal = Math.max(...allData);
   const minVal = Math.min(...allData);

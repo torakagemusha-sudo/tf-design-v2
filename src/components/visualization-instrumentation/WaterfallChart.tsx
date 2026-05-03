@@ -29,8 +29,8 @@ export interface WaterfallChartProps {
  * ```
  */
 const WaterfallChart: React.FC<WaterfallChartProps> = ({
-  data, width?, height?, showConnector?, showValues?, onBarClick?, className?
-}}) => {
+  data, width, height, showConnector, showValues, onBarClick, className
+}) => {
   const w = width || 600;
   const h = height || 400;
   const padding = 50;

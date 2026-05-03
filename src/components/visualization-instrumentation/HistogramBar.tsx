@@ -32,8 +32,8 @@ export interface HistogramBarProps {
  * ```
  */
 const HistogramBar: React.FC<HistogramBarProps> = ({
-  count, density?, min, max, x, y, width, height, color?, className?
-}}) => {
+  count, density, min, max, x, y, width, height, color, className
+}) => {
   return (
     <g className={`tf-histogram-bar ${className || ''}`}>
       <rect x={x} y={y} width={width} height={height} className="tf-histogram-bar__rect" style={{ fill: color || '#0ea5e9' }} />

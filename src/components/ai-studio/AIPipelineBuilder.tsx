@@ -12,6 +12,9 @@
 import React from 'react';
 import type { ComponentSize, ConfidenceLevel } from './types';
 import type { PipelineNode, PipelineEdge } from './types';
+import AIPipelineEdge from './AIPipelineEdge';
+import AIPipelineNode from './AIPipelineNode';
+import AIPipelineToolbar from './AIPipelineToolbar';
 
 /** Props for the AIPipelineBuilder component */
 export interface AIPipelineBuilderProps {

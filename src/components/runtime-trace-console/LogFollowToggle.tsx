@@ -2,7 +2,7 @@
  * @fileoverview LogFollowToggle — Toggle follow/tail mode for log viewer.
  * Controls whether the viewer auto-scrolls to new lines.
  *
- * @module @torafirma/design-system/runtime-trace-console/LogFollowToggle
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/LogFollowToggle
  */
 
 import React from "react";

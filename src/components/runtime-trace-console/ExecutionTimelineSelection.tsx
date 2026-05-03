@@ -2,7 +2,7 @@
  * @fileoverview ExecutionTimelineSelection — Selection range highlight.
  * Shows a highlighted time range on the timeline with duration info.
  *
- * @module @torafirma/design-system/runtime-trace-console/ExecutionTimelineSelection
+ * @module @torakagemusha-sudo/tf-design-v2/components/runtime-trace-console/ExecutionTimelineSelection
  */
 
 import React from "react";

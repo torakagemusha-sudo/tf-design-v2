@@ -41,10 +41,6 @@ export interface StatusBarSectionProps extends TorafirmaComponentBaseProps {
   sectionLabel: string;
   /** Section state. */
   sectionState?: TorafirmaComponentState;
-  /** Section variant. */
-  variant?: SemanticVariant;
-  /** On click callback. */
-  onClick?: () => void;
   /** Whether the section is interactive. */
   interactive?: boolean;
 }
@@ -88,8 +84,6 @@ const StatusBarSection: React.FC<StatusBarSectionProps> = ({
   icon,
   sectionLabel,
   sectionState = "ready",
-  variant = "neutral",
-  onClick,
   interactive = false,
 }) => {
   const stateClass = `tf-state--${state}`;
