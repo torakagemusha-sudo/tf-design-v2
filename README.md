@@ -1,34 +1,67 @@
 # Torafirma Design System v2
 
-> Controlled force. Operational clarity. Governed execution.
+A React + TypeScript design system for **dark, dense, operator-facing interfaces** — the kind used to run workflows, inspect runtime state, gate actions by authority, and audit what the system did.
 
-A design system for dark, dense, engineer-level interfaces with a militarized technical aesthetic. Torafirma interfaces communicate that the user is issuing commands into governed computational machinery — not clicking buttons in a consumer app.
-
-**v2** expands the foundation with 12 component families, state machines, layout systems, rules engine, React hooks, and utility functions.
-
-## Installation
+Install once, wire up CSS + Tailwind, and import components, hooks, and utilities from a single package.
 
 ```bash
-npm install @torakagemusha-sudo/tf-design-v2
+npm install @torakagemusha-sudo/tf-design-v2 react react-dom tailwindcss
 ```
 
-## Published Package
+**npm:** [@torakagemusha-sudo/tf-design-v2](https://www.npmjs.com/package/@torakagemusha-sudo/tf-design-v2)
 
-- npm: https://www.npmjs.com/package/@torakagemusha-sudo/tf-design-v2
+---
 
-## Peer Dependencies
+## What it looks like
 
-```bash
-npm install react react-dom tailwindcss
+The default **Command Cockpit** layout — command bar, workspace, inspector, and trace console:
+
+![Command Cockpit layout](docs/screenshots/command-cockpit.png)
+
+**Buttons, badges, inputs, and panels** with semantic variants (run, stage, abort, fault, etc.):
+
+![Component variants](docs/screenshots/components.png)
+
+**Five built-in themes** for different operational contexts:
+
+![Theme variants](docs/screenshots/themes.png)
+
+---
+
+## What this system is
+
+Torafirma is not a generic SaaS UI kit. It is built around six ideas that show up in every component:
+
+| Model | What it means in the UI |
+|-------|-------------------------|
+| **State** | Every surface shows whether something is idle, staged, running, faulted, locked, etc. |
+| **Authority** | Consequential actions declare required permission levels (`AUTH_0` … `AUTH_6`). |
+| **Commands** | Buttons are commands with an operation, target, and consequence — not anonymous clicks. |
+| **Trace** | Important actions produce inspectable log lines with trace IDs. |
+| **Governance** | Blocked, degraded, or uncertain states visually restrict what you can do. |
+| **Density** | Information-rich layouts with hard edges, panels, and monospace telemetry. |
+
+### How the package is organized
+
+```
+Tokens (CSS variables)
+  ↓
+Styles + Themes (5 palettes)
+  ↓
+Components (12 families — command, status, layout, data, graph, …)
+  ↓
+Layouts (Command Cockpit, Studio Builder, Trace Console, …)
+  ↓
+Hooks + Utils + State machines + Rules
 ```
 
-## Package status
+**In practice:** import CSS tokens and a theme class, add the Tailwind preset, then use React components and hooks. The full specification covers 1,000+ component definitions; this package exports the implemented catalog from `@torakagemusha-sudo/tf-design-v2` (or subpath imports like `/components`, `/hooks`).
 
-This package ships **compiled ESM** from `dist/` (`.js` + `.d.ts`) for all TypeScript entry points. CSS and the Tailwind preset continue to ship from `src/styles/` as static assets. Run `npm run build` before `npm pack` or publish; `prepack` runs the build automatically.
+---
 
-## Quick Start
+## Quick start
 
-### 1. Import the CSS tokens
+### 1. Import styles
 
 ```tsx
 import '@torakagemusha-sudo/tf-design-v2/styles/tokens.css';
@@ -49,13 +82,21 @@ export default {
 };
 ```
 
-### 3. Use a theme
+### 3. Wrap your app in a theme
 
 ```tsx
 <div className="theme-command-dark">
-  <YourApp />
+  <App />
 </div>
 ```
+
+| Theme class | Best for |
+|-------------|----------|
+| `theme-command-dark` | Default operations UI |
+| `theme-field-green` | Tactical / field ops |
+| `theme-deep-blue` | Analysis / intelligence |
+| `theme-forge` | Engineering / IDE |
+| `theme-redline` | Incidents / threat response |
 
 ### 4. Use components
 
@@ -76,191 +117,82 @@ import { CommandButton } from '@torakagemusha-sudo/tf-design-v2';
 />
 ```
 
-### 5. Use hooks (v2)
+### 5. Use hooks
 
 ```tsx
-import { useAuthority, useComponentState, useTheme, useCommand } from '@torakagemusha-sudo/tf-design-v2';
+import {
+  useAuthority,
+  useComponentState,
+  useTheme,
+  useCommand,
+} from '@torakagemusha-sudo/tf-design-v2';
 
-function MyComponent() {
-  const { authority, hasRequiredAuthority } = useAuthority('AUTH_3_EXECUTE');
-  const { state, transition, canTransition } = useComponentState();
-  const { theme, setTheme } = useTheme();
-  const { execute, isExecuting } = useCommand(dispatch);
-  // ...
-}
+const { hasRequiredAuthority } = useAuthority('AUTH_3_EXECUTE');
+const { state, transition } = useComponentState();
+const { theme, setTheme } = useTheme();
+const { execute, isExecuting } = useCommand(dispatch);
 ```
 
-### 6. Use utilities (v2)
+---
 
-```tsx
-import { generateTraceId, getStateColor, classNames, deepMerge } from '@torakagemusha-sudo/tf-design-v2';
+## What's in the box
 
-const traceId = generateTraceId('cmd');
-const color = getStateColor('running');
-const classes = classNames('tf-button', { 'tf-button--run': isRunMode });
-const config = deepMerge(defaultConfig, userOverrides);
-```
+| Area | Description |
+|------|-------------|
+| **12 component families** | Command, status, input, navigation, data, overlay, authority, AI, stream, safety, trace, workspace |
+| **5 themes** | Command Dark, Field Green, Deep Blue, Forge, Redline |
+| **20 layout templates** | Command Cockpit, Builder Studio, Trace Console, Emergency, and more |
+| **18 state machines** | Workflow execution, staging, authority escalation, circuit breaker, … |
+| **9 React hooks** | Authority, component state, theme, trace, command, validation, telemetry, modal, toast, drawer |
+| **18 utilities** | Trace IDs, timestamps, state colors, `classNames`, debounce, deep merge, … |
+| **Design rules** | Automated checks for naming, accessibility, token usage, authority disclosure |
 
-## Package structure
+### Main export paths
 
-Published tarball layout (conceptual):
-
-```
-@torakagemusha-sudo/tf-design-v2/
-├── dist/                       # Compiled ESM + declarations (main, subpath exports)
-├── src/styles/                 # Packaged CSS + Tailwind preset (not compiled by tsc)
-│   ├── tokens.css              # Many CSS custom properties (implementation detail)
-│   ├── tailwind.config.js
-│   ├── themes.css
-│   ├── components.css
-│   └── utilities.css
-├── types/                      # Source: barrel at src/types (types-only export → dist/types)
-├── components/                 # Source: src/components (family folders + barrel)
-├── hooks/                      # Source: src/hooks
-├── utils/                      # Source: src/utils
-├── state-machines/             # Source: src/state-machines
-├── layouts/                    # Source: src/layouts
-├── rules/                      # Source: src/rules
-└── index.ts                    # Root barrel (compiled to dist/index.*)
-```
-
-**Catalog vs exports:** The Torafirma specification codex describes **1,193 component definitions** across twelve families; this repository implements that catalog as **TypeScript/React exports** (import from `@torakagemusha-sudo/tf-design-v2` or `@torakagemusha-sudo/tf-design-v2/components`). The headline number refers to **specification coverage**, not a hand-count of every discrete default export in the tree.
-
-**Design tokens vs CSS variables:** Semantic token categories in the design system number on the order of **256+** (grouped dimensions such as color, spacing, motion). **`tokens.css` additionally defines a large set of CSS custom properties** (including aliases, component-family tokens, and theme wiring); treat “350+ CSS custom properties” and “256+ design tokens” as **different layers** of the same token system, not two estimates of the same set.
-
-## v2 Exports Map
-
-| Export Path | Description |
-|-------------|-------------|
-| `@torakagemusha-sudo/tf-design-v2` | Main barrel from `dist/` (types, components, hooks, utils, …) |
-| `@torakagemusha-sudo/tf-design-v2/styles` | CSS tokens (`src/styles/tokens.css`) |
-| `@torakagemusha-sudo/tf-design-v2/styles/tokens.css` | CSS tokens file |
-| `@torakagemusha-sudo/tf-design-v2/styles/themes.css` | Theme classes |
-| `@torakagemusha-sudo/tf-design-v2/styles/components.css` | Base component styles |
-| `@torakagemusha-sudo/tf-design-v2/styles/utilities.css` | Utility classes/effects |
-| `@torakagemusha-sudo/tf-design-v2/tokens` | CSS tokens (alias) |
-| `@torakagemusha-sudo/tf-design-v2/tailwind` | Tailwind config |
-| `@torakagemusha-sudo/tf-design-v2/types` | Type-only barrel (`dist/types/*.d.ts`) |
-| `@torakagemusha-sudo/tf-design-v2/components` | React components (`dist/components/*`) |
+| Import | Use for |
+|--------|---------|
+| `@torakagemusha-sudo/tf-design-v2` | Everything (default) |
+| `@torakagemusha-sudo/tf-design-v2/components` | React components only |
 | `@torakagemusha-sudo/tf-design-v2/hooks` | React hooks |
-| `@torakagemusha-sudo/tf-design-v2/utils` | Utility functions |
-| `@torakagemusha-sudo/tf-design-v2/state-machines` | State machine types & configs |
-| `@torakagemusha-sudo/tf-design-v2/layouts` | Layout types & configs |
-| `@torakagemusha-sudo/tf-design-v2/rules` | Rules engine types |
+| `@torakagemusha-sudo/tf-design-v2/utils` | Helper functions |
+| `@torakagemusha-sudo/tf-design-v2/layouts` | Layout templates |
+| `@torakagemusha-sudo/tf-design-v2/state-machines` | State machine configs |
+| `@torakagemusha-sudo/tf-design-v2/tailwind` | Tailwind preset |
 
-## Design Token Categories (v2)
+Styles ship from `src/styles/` (not compiled). TypeScript compiles to `dist/` on build.
 
-| Category | v1 Count | v2 Count | Description |
-|----------|----------|----------|-------------|
-| Colors | 60+ | 90+ | Root surfaces, steel scale, operational semantics, family accents |
-| Typography | 26 | 26 | Font stacks, sizes, weights, tracking |
-| Spacing | 23 | 32 | Space scale, control heights, padding, mobile tokens |
-| Radius | 6 | 6 | Hard-edge geometry tokens |
-| Borders | 18 | 18 | Subtle/normal/strong + semantic variants |
-| Shadows/Glow | 11 | 22 | Elevation + semantic glows + AI/stream variants |
-| Motion | 9 | 18 | Durations + easing curves + family-specific |
-| Z-Index | 9 | 14 | Stacking order for operational layers |
-| Component Families | — | 12 | Family-specific color, border, glow tokens |
-| Layout | — | 8 | Grid, panel, sidebar, drawer dimensions |
-| State Machine | — | 12 | Visual tokens for state representations |
+```bash
+npm run build   # compile before pack/publish (prepack runs this automatically)
+```
 
-## Themes
+---
 
-| Theme | Class | Use Case |
-|-------|-------|----------|
-| Command Dark | `.theme-command-dark` | Default — general purpose |
-| Field Green | `.theme-field-green` | Tactical / operations |
-| Deep Blue | `.theme-deep-blue` | Analysis / intelligence |
-| Forge | `.theme-forge` | Engineering / IDE |
-| Redline | `.theme-redline` | Threat / incident response |
+## Documentation
 
-## 12 Component Families (v2)
+Detailed guides live in [`docs/`](docs/):
 
-| # | Family | Accent | Variant |
-|---|--------|--------|---------|
-| 1 | Action & Command | Green | `run` |
-| 2 | Feedback & Status | Blue/Amber/Red | `inspect` / `warning` / `danger` |
-| 3 | Input & Control | Steel | `neutral` |
-| 4 | Navigation | Cyan | `stream` |
-| 5 | Data Display | Steel | `neutral` |
-| 6 | Overlay | Steel | `neutral` |
-| 7 | Authority & Permission | Gold | `authority` |
-| 8 | AI & Model | Purple | `model` |
-| 9 | Stream & Live | Cyan | `stream` |
-| 10 | Safety & Circuit | Red/Amber/Green | `danger` / `warning` / `run` |
-| 11 | Trace & Audit | Cyan | `stream` |
-| 12 | Workspace & Layout | Steel | `neutral` |
+| Doc | Topic |
+|-----|-------|
+| [Introduction](docs/01-INTRODUCTION.md) | Philosophy and voice |
+| [Architecture](docs/02-ARCHITECTURE.md) | Layers, authority, trace pipeline |
+| [Design tokens](docs/03-DESIGN-TOKENS.md) | Colors, spacing, motion |
+| [Component catalog](docs/04-COMPONENT-CATALOG.md) | All 12 families |
+| [State machines](docs/05-STATE-MACHINES.md) | Lifecycle models |
+| [Layout templates](docs/06-LAYOUT-TEMPLATES.md) | Shell arrangements |
+| [Themes](docs/07-THEMES.md) | Theme variables |
+| [API reference](docs/12-API-REFERENCE.md) | Types and exports |
 
-## Type System (v2)
+To regenerate README screenshots locally:
 
-**80+ TypeScript types** including all v1 types plus:
+```bash
+node docs/screenshots/capture.mjs
+```
 
-- **State Machines**: `StateMachineConfig`, `StateTransition`, `StateMachineSnapshot`, `StateGuard`, `StateMachineEventType`
-- **Layouts**: `LayoutTemplate`, `LayoutPanelConfig`, `LayoutBreakpoint`, `LayoutState`, `DrawerPosition`, `ToastPosition`
-- **Rules**: `Rule`, `RuleCondition`, `RuleConditionGroup`, `RuleAction`, `RulesetEvaluationResult`
-- **Hooks**: `UseAuthorityReturn`, `UseComponentStateReturn`, `UseCommandReturn`, `UseValidationReturn`, `UseTelemetryReturn`, `UseModalReturn`, `UseToastReturn`, `UseDrawerReturn`, `UseThemeReturn`, `UseTraceReturn`
-- **Utilities**: `ClassNamesOptions`, `DebounceOptions`, `ThrottleOptions`, `DeepMergeOptions`
-
-## Hooks (v2)
-
-| Hook | Purpose |
-|------|---------|
-| `useAuthority` | Authority levels, elevation requests |
-| `useComponentState` | State machine transitions |
-| `useTheme` | Theme switching with system detection |
-| `useTrace` | Trace ID generation, audit logging |
-| `useCommand` | Command execution with governance |
-| `useValidation` | Async validation state |
-| `useTelemetry` | Operational event tracking |
-| `useModal` | Modal open/close state |
-| `useToast` | Toast queue management |
-| `useDrawer` | Drawer state with position |
-
-## Utilities (v2)
-
-The `utils` entry exports **18 named functions** (see `src/utils/index.ts`):
-
-| Utility | Purpose |
-|---------|---------|
-| `generateTraceId` | Unique trace ID generation |
-| `formatTimestamp` | ISO 8601 / human-readable timestamps |
-| `getAuthorityLabel` | Human-readable authority labels |
-| `getAuthorityDescription` | Longer description for an authority level |
-| `getAuthorityRank` | Numeric rank for an authority level |
-| `getStateColor` | Semantic foreground color for component states |
-| `getStateBgColor` | Background color for component states |
-| `getStateColorPair` | Foreground + background pair for a state |
-| `classNames` | Conditional class name joining |
-| `debounce` | Debounced function wrapper |
-| `throttle` | Throttled function wrapper |
-| `deepMerge` | Deep object merging |
-| `isValidAuthority` | Authority level validation |
-| `isValidState` | Component state validation |
-| `getStateLabel` | Human-readable label for a state |
-| `isActiveState` | Whether a state is “active” |
-| `isTerminalState` | Whether a state is terminal |
-| `isErrorState` | Whether a state represents an error |
+---
 
 ## Contributing
 
-This package is compiled from the Torafirma Specification Codex:
-
-- `01` — Product Architecture Constitution
-- `02` — Interaction & Command Grammar
-- `03.0` — Component System Overview
-- `03.1` — Command & Action Components
-- General Design System Parts 1 & 2
-
-## Acknowledgements
-
-This package uses and depends on the following open-source packages:
-
-- `react`
-- `react-dom`
-- `tailwindcss`
-- `typescript`
-- `@types/react`
-- `@types/react-dom`
+Implementation follows the Torafirma Specification Codex (product architecture, command grammar, component system, design tokens).
 
 ## License
 
