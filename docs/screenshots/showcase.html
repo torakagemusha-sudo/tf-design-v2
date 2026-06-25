@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torafirma Design System — Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../src/styles/tokens.css" />
+  <link rel="stylesheet" href="../../src/styles/themes.css" />
+  <link rel="stylesheet" href="../../src/styles/components.css" />
+  <link rel="stylesheet" href="../../src/styles/utilities.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, sans-serif; }
+
+    #command-cockpit {
+      width: 1200px;
+      height: 720px;
+      display: grid;
+      grid-template-rows: 48px 1fr 140px 28px;
+      grid-template-columns: 52px 1fr 280px;
+      grid-template-areas:
+        "topbar topbar topbar"
+        "sidebar main inspector"
+        "console console console"
+        "footer footer footer";
+      background: var(--tf-bg);
+      color: var(--tf-text-primary);
+      font-size: 13px;
+      overflow: hidden;
+    }
+
+    .topbar {
+      grid-area: topbar;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--tf-border-normal);
+      background: var(--tf-charcoal);
+    }
+    .topbar-brand { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; }
+    .topbar-meta { display: flex; gap: 12px; align-items: center; color: var(--tf-text-muted); font-family: "JetBrains Mono", monospace; font-size: 11px; }
+
+    .sidebar {
+      grid-area: sidebar;
+      border-right: 1px solid var(--tf-border-normal);
+      background: var(--tf-charcoal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 0;
+      gap: 8px;
+    }
+    .nav-icon {
+      width: 32px; height: 32px;
+      border: 1px solid var(--tf-border-subtle);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--tf-text-muted); font-size: 10px; font-weight: 700;
+    }
+    .nav-icon.active { border-color: var(--tf-green-dim); color: var(--tf-green); background: var(--tf-green-dark); }
+
+    .main {
+      grid-area: main;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .inspector {
+      grid-area: inspector;
+      border-left: 1px solid var(--tf-border-normal);
+      background: var(--tf-surface);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .console {
+      grid-area: console;
+      border-top: 1px solid var(--tf-border-normal);
+      background: var(--tf-void);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .console-line { color: var(--tf-text-muted); }
+    .console-line span { color: var(--tf-cyan); }
+    .console-line .op { color: var(--tf-text-primary); }
+    .console-line .state-ready { color: var(--tf-green); }
+    .console-line .state-running { color: var(--tf-cyan); }
+
+    .footer {
+      grid-area: footer;
+      border-top: 1px solid var(--tf-border-normal);
+      background: var(--tf-charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      color: var(--tf-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .workspace-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .workspace-tabs { display: flex; gap: 4px; }
+    .workspace-tab {
+      padding: 6px 12px;
+      border: 1px solid var(--tf-border-subtle);
+      border-radius: 4px 4px 0 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--tf-text-muted);
+      background: var(--tf-charcoal);
+    }
+    .workspace-tab.active {
+      color: var(--tf-text-primary);
+      border-color: var(--tf-border-normal);
+      border-bottom-color: var(--tf-surface);
+      background: var(--tf-surface);
+    }
+
+    .inspector-body { padding: 12px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .kv { display: grid; grid-template-columns: 90px 1fr; gap: 4px 8px; font-size: 11px; }
+    .kv dt { color: var(--tf-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .kv dd { font-family: "JetBrains Mono", monospace; color: var(--tf-text-primary); }
+
+    /* Components showcase */
+    #components-showcase {
+      width: 1100px;
+      padding: 32px;
+      background: var(--tf-bg);
+      color: var(--tf-text-primary);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--tf-text-muted);
+      margin-bottom: 12px;
+    }
+    .button-row, .badge-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .panel-body { padding: 12px; font-size: 12px; color: var(--tf-text-muted); }
+
+    /* Themes showcase */
+    #themes-showcase {
+      width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      padding: 24px;
+      background: #020304;
+    }
+    .theme-card {
+      border: 1px solid var(--tf-border-normal);
+      border-radius: 6px;
+      overflow: hidden;
+      min-height: 200px;
+    }
+    .theme-card-header {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--tf-border-normal);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .theme-card-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .theme-swatch { height: 24px; border-radius: 3px; border: 1px solid var(--tf-border-subtle); }
+  </style>
+</head>
+<body>
+  <!-- Command Cockpit -->
+  <div id="command-cockpit" class="theme-command-dark">
+    <header class="topbar">
+      <div class="topbar-brand">Torafirma Studio</div>
+      <div class="topbar-meta">
+        <span>runtime.local.dev</span>
+        <span class="tf-badge tf-badge--ready">READY</span>
+        <span class="tf-badge tf-badge--signed">AUTH 3 · EXECUTE</span>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <div class="nav-icon active">ST</div>
+      <div class="nav-icon">GR</div>
+      <div class="nav-icon">RT</div>
+      <div class="nav-icon">TR</div>
+      <div class="nav-icon">PL</div>
+    </aside>
+
+    <main class="main">
+      <div class="workspace-toolbar">
+        <div class="workspace-tabs">
+          <div class="workspace-tab active">Workflow</div>
+          <div class="workspace-tab">Graph</div>
+          <div class="workspace-tab">Policies</div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="tf-button tf-button--warning">Stage</button>
+          <button class="tf-button tf-button--run">Execute run</button>
+        </div>
+      </div>
+
+      <div class="tf-panel tf-panel--command" style="flex:1;">
+        <div class="tf-panel-header">
+          <span>workflow.qc.repeat_detection</span>
+          <span class="tf-badge tf-badge--staged">STAGED</span>
+        </div>
+        <div class="panel-body">
+          <table class="tf-table">
+            <thead>
+              <tr>
+                <th>Node</th>
+                <th>State</th>
+                <th>Authority</th>
+                <th>Trace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tf-table-cell">ingest.dataset</td>
+                <td class="tf-table-cell"><span class="tf-badge tf-badge--ready">COMPLETE</span></td>
+                <td class="tf-table-cell">AUTH 1</td>
+                <td class="tf-table-cell">18F2-A91A</td>
+              </tr>
+              <tr>
+                <td class="tf-table-cell">validate.schema</td>
+                <td class="tf-table-cell"><span class="tf-badge tf-badge--ready">VALID</span></td>
+                <td class="tf-table-cell">AUTH 2</td>
+                <td class="tf-table-cell">18F2-A91B</td>
+              </tr>
+              <tr>
+                <td class="tf-table-cell">detect.anomalies</td>
+                <td class="tf-table-cell"><span class="tf-badge tf-badge--live">RUNNING</span></td>
+                <td class="tf-table-cell">AUTH 3</td>
+                <td class="tf-table-cell">18F2-A91C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <aside class="inspector">
+      <div class="tf-panel-header">Inspector</div>
+      <div class="inspector-body">
+        <dl class="kv">
+          <dt>Object</dt><dd>detect.anomalies</dd>
+          <dt>State</dt><dd>RUNNING</dd>
+          <dt>Authority</dt><dd>AUTH 3 · EXECUTE</dd>
+          <dt>Runtime</dt><dd>runtime.local.dev</dd>
+        </dl>
+        <button class="tf-button tf-button--danger" style="margin-top:auto;">Abort operation</button>
+      </div>
+    </aside>
+
+    <div class="console">
+      <div class="console-line"><span>14:42:00</span> <span class="op">workflow.execute</span> <span class="state-running">RUNNING</span> AUTH 3 18F2-A91C</div>
+      <div class="console-line"><span>14:41:55</span> <span class="op">workflow.stage</span> <span class="state-ready">STAGED</span> AUTH 2 18F2-A91B</div>
+      <div class="console-line"><span>14:41:42</span> <span class="op">graph.validate</span> <span class="state-ready">VALID</span> AUTH 1 18F2-A91A</div>
+    </div>
+
+    <footer class="footer">
+      <span>Runtime: LOCAL</span>
+      <span>State: RUNNING</span>
+      <span>Trace: 18F2-A91C</span>
+    </footer>
+  </div>
+
+  <!-- Components -->
+  <div id="components-showcase" class="theme-command-dark" style="margin-top: 40px;">
+    <section>
+      <div class="section-title">Command buttons</div>
+      <div class="button-row">
+        <button class="tf-button tf-button--run">Execute run</button>
+        <button class="tf-button tf-button--warning">Stage</button>
+        <button class="tf-button tf-button--danger">Abort</button>
+        <button class="tf-button tf-button--inspect">Inspect</button>
+        <button class="tf-button tf-button--authority">Authorize</button>
+        <button class="tf-button tf-button--neutral">Cancel</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">State badges</div>
+      <div class="badge-row">
+        <span class="tf-badge tf-badge--ready">READY</span>
+        <span class="tf-badge tf-badge--live">RUNNING</span>
+        <span class="tf-badge tf-badge--staged">STAGED</span>
+        <span class="tf-badge tf-badge--dirty">DIRTY</span>
+        <span class="tf-badge tf-badge--fault">FAULTED</span>
+        <span class="tf-badge tf-badge--locked">LOCKED</span>
+        <span class="tf-badge tf-badge--model">MODEL</span>
+        <span class="tf-badge tf-badge--sim">SIMULATED</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Inputs & panels</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <input class="tf-input" placeholder="workflow.target.id" value="workflow.qc.main" />
+        <input class="tf-input tf-input--warning" placeholder="Requires staging" />
+        <div class="tf-panel tf-panel--inspect">
+          <div class="tf-panel-header"><span>Validation</span><span class="tf-badge tf-badge--ready">VALID</span></div>
+          <div class="panel-body">Schema checks passed. Ready for staging.</div>
+        </div>
+        <div class="tf-panel tf-panel--fault">
+          <div class="tf-panel-header"><span>Circuit breaker</span><span class="tf-badge tf-badge--fault">TRIPPED</span></div>
+          <div class="panel-body">Execution halted. Review fault code RUNTIME_TIMEOUT.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Themes -->
+  <div id="themes-showcase" style="margin-top: 40px;">
+    <div class="theme-card theme-command-dark">
+      <div class="theme-card-header" style="background:var(--tf-charcoal);color:var(--tf-text-primary);">Command Dark</div>
+      <div class="theme-card-body" style="background:var(--tf-bg);">
+        <div class="theme-swatch" style="background:var(--tf-green);"></div>
+        <button class="tf-button tf-button--run" style="width:100%;">Execute</button>
+        <span class="tf-badge tf-badge--ready">READY</span>
+      </div>
+    </div>
+    <div class="theme-card theme-field-green">
+      <div class="theme-card-header" style="background:var(--tf-charcoal);color:var(--tf-text-primary);">Field Green</div>
+      <div class="theme-card-body" style="background:var(--tf-bg);">
+        <div class="theme-swatch" style="background:var(--tf-theme-accent);"></div>
+        <button class="tf-button tf-button--run" style="width:100%;">Execute</button>
+        <span class="tf-badge tf-badge--ready">READY</span>
+      </div>
+    </div>
+    <div class="theme-card theme-deep-blue">
+      <div class="theme-card-header" style="background:var(--tf-charcoal);color:var(--tf-text-primary);">Deep Blue</div>
+      <div class="theme-card-body" style="background:var(--tf-bg);">
+        <div class="theme-swatch" style="background:var(--tf-theme-accent);"></div>
+        <button class="tf-button tf-button--inspect" style="width:100%;">Inspect</button>
+        <span class="tf-badge tf-badge--sim">ANALYSIS</span>
+      </div>
+    </div>
+    <div class="theme-card theme-forge">
+      <div class="theme-card-header" style="background:var(--tf-charcoal);color:var(--tf-text-primary);">Forge</div>
+      <div class="theme-card-body" style="background:var(--tf-bg);">
+        <div class="theme-swatch" style="background:var(--tf-theme-accent);"></div>
+        <button class="tf-button tf-button--warning" style="width:100%;">Build</button>
+        <span class="tf-badge tf-badge--staged">STAGED</span>
+      </div>
+    </div>
+    <div class="theme-card theme-redline">
+      <div class="theme-card-header" style="background:var(--tf-charcoal);color:var(--tf-text-primary);">Redline</div>
+      <div class="theme-card-body" style="background:var(--tf-bg);">
+        <div class="theme-swatch" style="background:var(--tf-theme-accent);"></div>
+        <button class="tf-button tf-button--danger" style="width:100%;">Trip</button>
+        <span class="tf-badge tf-badge--fault">INCIDENT</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
