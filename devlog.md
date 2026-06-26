@@ -11,3 +11,7 @@ Completed validation gates: fixed `CommandStatusIndicator` / `ToggleCommandButto
 ## 2026-06-25T00:41:00Z
 
 Rewrote README for clarity: added system overview (six operational models, layer stack), screenshots (`docs/screenshots/` — command cockpit, components, themes) captured from a static showcase via `capture.mjs`, streamlined quick start and export tables, and linked to full `docs/` guides.
+
+## 2026-06-26T09:12:00Z
+
+Security scan (at-rest vulnerability review) at commit `53497c3eb9ed7554e267358a64643f2e0b172109`. Identified 4 validated findings (3 HIGH, 1 MEDIUM): stored XSS in `FormFieldMarkdown` and `FormFieldRichText` via unsanitized `dangerouslySetInnerHTML`/`innerHTML`, arbitrary JS execution via Pyodide `exec()` with unrestricted `import js` interop in `PyodideMatplotlib`, and ReDoS in `LogViewer` from unescaped regex construction. Findings reported to Slack and persisted in automation memory.
