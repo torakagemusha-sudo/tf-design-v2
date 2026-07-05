@@ -11,3 +11,7 @@ Completed validation gates: fixed `CommandStatusIndicator` / `ToggleCommandButto
 ## 2026-06-25T00:41:00Z
 
 Rewrote README for clarity: added system overview (six operational models, layer stack), screenshots (`docs/screenshots/` — command cockpit, components, themes) captured from a static showcase via `capture.mjs`, streamlined quick start and export tables, and linked to full `docs/` guides.
+
+## 2026-07-05T09:22:15Z
+
+Security scan (vulnerability hunter, run `bc-a92fc32b-bb25-4618-a840-5386a0d7b4a8`). Found 3 new findings in the data-table components: stored XSS via `dangerouslySetInnerHTML` in `CellFormatterIcon` (HIGH), `javascript:` URI XSS in `CellFormatterLink` (MEDIUM), and stored XSS in `TableEmptyState` icon prop (MEDIUM). Reported to Slack and persisted to automation memory. Codebase unchanged (no code fixes — report only).
